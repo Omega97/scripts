@@ -6,11 +6,15 @@ import re
 import subprocess
 import platform
 
+# Repo root is parent of Programs/
+_PROJECT_ROOT = Path(__file__).resolve().parent.parent
+
+
 class FolderTreeApp:
     # Default Values
     CONFIRM_THRESHOLD = 1000
     MAX_DEPTH = 50
-    DEFAULT_OUTPUT_DIR = Path(r"C:\summaries")
+    DEFAULT_OUTPUT_DIR = _PROJECT_ROOT / "data" / "summaries"
     
     # ANSI Color Codes (Works on Windows 10/11 Console)
     CLR_HEADER = '\033[95m'

@@ -6,11 +6,15 @@ import re
 import subprocess
 import platform
 
+# Repo root is parent of Programs/
+_PROJECT_ROOT = Path(__file__).resolve().parent.parent
+
+
 class ConcatFilesApp:
     # Default Values
     DEFAULT_LINES_LIM = 1000
     DEFAULT_TRUNCATED_MARKER = "\n[... TRUNCATED ...]\n"
-    DEFAULT_OUTPUT_DIR = Path(r"C:\scripts\data\summaries")
+    DEFAULT_OUTPUT_DIR = _PROJECT_ROOT / "data" / "summaries"
     CONFIRM_THRESHOLD = 1000
     
     # ANSI Color Codes

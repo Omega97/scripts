@@ -2,9 +2,6 @@
 _other/
 data/
 
-# ExifTool bundle
-Programs/exiftool_files/
-
 # Executables
 *.exe
 

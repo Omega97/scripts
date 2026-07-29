@@ -25,7 +25,9 @@ from typing import List, Tuple
 import requests
 from bs4 import BeautifulSoup
 
-DEFAULT_DATA_FILE = r"C:\scripts\data\genesys_cards.csv"
+# Repo root is parent of Programs/
+_PROJECT_ROOT = Path(__file__).resolve().parent.parent
+DEFAULT_DATA_FILE = str(_PROJECT_ROOT / "data" / "genesys_cards.csv")
 
 # Color palette for card points based on value ranges
 # Format: (min_points, max_points, color_code, color_name)
@@ -94,6 +96,7 @@ class GenesysScraper:
     def save_to_cache(self) -> bool:
         """Save current card data to CSV cache."""
         try:
+            self.cache_file.parent.mkdir(parents=True, exist_ok=True)
             with open(self.cache_file, 'w', newline='', encoding='utf-8') as f:
                 writer = csv.DictWriter(f, fieldnames=['Card Name', 'Points'])
                 writer.writeheader()

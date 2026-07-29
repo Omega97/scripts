@@ -8,7 +8,7 @@ Usage:
     python log.py where        - Display the file path of the log file.
     python log.py -h           - Show available commands and help.
 
-Logs are stored in 'log.txt' within the same directory as the script.
+Logs are stored in data/log.txt relative to the project root.
 """
 
 import os
@@ -16,17 +16,17 @@ import datetime
 import sys
 
 
-DEFAULT_DATA_FILE = r"C:\scripts\data\log.txt"
+# Repo root is parent of Programs/
+_PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+DEFAULT_DATA_FILE = os.path.join(_PROJECT_ROOT, "data", "log.txt")
 
-
-def get_script_dir():
-    return os.path.dirname(os.path.abspath(sys.argv[0]))
 
 def get_log_file():
-    return os.path.join(get_script_dir(), DEFAULT_DATA_FILE)
+    return DEFAULT_DATA_FILE
 
 def log_message(message):
     log_file = get_log_file()
+    os.makedirs(os.path.dirname(log_file), exist_ok=True)
     timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     line = f"{timestamp}: {message}\n"
     with open(log_file, "a", encoding="utf-8") as f:

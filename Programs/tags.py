@@ -93,7 +93,7 @@ def main():
     exiftool = get_exiftool_path()
     if exiftool is None:
         print("❌ ERRORE: exiftool non trovato.")
-        print("   Copia exiftool.exe in C:\\scripts\\Programs\\ o aggiungilo al PATH.")
+        print("   Copia exiftool.exe in Programs/ (accanto a tags.py) o aggiungilo al PATH.")
         sys.exit(1)
     else:
         print(f"🔧 Usa exiftool: {exiftool}")
