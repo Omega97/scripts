@@ -5,7 +5,7 @@ chcp 65001 > nul
 title Omar's Grok Telegram Bot
 
 :: 1. Navigate to your project folder
-cd /d "C:\Users\monfalcone\Il mio Drive\Documents\Omar_private_vault"
+cd /d "C:\Users\monfalcone\PycharmProjects\Omar_private_vault"
 
 :: 2. Check if the virtual environment exists
 if not exist ".venv\Scripts\activate.bat" (

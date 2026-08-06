@@ -1,3 +1,2 @@
 @echo off
-cd /d "C:\Users\monfalcone\Il mio Drive\Documents\Omar_private_vault"
-grok
+cd /d "C:\Users\monfalcone\PycharmProjects\Omar_private_vault" && grok
