@@ -162,7 +162,7 @@ class Handler:
         print('\nDone!')
 
 def main():
-    default_path = Path.cwd() / '_downloads'
+    default_path = Path.cwd() # / '_downloads'
     parser = argparse.ArgumentParser(description="Download images from the web in parallel.")
 
     parser.add_argument("url", type=str, nargs='*',
