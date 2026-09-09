@@ -114,7 +114,7 @@ except ImportError:
     console = Console()
 
 DB_FILE = ".tagstore.json"
-SCHEMA_VERSION = 2
+SCHEMA_VERSION = 3
 HASH_CHUNK = 64 * 1024
 SUPPORTED_EXTS = {".png", ".jpg", ".jpeg", ".webp"}
 SKIP_DIRS = {
@@ -129,7 +129,8 @@ SKIP_DIRS = {
     ".vs",
     "venvs",
 }
-DEFAULT_MIN_TAG_LEN = 2
+MIN_TOKEN_LEN = 2
+DEFAULT_MIN_TAG_COUNT = 2
 RESULT_DISPLAY_LIMIT = 50
 
 COMMANDS = [
@@ -139,7 +140,7 @@ COMMANDS = [
     ("tag", "Add tags to matching images     tag <query> <tags...>"),
     ("untag", "Remove tags from matching images  untag <query> <tags...>"),
     ("override", "Replace tags on matching images   override <query> <tags...>"),
-    ("list", "Show every known tag (and synonyms, if any)"),
+    ("list", "Show every known tag with hit counts (and synonyms, if any)"),
     ("exit", "Leave the interactive prompt (aliases: quit)"),
 ]
 
@@ -147,7 +148,7 @@ COMMANDS = [
 def get_default_schema():
     return {
         "version": SCHEMA_VERSION,
-        "settings": {"min_tag_count_for_search": DEFAULT_MIN_TAG_LEN},
+        "settings": {"min_tag_count_for_search": DEFAULT_MIN_TAG_COUNT},
         "tags": {},
         "hashes": {},
     }
@@ -168,6 +169,53 @@ def _unique_keep_order(items):
     return out
 
 
+def _as_tag_record(value):
+    """Normalize a global tag entry. Old DBs stored a synonym list; now {synonyms, count}."""
+    if isinstance(value, dict):
+        synonyms = value.get("synonyms", [])
+        if not isinstance(synonyms, list):
+            synonyms = []
+        try:
+            count = int(value.get("count") or 0)
+        except (TypeError, ValueError):
+            count = 0
+        value["synonyms"] = synonyms
+        value["count"] = max(0, count)
+        return value
+    synonyms = value if isinstance(value, list) else []
+    return {"synonyms": synonyms, "count": 0}
+
+
+def rebuild_tag_counts(data):
+    """Count how many unique assets carry each tag. Metadata only — no image I/O."""
+    counts = {}
+    for info in (data.get("hashes") or {}).values():
+        if not isinstance(info, dict):
+            continue
+        seen = set()
+        for raw in info.get("tags") or []:
+            tag = normalize_tag(raw)
+            if tag:
+                seen.add(tag)
+        for tag in seen:
+            counts[tag] = counts.get(tag, 0) + 1
+
+    tags = data.setdefault("tags", {})
+    if not isinstance(tags, dict):
+        tags = {}
+        data["tags"] = tags
+
+    for tag in list(tags):
+        tags[tag] = _as_tag_record(tags[tag])
+        tags[tag]["count"] = counts.get(tag, 0)
+    for tag, n in counts.items():
+        if tag not in tags:
+            tags[tag] = {"synonyms": [], "count": n}
+        else:
+            tags[tag]["count"] = n
+    return counts
+
+
 def migrate_schema(data):
     """Upgrade older .tagstore.json files in place without dropping fields."""
     if not isinstance(data, dict):
@@ -177,7 +225,7 @@ def migrate_schema(data):
     data.setdefault("settings", {})
     if not isinstance(data["settings"], dict):
         data["settings"] = {}
-    data["settings"].setdefault("min_tag_count_for_search", DEFAULT_MIN_TAG_LEN)
+    data["settings"].setdefault("min_tag_count_for_search", DEFAULT_MIN_TAG_COUNT)
     data.setdefault("tags", {})
     data.setdefault("hashes", {})
     if not isinstance(data["tags"], dict):
@@ -222,10 +270,10 @@ def migrate_schema(data):
             }
         info["files"] = cleaned
 
-    for tag, synonyms in list(data["tags"].items()):
-        if not isinstance(synonyms, list):
-            data["tags"][tag] = []
+    for tag, value in list(data["tags"].items()):
+        data["tags"][tag] = _as_tag_record(value)
 
+    rebuild_tag_counts(data)
     data["version"] = SCHEMA_VERSION
     return data
 
@@ -236,13 +284,27 @@ class TagStoreDB:
         self.db_path = os.path.join(self.root_dir, DB_FILE)
         self.data = self._load()
 
-    def _min_tag_len(self):
+    def _min_visible_count(self):
+        """Tags with fewer hits than this are treated as spurious (default: count > 1)."""
         settings = self.data.get("settings") or {}
         try:
-            value = int(settings.get("min_tag_count_for_search", DEFAULT_MIN_TAG_LEN))
+            value = int(settings.get("min_tag_count_for_search", DEFAULT_MIN_TAG_COUNT))
         except (TypeError, ValueError):
-            value = DEFAULT_MIN_TAG_LEN
+            value = DEFAULT_MIN_TAG_COUNT
         return max(1, value)
+
+    def tag_count(self, tag):
+        rec = (self.data.get("tags") or {}).get(normalize_tag(tag))
+        if isinstance(rec, dict):
+            try:
+                return int(rec.get("count") or 0)
+            except (TypeError, ValueError):
+                return 0
+        return 0
+
+    def visible_tags(self, tags):
+        threshold = self._min_visible_count()
+        return [t for t in tags if self.tag_count(t) >= threshold]
 
     def _load(self):
         if os.path.exists(self.db_path):
@@ -277,8 +339,13 @@ class TagStoreDB:
 
     def add_tag_to_global(self, tag):
         tag = normalize_tag(tag)
-        if tag and tag not in self.data["tags"]:
-            self.data["tags"][tag] = []
+        if not tag:
+            return
+        existing = self.data["tags"].get(tag)
+        if existing is None:
+            self.data["tags"][tag] = {"synonyms": [], "count": 0}
+        else:
+            self.data["tags"][tag] = _as_tag_record(existing)
 
     def compute_hash(self, filepath):
         sha256 = hashlib.sha256()
@@ -293,13 +360,12 @@ class TagStoreDB:
     def infer_tags(self, rel_path):
         parts = rel_path.replace("\\", "/").split("/")
         tags = set()
-        min_len = self._min_tag_len()
         for i, part in enumerate(parts):
             if i == len(parts) - 1:
                 part = os.path.splitext(part)[0]
             for token in re.split(r"[_\-\s]+", part):
                 token = normalize_tag(token)
-                if token and len(token) >= min_len and re.match(r"^[a-z0-9_]+$", token):
+                if token and len(token) >= MIN_TOKEN_LEN and re.match(r"^[a-z0-9_]+$", token):
                     tags.add(token)
         return tags
 
@@ -429,6 +495,9 @@ class TagStoreDB:
         for h in stale_hashes:
             del self.data["hashes"][h]
 
+        counts = rebuild_tag_counts(self.data)
+        frequent = sum(1 for n in counts.values() if n >= self._min_visible_count())
+
         self.save()
 
         summary = Table(box=box.SIMPLE, show_header=False, title="Scan complete")
@@ -440,6 +509,8 @@ class TagStoreDB:
         summary.add_row("Unchanged (hash skipped)", str(reused))
         summary.add_row("Duplicates merged", str(merged))
         summary.add_row("New assets", str(new_assets))
+        summary.add_row("Tags (total)", str(len(counts)))
+        summary.add_row(f"Tags with {self._min_visible_count()}+ hits", str(frequent))
         if errors:
             summary.add_row("Unreadable", str(errors))
         console.print(summary)
@@ -528,23 +599,36 @@ class TagStoreDB:
             for t in tags_to_add:
                 self.add_tag_to_global(t)
 
+        rebuild_tag_counts(self.data)
         self.save()
         console.print(f"[bold green]Updated tags for {len(results)} asset(s).[/bold green]")
 
     def list_tags(self):
+        threshold = self._min_visible_count()
         table = Table(title="Global Tags", box=box.ROUNDED, show_lines=False)
         table.add_column("Tag", style="cyan", no_wrap=True)
+        table.add_column("Hits", justify="right", style="yellow")
         table.add_column("Synonyms / Related", style="magenta")
 
         if not self.data["tags"]:
-            table.add_row("—", "(none yet — run [bold]scan[/bold])")
+            table.add_row("—", "0", "(none yet — run [bold]scan[/bold])")
         else:
-            for tag, synonyms in sorted(self.data["tags"].items()):
-                if not isinstance(synonyms, (list, tuple)):
-                    synonyms = []
-                table.add_row(tag, ", ".join(synonyms) if synonyms else "—")
+            rows = []
+            for tag, rec in self.data["tags"].items():
+                rec = _as_tag_record(rec)
+                synonyms = rec.get("synonyms") or []
+                rows.append((rec.get("count", 0), tag, synonyms))
+            rows.sort(key=lambda r: (-r[0], r[1]))
+            for count, tag, synonyms in rows:
+                syn = ", ".join(synonyms) if synonyms else "—"
+                label = tag if count >= threshold else f"[dim]{tag}[/dim]"
+                table.add_row(label, str(count), syn)
 
         console.print(table)
+        console.print(
+            f"[dim]Image views hide tags with fewer than {threshold} hits "
+            f"(settings.min_tag_count_for_search).[/dim]"
+        )
 
     def show_results(self, results):
         if not results:
@@ -562,7 +646,8 @@ class TagStoreDB:
         for h, info in shown:
             paths = info.get("paths") or ([info["path"]] if info.get("path") else [])
             loc = "\n".join(paths) if paths else "—"
-            table.add_row(h[:12] + "…", loc, ", ".join(info.get("tags") or []))
+            shown_tags = self.visible_tags(info.get("tags") or [])
+            table.add_row(h[:12] + "…", loc, ", ".join(shown_tags) if shown_tags else "—")
 
         console.print(table)
         if extra:
