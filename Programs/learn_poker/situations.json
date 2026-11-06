@@ -1,0 +1,406 @@
+{
+  "id": "heads-up-mixes",
+  "name": "Heads-up BTN vs BB, mixed frequencies",
+  "note": "Heads-up button versus big blind. Each answer is a frequency mix across the menu, not a single action. The numbers are practice targets, not a solver export.",
+  "spots": [
+    {
+      "id": "pf-22-btn",
+      "phase": "preflop",
+      "line": "open",
+      "hero": ["2s", "2c"],
+      "board": [],
+      "text": "Hero (50bb) on the BTN. Villain (50bb) in the BB. First to act, hero holds 2s 2c.",
+      "actions": [
+        {"key": "fold", "label": "Fold"},
+        {"key": "limp", "label": "Limp"},
+        {"key": "raise2", "label": "Raise 2x"},
+        {"key": "raise25", "label": "Raise 2.5x"},
+        {"key": "raise3", "label": "Raise 3x"},
+        {"key": "jam", "label": "Jam"}
+      ],
+      "gto": {"fold": 5, "limp": 25, "raise2": 10, "raise25": 50, "raise3": 10, "jam": 0}
+    },
+    {
+      "id": "pf-k9o-bb",
+      "phase": "preflop",
+      "line": "vs-open",
+      "hero": ["Kd", "9c"],
+      "board": [],
+      "text": "Hero (50bb) in the BB. Villain (50bb) on the BTN opens to 2.5x. Hero holds Kd 9c.",
+      "actions": [
+        {"key": "fold", "label": "Fold"},
+        {"key": "call", "label": "Call"},
+        {"key": "three7", "label": "3-bet 7x"},
+        {"key": "three9", "label": "3-bet 9x"},
+        {"key": "three12", "label": "3-bet 12x"},
+        {"key": "jam", "label": "Jam"}
+      ],
+      "gto": {"fold": 35, "call": 50, "three7": 4, "three9": 9, "three12": 2, "jam": 0}
+    },
+    {
+      "id": "pf-a5s-bb",
+      "phase": "preflop",
+      "line": "vs-open",
+      "hero": ["Ah", "5h"],
+      "board": [],
+      "text": "Hero (50bb) in the BB. Villain (50bb) on the BTN opens to 2.5x. Hero holds Ah 5h.",
+      "actions": [
+        {"key": "fold", "label": "Fold"},
+        {"key": "call", "label": "Call"},
+        {"key": "three7", "label": "3-bet 7x"},
+        {"key": "three9", "label": "3-bet 9x"},
+        {"key": "three12", "label": "3-bet 12x"},
+        {"key": "jam", "label": "Jam"}
+      ],
+      "gto": {"fold": 5, "call": 35, "three7": 12, "three9": 32, "three12": 12, "jam": 4}
+    },
+    {
+      "id": "pf-aqo-vs-3bet",
+      "phase": "preflop",
+      "line": "vs-3bet",
+      "hero": ["As", "Qd"],
+      "board": [],
+      "text": "Hero (50bb) on the BTN opens to 2.5x. Villain (50bb) in the BB 3-bets to 9x. Hero holds As Qd.",
+      "actions": [
+        {"key": "fold", "label": "Fold"},
+        {"key": "call", "label": "Call"},
+        {"key": "four18", "label": "4-bet 18x"},
+        {"key": "four22", "label": "4-bet 22x"},
+        {"key": "jam", "label": "Jam"}
+      ],
+      "gto": {"fold": 22, "call": 48, "four18": 8, "four22": 16, "jam": 6}
+    },
+    {
+      "id": "pf-kto-jam",
+      "phase": "preflop",
+      "line": "open",
+      "hero": ["Kh", "Td"],
+      "board": [],
+      "text": "Hero (15bb) on the BTN. Villain (15bb) in the BB. First to act, hero holds Kh Td.",
+      "actions": [
+        {"key": "fold", "label": "Fold"},
+        {"key": "limp", "label": "Limp"},
+        {"key": "raise2", "label": "Raise 2x"},
+        {"key": "raise25", "label": "Raise 2.5x"},
+        {"key": "raise3", "label": "Raise 3x"},
+        {"key": "jam", "label": "Jam"}
+      ],
+      "gto": {"fold": 42, "limp": 0, "raise2": 0, "raise25": 0, "raise3": 0, "jam": 58}
+    },
+    {
+      "id": "pf-q8s-vs-limp",
+      "phase": "preflop",
+      "line": "vs-limp",
+      "hero": ["Qs", "8s"],
+      "board": [],
+      "text": "Hero (50bb) in the BB. Villain (50bb) on the BTN limps. Hero holds Qs 8s.",
+      "actions": [
+        {"key": "check", "label": "Check"},
+        {"key": "iso3", "label": "Raise 3x"},
+        {"key": "iso4", "label": "Raise 4x"},
+        {"key": "jam", "label": "Jam"}
+      ],
+      "gto": {"check": 58, "iso3": 24, "iso4": 16, "jam": 2}
+    },
+    {
+      "id": "fl-kq-a72",
+      "phase": "flop",
+      "line": "checked",
+      "hero": ["Ks", "Qd"],
+      "board": ["Ah", "7d", "2c"],
+      "text": "50bb effective. Hero opened the BTN to 2.5x, the BB called. Pot is 5.5bb and the BB checks. Hero holds Ks Qd.",
+      "actions": [
+        {"key": "check", "label": "Check"},
+        {"key": "bet33", "label": "Bet 33%"},
+        {"key": "bet50", "label": "Bet 50%"},
+        {"key": "bet75", "label": "Bet 75%"},
+        {"key": "betpot", "label": "Bet pot"},
+        {"key": "jam", "label": "Jam"}
+      ],
+      "gto": {"check": 62, "bet33": 28, "bet50": 0, "bet75": 10, "betpot": 0, "jam": 0}
+    },
+    {
+      "id": "fl-76s-k83",
+      "phase": "flop",
+      "line": "facing",
+      "hero": ["7s", "6s"],
+      "board": ["Kh", "8d", "3c"],
+      "text": "50bb effective. Hero called a BTN open in the BB. Hero faces a 33% c-bet into a 5.5bb pot and holds 7s 6s.",
+      "actions": [
+        {"key": "fold", "label": "Fold"},
+        {"key": "call", "label": "Call"},
+        {"key": "raise25", "label": "Raise 2.5x"},
+        {"key": "raisepot", "label": "Raise pot"},
+        {"key": "jam", "label": "Jam"}
+      ],
+      "gto": {"fold": 18, "call": 70, "raise25": 8, "raisepot": 4, "jam": 0}
+    },
+    {
+      "id": "fl-aa-tt9",
+      "phase": "flop",
+      "line": "checked",
+      "hero": ["As", "Ad"],
+      "board": ["Tc", "9c", "4d"],
+      "text": "50bb effective. Hero opened the BTN, the BB called. Pot is 5.5bb and the BB checks. Hero holds As Ad.",
+      "actions": [
+        {"key": "check", "label": "Check"},
+        {"key": "bet33", "label": "Bet 33%"},
+        {"key": "bet50", "label": "Bet 50%"},
+        {"key": "bet75", "label": "Bet 75%"},
+        {"key": "betpot", "label": "Bet pot"},
+        {"key": "jam", "label": "Jam"}
+      ],
+      "gto": {"check": 25, "bet33": 45, "bet50": 0, "bet75": 30, "betpot": 0, "jam": 0}
+    },
+    {
+      "id": "fl-j8-652",
+      "phase": "flop",
+      "line": "facing",
+      "hero": ["Jh", "8h"],
+      "board": ["6c", "5d", "2h"],
+      "text": "50bb effective. Hero called a BTN open in the BB. Hero faces a 75% c-bet into a 5.5bb pot and holds Jh 8h.",
+      "actions": [
+        {"key": "fold", "label": "Fold"},
+        {"key": "call", "label": "Call"},
+        {"key": "raise25", "label": "Raise 2.5x"},
+        {"key": "raisepot", "label": "Raise pot"},
+        {"key": "jam", "label": "Jam"}
+      ],
+      "gto": {"fold": 40, "call": 45, "raise25": 10, "raisepot": 5, "jam": 0}
+    },
+    {
+      "id": "fl-93-qq5",
+      "phase": "flop",
+      "line": "checked",
+      "hero": ["9d", "3c"],
+      "board": ["Qs", "Qh", "5c"],
+      "text": "50bb effective. Hero opened the BTN, the BB called. Pot is 5.5bb and the BB checks. Hero holds 9d 3c.",
+      "actions": [
+        {"key": "check", "label": "Check"},
+        {"key": "bet33", "label": "Bet 33%"},
+        {"key": "bet50", "label": "Bet 50%"},
+        {"key": "bet75", "label": "Bet 75%"},
+        {"key": "betpot", "label": "Bet pot"},
+        {"key": "jam", "label": "Jam"}
+      ],
+      "gto": {"check": 80, "bet33": 20, "bet50": 0, "bet75": 0, "betpot": 0, "jam": 0}
+    },
+    {
+      "id": "fl-a5-kh9",
+      "phase": "flop",
+      "line": "checked",
+      "hero": ["Ah", "5h"],
+      "board": ["Kh", "9h", "2d"],
+      "text": "50bb effective. Hero opened the BTN, the BB called. Pot is 5.5bb and the BB checks. Hero holds Ah 5h.",
+      "actions": [
+        {"key": "check", "label": "Check"},
+        {"key": "bet33", "label": "Bet 33%"},
+        {"key": "bet50", "label": "Bet 50%"},
+        {"key": "bet75", "label": "Bet 75%"},
+        {"key": "betpot", "label": "Bet pot"},
+        {"key": "jam", "label": "Jam"}
+      ],
+      "gto": {"check": 35, "bet33": 40, "bet50": 0, "bet75": 25, "betpot": 0, "jam": 0}
+    },
+    {
+      "id": "tn-76-a729",
+      "phase": "turn",
+      "line": "checked",
+      "hero": ["7d", "6c"],
+      "board": ["As", "7h", "2c", "9d"],
+      "text": "50bb effective. Hero c-bet 33% on Ah 7d 2c as the BTN opener and was called. Pot is 9bb and the BB checks. Hero holds 7d 6c.",
+      "actions": [
+        {"key": "check", "label": "Check"},
+        {"key": "bet33", "label": "Bet 33%"},
+        {"key": "bet50", "label": "Bet 50%"},
+        {"key": "bet75", "label": "Bet 75%"},
+        {"key": "betpot", "label": "Bet pot"},
+        {"key": "jam", "label": "Jam"}
+      ],
+      "gto": {"check": 70, "bet33": 0, "bet50": 12, "bet75": 18, "betpot": 0, "jam": 0}
+    },
+    {
+      "id": "tn-77-a729",
+      "phase": "turn",
+      "line": "checked",
+      "hero": ["7s", "7c"],
+      "board": ["Ah", "7d", "2c", "9s"],
+      "text": "50bb effective. Hero c-bet the flop as the BTN and was called. Pot is 9bb and the BB checks. Hero holds 7s 7c.",
+      "actions": [
+        {"key": "check", "label": "Check"},
+        {"key": "bet33", "label": "Bet 33%"},
+        {"key": "bet50", "label": "Bet 50%"},
+        {"key": "bet75", "label": "Bet 75%"},
+        {"key": "betpot", "label": "Bet pot"},
+        {"key": "jam", "label": "Jam"}
+      ],
+      "gto": {"check": 15, "bet33": 0, "bet50": 40, "bet75": 0, "betpot": 45, "jam": 0}
+    },
+    {
+      "id": "tn-fd-facing",
+      "phase": "turn",
+      "line": "facing",
+      "hero": ["Qh", "Th"],
+      "board": ["Kh", "8c", "3d", "2h"],
+      "text": "50bb effective. Hero called a flop c-bet in the BB. The BTN bets 66% into a 9bb pot. Hero holds Qh Th.",
+      "actions": [
+        {"key": "fold", "label": "Fold"},
+        {"key": "call", "label": "Call"},
+        {"key": "raise25", "label": "Raise 2.5x"},
+        {"key": "raisepot", "label": "Raise pot"},
+        {"key": "jam", "label": "Jam"}
+      ],
+      "gto": {"fold": 25, "call": 65, "raise25": 7, "raisepot": 3, "jam": 0}
+    },
+    {
+      "id": "tn-aq-probe",
+      "phase": "turn",
+      "line": "facing",
+      "hero": ["Ac", "Qd"],
+      "board": ["Js", "8h", "4c", "2d"],
+      "text": "50bb effective. Both players checked the flop. The BB leads 66% into a 5.5bb pot. Hero, on the BTN, holds Ac Qd.",
+      "actions": [
+        {"key": "fold", "label": "Fold"},
+        {"key": "call", "label": "Call"},
+        {"key": "raise25", "label": "Raise 2.5x"},
+        {"key": "raisepot", "label": "Raise pot"},
+        {"key": "jam", "label": "Jam"}
+      ],
+      "gto": {"fold": 55, "call": 40, "raise25": 4, "raisepot": 1, "jam": 0}
+    },
+    {
+      "id": "tn-nutfd",
+      "phase": "turn",
+      "line": "checked",
+      "hero": ["Ah", "Qh"],
+      "board": ["Kh", "9c", "4d", "2h"],
+      "text": "50bb effective. Hero defended the BB and the flop checked through. Hero can lead the turn. Pot is 5.5bb. Hero holds Ah Qh.",
+      "actions": [
+        {"key": "check", "label": "Check"},
+        {"key": "bet33", "label": "Bet 33%"},
+        {"key": "bet50", "label": "Bet 50%"},
+        {"key": "bet75", "label": "Bet 75%"},
+        {"key": "betpot", "label": "Bet pot"},
+        {"key": "jam", "label": "Jam"}
+      ],
+      "gto": {"check": 48, "bet33": 0, "bet50": 37, "bet75": 0, "betpot": 15, "jam": 0}
+    },
+    {
+      "id": "tn-mp-thin",
+      "phase": "turn",
+      "line": "checked",
+      "hero": ["Td", "9c"],
+      "board": ["Ts", "6h", "3c", "2d"],
+      "text": "50bb effective. Hero opened the BTN, bet the flop, and was called. Pot is 9bb and the BB checks. Hero holds Td 9c.",
+      "actions": [
+        {"key": "check", "label": "Check"},
+        {"key": "bet33", "label": "Bet 33%"},
+        {"key": "bet50", "label": "Bet 50%"},
+        {"key": "bet75", "label": "Bet 75%"},
+        {"key": "betpot", "label": "Bet pot"},
+        {"key": "jam", "label": "Jam"}
+      ],
+      "gto": {"check": 55, "bet33": 40, "bet50": 0, "bet75": 5, "betpot": 0, "jam": 0}
+    },
+    {
+      "id": "rv-mp-pot",
+      "phase": "river",
+      "line": "facing",
+      "hero": ["9h", "8c"],
+      "board": ["9d", "6s", "3c", "2h", "Kd"],
+      "text": "50bb effective. Hero called a flop bet and a turn bet in the BB. The BTN bets pot into a 28bb pot. Hero holds 9h 8c.",
+      "actions": [
+        {"key": "fold", "label": "Fold"},
+        {"key": "call", "label": "Call"},
+        {"key": "raise25", "label": "Raise 2.5x"},
+        {"key": "raisepot", "label": "Raise pot"},
+        {"key": "jam", "label": "Jam"}
+      ],
+      "gto": {"fold": 62, "call": 38, "raise25": 0, "raisepot": 0, "jam": 0}
+    },
+    {
+      "id": "rv-tp-thin",
+      "phase": "river",
+      "line": "checked",
+      "hero": ["Ac", "Jd"],
+      "board": ["Js", "8h", "4c", "2d", "6s"],
+      "text": "50bb effective. Hero has been the BTN aggressor and the turn checked through. Pot is 12bb and the BB checks. Hero holds Ac Jd.",
+      "actions": [
+        {"key": "check", "label": "Check"},
+        {"key": "bet33", "label": "Bet 33%"},
+        {"key": "bet50", "label": "Bet 50%"},
+        {"key": "bet75", "label": "Bet 75%"},
+        {"key": "betpot", "label": "Bet pot"},
+        {"key": "jam", "label": "Jam"}
+      ],
+      "gto": {"check": 45, "bet33": 40, "bet50": 0, "bet75": 15, "betpot": 0, "jam": 0}
+    },
+    {
+      "id": "rv-air-stab",
+      "phase": "river",
+      "line": "checked",
+      "hero": ["Qc", "Jd"],
+      "board": ["Ah", "9s", "4d", "2c", "7h"],
+      "text": "50bb effective. The flop and turn checked through. Pot is 5.5bb and the BB checks. Hero, on the BTN, holds Qc Jd.",
+      "actions": [
+        {"key": "check", "label": "Check"},
+        {"key": "bet33", "label": "Bet 33%"},
+        {"key": "bet50", "label": "Bet 50%"},
+        {"key": "bet75", "label": "Bet 75%"},
+        {"key": "betpot", "label": "Bet pot"},
+        {"key": "jam", "label": "Jam"}
+      ],
+      "gto": {"check": 75, "bet33": 0, "bet50": 8, "bet75": 17, "betpot": 0, "jam": 0}
+    },
+    {
+      "id": "rv-nuts",
+      "phase": "river",
+      "line": "checked",
+      "hero": ["Ah", "5h"],
+      "board": ["Kh", "9h", "2d", "6c", "3h"],
+      "text": "50bb effective. Hero called down in the BB with a flush draw and the river completes it. Pot is 30bb and the BTN checks. Hero holds Ah 5h.",
+      "actions": [
+        {"key": "check", "label": "Check"},
+        {"key": "bet33", "label": "Bet 33%"},
+        {"key": "bet50", "label": "Bet 50%"},
+        {"key": "bet75", "label": "Bet 75%"},
+        {"key": "betpot", "label": "Bet pot"},
+        {"key": "jam", "label": "Jam"}
+      ],
+      "gto": {"check": 8, "bet33": 0, "bet50": 27, "bet75": 0, "betpot": 0, "jam": 65}
+    },
+    {
+      "id": "rv-busted",
+      "phase": "river",
+      "line": "checked",
+      "hero": ["Jh", "Th"],
+      "board": ["Qh", "8c", "3d", "2s", "4c"],
+      "text": "50bb effective. Hero was the BTN aggressor and the flush draw missed. Pot is 18bb and the BB checks. Hero holds Jh Th.",
+      "actions": [
+        {"key": "check", "label": "Check"},
+        {"key": "bet33", "label": "Bet 33%"},
+        {"key": "bet50", "label": "Bet 50%"},
+        {"key": "bet75", "label": "Bet 75%"},
+        {"key": "betpot", "label": "Bet pot"},
+        {"key": "jam", "label": "Jam"}
+      ],
+      "gto": {"check": 82, "bet33": 0, "bet50": 0, "bet75": 18, "betpot": 0, "jam": 0}
+    },
+    {
+      "id": "rv-bp-small",
+      "phase": "river",
+      "line": "facing",
+      "hero": ["5d", "4d"],
+      "board": ["Qs", "9c", "5h", "2s", "Kd"],
+      "text": "50bb effective. Hero called a flop c-bet in the BB and the turn checked through. The BTN bets 33% into a 10bb pot. Hero holds 5d 4d.",
+      "actions": [
+        {"key": "fold", "label": "Fold"},
+        {"key": "call", "label": "Call"},
+        {"key": "raise25", "label": "Raise 2.5x"},
+        {"key": "raisepot", "label": "Raise pot"},
+        {"key": "jam", "label": "Jam"}
+      ],
+      "gto": {"fold": 35, "call": 65, "raise25": 0, "raisepot": 0, "jam": 0}
+    }
+  ]
+}

@@ -1,9 +1,34 @@
-# Local / generated
-_other/
+Private_Programs/
 data/
+_other/
+_backup/
 
-# Executables
-*.exe
+# --- AI ---
+terminals
+mcps
+temp
 
-# AI
-ai-feed.md
+# --- env ---
+.venv
+venv
+venvs
+
+# --- ignored formats ---
+*.lnk
+*.db
+*.sqlite
+
+# --- local runtime state ---
+Programs/learn_japanese/state.json
+
+# --- Specific Folders and Files ---
+.obsidian/
+
+# --- Python ---
+__pycache__/
+
+# --- Environment / Secrets ---
+.env
+*.env
+.env.local
+.env.*.local

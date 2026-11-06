@@ -1,0 +1,29 @@
+{
+  "default_status": "active",
+  "connection_types": [
+    "friend",
+    "coworker",
+    "ex-coworker",
+    "mentor",
+    "mentee",
+    "family",
+    "acquaintance",
+    "other"
+  ],
+  "connection_strengths": ["weak", "medium", "strong"],
+  "layout": {
+    "iterations": 300,
+    "repulsion": 1.0,
+    "attraction": 0.1,
+    "gravity": 0.01
+  },
+  "viz": {
+    "browser": "firefox",
+    "colors": {
+      "active": "#4caf50",
+      "inactive": "#9e9e9e",
+      "archived": "#f44336"
+    },
+    "node_size_base": 4
+  }
+}

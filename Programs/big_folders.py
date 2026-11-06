@@ -5,7 +5,7 @@ from pathlib import Path
 from collections import defaultdict
 
 # ===== Hyperparameters =====
-DEFAULT_TOP_N = 10
+DEFAULT_TOP_N = 30
 DEFAULT_MAX_TIME = 30.0
 DEFAULT_MAX_DEPTH = 50
 

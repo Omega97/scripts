@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>TagStore</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <header>
+    <div class="settings-wrap">
+      <button id="settings-btn" class="icon-btn" type="button" title="Settings">&#9881;</button>
+      <div id="settings-menu" class="menu hidden">
+        <button id="scan-db" class="menu-item" type="button">Scan database</button>
+        <button id="open-synonyms" class="menu-item" type="button">Synonyms</button>
+        <label class="menu-item setting">
+          <span>Min tag matches</span>
+          <input id="min-matches" type="number" min="1" step="1" />
+        </label>
+        <label class="menu-item setting">
+          <span>Rows</span>
+          <input id="grid-rows" type="number" min="1" max="50" step="1" />
+        </label>
+        <label class="menu-item setting">
+          <span>Columns</span>
+          <input id="grid-cols" type="number" min="1" max="50" step="1" />
+        </label>
+        <label class="menu-item setting">
+          <span>Image fit</span>
+          <select id="fit-mode">
+            <option value="center">Center (crop)</option>
+            <option value="top">Top (crop)</option>
+            <option value="contain">Contain (black)</option>
+          </select>
+        </label>
+        <div id="scan-status" class="scan-status hidden">
+          <div class="progress"><div id="progress-fill"></div></div>
+          <span id="progress-label" class="muted"></span>
+          <button id="scan-cancel" type="button">Cancel</button>
+        </div>
+        <button id="force-recompute" class="menu-item" type="button">Force recompute tags</button>
+      </div>
+    </div>
+
+    <div class="search-area">
+      <div class="search-row">
+        <input id="search-input" type="text" placeholder='cat AND (dog OR bird)' autocomplete="off" spellcheck="false" />
+        <button id="search-btn" type="button">Search</button>
+
+        <div class="menu-wrap">
+          <button id="sort-btn" class="icon-btn" type="button" title="Sort">Sort &#9662;</button>
+          <div id="sort-menu" class="menu hidden">
+            <button class="menu-item sort-option" data-sort="date" type="button">date</button>
+            <button class="menu-item sort-option" data-sort="name" type="button">name</button>
+            <button class="menu-item sort-option" data-sort="path" type="button">path name</button>
+            <button class="menu-item sort-option" data-sort="random" type="button">random</button>
+          </div>
+        </div>
+        <button id="reverse-btn" class="icon-btn" type="button" title="Reverse order">&#8645;</button>
+        <div id="autocomplete" class="autocomplete hidden"></div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <aside id="tags-sidebar">
+      <h2>Tags</h2>
+      <div id="tag-list" class="tag-list"></div>
+    </aside>
+
+    <div class="resizer" id="resizer-left"></div>
+
+    <section class="gallery">
+      <div id="results" class="results"></div>
+      <div class="pager">
+        <button id="prev-btn" type="button" title="Previous page">&#8249;</button>
+        <span id="page-indicator" class="muted">0 / 0</span>
+        <button id="next-btn" type="button" title="Next page">&#8250;</button>
+      </div>
+    </section>
+
+    <div class="resizer" id="resizer-right"></div>
+
+    <aside id="detail" class="detail">
+      <div class="detail-image">
+        <img id="detail-thumb" class="detail-thumb hidden" alt="" />
+        <div id="detail-placeholder" class="detail-placeholder muted">Select an image</div>
+      </div>
+      <div class="detail-info">
+        <div id="detail-name" class="detail-name"></div>
+        <div id="detail-paths" class="detail-paths"></div>
+        <div id="detail-tags" class="tags"></div>
+        <div id="selection-info" class="selection-info muted hidden"></div>
+        <div id="selection-tags" class="tags selection-tags hidden"></div>
+        <div class="detail-actions">
+          <input id="detail-tag-input" type="text" placeholder="add tag" />
+          <button id="detail-delete" type="button" title="Delete selected image(s)">🗑</button>
+          <button id="detail-reveal" type="button" title="Open in Explorer">🗔</button>
+          <button id="detail-rename" type="button" title="Rename file and recompute tags">Rename</button>
+        </div>
+      </div>
+    </aside>
+  </main>
+
+  <script src="/app.js"></script>
+</body>
+</html>

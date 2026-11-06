@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import os
 import sys
+import time
 from pathlib import Path
 import re
 import subprocess
@@ -9,14 +10,13 @@ import platform
 # Repo root is parent of Programs/
 _PROJECT_ROOT = Path(__file__).resolve().parent.parent
 
-
 class ConcatFilesApp:
     # Default Values
-    DEFAULT_LINES_LIM = 1000
+    DEFAULT_LINES_LIM = 10000
     DEFAULT_TRUNCATED_MARKER = "\n[... TRUNCATED ...]\n"
     DEFAULT_OUTPUT_DIR = _PROJECT_ROOT / "data" / "summaries"
     CONFIRM_THRESHOLD = 1000
-    
+
     # ANSI Color Codes
     CLR_HEADER = '\033[95m'
     CLR_OKBLUE = '\033[94m'
@@ -26,12 +26,12 @@ class ConcatFilesApp:
     CLR_FAIL = '\033[91m'
     CLR_BOLD = '\033[1m'
     CLR_END = '\033[0m'
-    
-    # Text-like extensions
-    TEXT_EXTENSIONS = {
+
+    # Supported extensions (Text + PDF)
+    DEFAULT_EXTENSIONS = {
         '.txt', '.md', '.py', '.js', '.json', '.html', '.css', '.java',
         '.cpp', '.c', '.ts', '.sh', '.xml', '.yaml', '.yml', '.go',
-        '.rb', '.php', '.sql', '.rs', '.ipynb'
+        '.rb', '.php', '.sql', '.rs', '.ipynb', '.pdf', '.tex'
     }
 
     def __init__(
@@ -45,7 +45,7 @@ class ConcatFilesApp:
         force: bool = False,
     ):
         self.dir_path = Path.cwd()
-        self.extensions = {f".{str(ext).lstrip('.')}" for ext in extensions} if extensions else self.TEXT_EXTENSIONS
+        self.extensions = {f".{str(ext).lstrip('.')}" for ext in extensions} if extensions else self.DEFAULT_EXTENSIONS
         
         if output:
             self.output = Path(output).resolve()
@@ -53,14 +53,12 @@ class ConcatFilesApp:
             # Ensure the default directory exists
             out_dir = self.DEFAULT_OUTPUT_DIR
             out_dir.mkdir(parents=True, exist_ok=True)
-            
             # Create filename based on current folder name to avoid conflicts
             folder_name = self.dir_path.name
             self.output = out_dir / f"combined_{folder_name}.txt"
             
         self.separator = sep
         self.max_lines_per_file = max_lines_per_file
-        # Fallback to class constant if no custom marker is provided
         self.truncate_marker = truncate_marker if truncate_marker is not None else self.DEFAULT_TRUNCATED_MARKER
         self.ignore_empty_files = ignore_empty_files
         self.force = force
@@ -79,12 +77,12 @@ class ConcatFilesApp:
             print(f"  --force            Skip confirmation for >{cls.CONFIRM_THRESHOLD} files")
             print()
             print(f"{cls.CLR_BOLD}Examples:{cls.CLR_END}")
-            print("  concatfiles                     # Process text files")
-            print("  concatfiles md py               # Process only .md and .py")
+            print("  concatfiles                     # Process text and PDF files")
+            print("  concatfiles md py pdf           # Process only .md, .py, and .pdf")
             print(f"  concatfiles --max-lines 50      # Limit to 50 lines")
             print()
-            print(f"{cls.CLR_OKCYAN}Default text extensions:{cls.CLR_END}")
-            print(f"  {', '.join(sorted(cls.TEXT_EXTENSIONS))}")
+            print(f"{cls.CLR_OKCYAN}Default supported extensions:{cls.CLR_END}")
+            print(f"  {', '.join(sorted(cls.DEFAULT_EXTENSIONS))}")
             return
 
         # Parse arguments
@@ -135,7 +133,7 @@ class ConcatFilesApp:
             for fname in files:
                 if Path(fname).suffix.lower() in self.extensions:
                     count += 1
-                    if count > self.CONFIRM_THRESHOLD: 
+                    if count > self.CONFIRM_THRESHOLD:
                         return count
         return count
 
@@ -151,7 +149,7 @@ class ConcatFilesApp:
         matched_files = []
         ignored_empty = 0
         all_extensions = set()  # Track ALL extensions found
-        
+
         for root, dirs, files in os.walk(self.dir_path):
             dirs[:] = [d for d in dirs if not d.startswith('.') and not d.startswith('__')]
             for fname in files:
@@ -164,7 +162,7 @@ class ConcatFilesApp:
                         ignored_empty += 1
                         continue
                     matched_files.append(p)
-                    
+
         matched_files.sort(key=self._natural_sort_key)
         
         if ignored_empty:
@@ -172,7 +170,53 @@ class ConcatFilesApp:
             
         return matched_files, all_extensions
 
+    def _clean_pdf_text(self, text: str) -> str:
+        """Removes exotic, spurious, and non-printable control characters from PDF text."""
+        # Remove ASCII control characters (except \n, \r, \t)
+        # \x00-\x08, \x0b (VT), \x0c (FF), \x0e-\x1f, \x7f (DEL), \x80-\x9f (C1 controls)
+        text = re.sub(r'[\x00-\x08\x0b\x0c\x0e-\x1f\x7f-\x9f]', '', text)
+        
+        # Remove common invisible Unicode formatting characters & Private Use Area (PUA)
+        text = re.sub(r'[\u200b-\u200f\u202a-\u202e\u2060\ufeff\uE000-\uF8FF]', '', text)
+        
+        # Collapse excessive blank lines (more than 2 consecutive newlines) to clean up layout
+        text = re.sub(r'\n{3,}', '\n\n', text)
+        
+        return text
+
+    def _read_pdf(self, file_path: Path) -> str:
+        """Extracts and cleans text from a PDF file."""
+        try:
+            from pypdf import PdfReader
+        except ImportError:
+            return f"{self.CLR_FAIL}[Error: 'pypdf' library is required to read PDF files. Install it via: pip install pypdf]{self.CLR_END}\n"
+        
+        try:
+            reader = PdfReader(str(file_path))
+            text_parts = []
+            for page in reader.pages:
+                # extract_text() can return None if the page has no extractable text
+                text_parts.append(page.extract_text() or "")
+            
+            raw_text = "\n".join(text_parts)
+            return self._clean_pdf_text(raw_text)
+        except Exception as e:
+            return f"{self.CLR_FAIL}[Error reading PDF: {e}]{self.CLR_END}\n"
+
     def _read_with_optional_truncation(self, file_path: Path) -> tuple[str, bool]:
+        is_pdf = file_path.suffix.lower() == '.pdf'
+        
+        if is_pdf:
+            content = self._read_pdf(file_path)
+            # Apply line limit to extracted PDF text
+            if self.max_lines_per_file > 0:
+                lines = content.splitlines(keepends=True)
+                if len(lines) > self.max_lines_per_file:
+                    content = "".join(lines[:self.max_lines_per_file]) + self.truncate_marker
+                    return content, True
+            return content, False
+
+        # Standard text file reading
         if self.max_lines_per_file <= 0:
             with file_path.open("r", encoding="utf-8", errors="replace") as infile:
                 return infile.read(), False
@@ -186,10 +230,10 @@ class ConcatFilesApp:
                         truncated = True
                         break
                     lines.append(line)
-                content = "".join(lines)
-                if truncated: 
-                    content += self.truncate_marker
-                return content, truncated
+            content = "".join(lines)
+            if truncated:
+                content += self.truncate_marker
+            return content, truncated
         except Exception as e:
             return f"{self.CLR_FAIL}[Error reading file: {e}]{self.CLR_END}\n", False
 
@@ -205,17 +249,18 @@ class ConcatFilesApp:
             else:  # Linux and other Unix-like
                 subprocess.Popen(["xdg-open", str(folder)])
         except Exception as e:
-            # Fixed: Referenced class attribute correctly instead of undefined global variable
             print(f"{ConcatFilesApp.CLR_WARNING}⚠️  Could not open folder automatically: {e}{ConcatFilesApp.CLR_END}")
 
     def run(self) -> None:
+        start_time = time.perf_counter()
+        
         print(f"\n{self.CLR_BOLD}Processing:{self.CLR_END} {self.dir_path}")
         matched_files, all_extensions = self._collect_files()
         
         if not matched_files:
             print(f"{self.CLR_WARNING}No files found with selected extensions.{self.CLR_END}")
             return
-            
+
         found_exts = sorted({f.suffix for f in matched_files})
         ignored_exts = sorted(all_extensions - set(found_exts))  # Calculate ignored
         
@@ -224,25 +269,40 @@ class ConcatFilesApp:
         # Display ignored extensions in yellow
         if ignored_exts:
             print(f"{self.CLR_WARNING}⚠️ Ignored extensions:{self.CLR_END} {', '.join(ignored_exts)}")
-            
+
         print(f"{self.CLR_BOLD}☑️ Processing {len(matched_files)} files...{self.CLR_END}")
         
         truncated_count = 0
         try:
             with self.output.open("w", encoding="utf-8") as outfile:
                 outfile.write(f'Directory: {self.dir_path}\nExtensions: {", ".join(found_exts)}\n')
+                
                 for file_path in matched_files:
                     rel_path = file_path.relative_to(self.dir_path)
                     outfile.write(f"{self.separator}\n{rel_path}\n{self.separator}\n")
+                    
                     content, was_truncated = self._read_with_optional_truncation(file_path)
                     truncated_count += int(was_truncated)
-                    outfile.write(content + ("\n" if not content.endswith("\n") else "") + "\n")
                     
+                    outfile.write(content + ("\n" if not content.endswith("\n") else "") + "\n")
+
             if truncated_count:
                 print(f"{self.CLR_WARNING}✂️  Truncated {truncated_count} files (limit: {self.max_lines_per_file} lines){self.CLR_END}")
                 
             print(f"{self.CLR_OKGREEN}✅ Success! Output written to:{self.CLR_END}")
             print(f"Output: {self.output}")
+            
+            # Calculate and print elapsed time
+            end_time = time.perf_counter()
+            elapsed = end_time - start_time
+            if elapsed < 1:
+                time_str = f"{elapsed*1000:.0f} ms"
+            elif elapsed < 60:
+                time_str = f"{elapsed:.2f} seconds"
+            else:
+                mins, secs = divmod(elapsed, 60)
+                time_str = f"{int(mins)}m {secs:.1f}s"
+            print(f"{self.CLR_OKCYAN}⏱️ Processing took: {time_str}{self.CLR_END}")
             
             # Open the folder containing the output file
             self._open_folder(self.output)

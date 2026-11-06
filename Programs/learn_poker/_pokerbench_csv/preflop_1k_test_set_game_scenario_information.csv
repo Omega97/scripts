@@ -1,0 +1,1001 @@
+,prev_line,hero_pos,hero_holding,correct_decision,num_players,num_bets,available_moves,pot_size
+0,UTG/2.0bb/BTN/call/SB/13.0bb/BB/allin/UTG/fold/BTN/fold,SB,KdKc,call,4,3,"['call', 'fold']",117.0
+1,UTG/2.0bb/CO/6.5bb/SB/18.0bb/BB/33.0bb/UTG/fold/CO/fold/SB/allin,BB,AdAc,call,4,5,"['call', 'fold']",141.5
+2,UTG/2.0bb/CO/6.5bb/BTN/13.0bb/UTG/fold/CO/31.0bb/BTN/allin,CO,AhAc,call,3,5,"['call', 'fold']",134.5
+3,,SB,QdJc,3.0bb,1,0,"['3.0bb', 'call', 'fold']",1.5
+4,UTG/2.0bb/CO/call/SB/call/BB/14.0bb/UTG/call/CO/fold/SB/allin,BB,AcKc,call,4,3,"['call', 'fold']",130.0
+5,HJ/2.0bb/CO/6.5bb/SB/allin,HJ,As7s,fold,3,3,"['call', 'fold']",109.5
+6,UTG/2.0bb/BTN/7.5bb/BB/20.0bb/UTG/38.0bb/BTN/allin,BB,ThTc,fold,3,5,"['call', 'fold']",158.5
+7,SB/call,BB,Ts8s,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+8,HJ/2.0bb/BTN/call/SB/13.0bb/BB/allin,HJ,AhJc,fold,4,3,"['call', 'fold']",117.0
+9,SB/call,BB,AhTc,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+10,CO/2.3bb/BTN/7.5bb/SB/21.0bb/CO/fold,BTN,AsAd,call,3,3,"['allin', 'call', 'fold']",31.8
+11,CO/2.3bb/SB/call/BB/11.0bb,CO,QsQd,22.0bb,3,2,"['22.0bb', 'call', 'fold']",15.6
+12,SB/call,BB,JsTd,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+13,SB/call,BB,9d5d,3.0bb,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+14,SB/call,BB,QcJs,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+15,HJ/2.0bb/CO/call/BTN/call/SB/call/BB/16.0bb/HJ/31.2bb/CO/call/BTN/fold/SB/allin,BB,Ac6c,fold,5,4,"['call', 'fold']",180.4
+16,HJ/2.0bb/BTN/7.5bb,SB,QsQh,21.0bb,3,2,"['21.0bb', 'allin', 'fold']",11.0
+17,CO/2.3bb/BTN/call/SB/12.5bb/BB/allin/CO/fold/BTN/fold,SB,AsKd,call,4,3,"['call', 'fold']",117.1
+18,SB/call,BB,2s2d,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+19,SB/call/BB/5.0bb,SB,5s5c,fold,2,1,['fold'],5.0
+20,HJ/2.0bb/CO/call/BTN/call,SB,AsQh,15.0bb,4,1,"['15.0bb', 'fold']",7.5
+21,CO/2.3bb/SB/call/BB/11.0bb/CO/call,SB,Kh6h,fold,3,2,['fold'],24.3
+22,BTN/2.5bb/SB/call/BB/11.0bb,BTN,QsQd,23.0bb,3,2,"['23.0bb', 'call', 'fold']",16.0
+23,SB/call,BB,Qc3c,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+24,SB/call,BB,Th6h,3.0bb,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+25,SB/call,BB,Ac7s,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+26,CO/2.3bb/BTN/call/SB/call/BB/14.0bb/CO/call,BTN,Th9h,fold,4,2,['fold'],32.6
+27,HJ/2.0bb/CO/call/BTN/9.5bb/SB/24.1bb/HJ/fold/CO/fold,BTN,AcQc,call,4,3,"['allin', 'call', 'fold']",38.6
+28,CO/2.3bb/BTN/call,SB,Ts3s,fold,3,1,"['12.5bb', 'fold']",6.1
+29,HJ/2.0bb/CO/allin,BB,KsKd,call,3,2,"['call', 'fold']",103.5
+30,UTG/2.0bb,BB,AdAc,12.0bb,2,1,"['call', '12.0bb', 'fold']",3.5
+31,UTG/2.0bb/CO/call/BTN/call/SB/call/BB/15.0bb,UTG,AdQc,fold,5,2,"['allin', 'call', 'fold']",23.0
+32,HJ/2.0bb/CO/call/BTN/call,SB,AhQc,15.0bb,4,1,"['15.0bb', 'fold']",7.5
+33,SB/call,BB,Ac4c,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+34,HJ/2.0bb/CO/allin,HJ,AsQd,fold,2,2,"['call', 'fold']",103.5
+35,SB/call,BB,Td2d,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+36,SB/call,BB,Ks7h,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+37,HJ/2.0bb/CO/6.5bb/BTN/13.1bb/SB/allin,BB,Kd9d,fold,5,4,"['call', 'fold']",122.6
+38,UTG/2.0bb/SB/10.0bb,BB,AcKh,20.0bb,3,2,"['20.0bb', 'allin', 'fold']",13.0
+39,HJ/2.0bb/CO/call/SB/call/BB/15.0bb/HJ/fold/CO/call/SB/allin,BB,KhKc,call,4,3,"['call', 'fold']",132.0
+40,SB/call,BB,Ts9d,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+41,HJ/2.0bb/CO/6.5bb/HJ/19.0bb,CO,AsAc,34.4bb,2,3,"['34.4bb', 'allin', 'call', 'fold']",27.0
+42,HJ/2.0bb/CO/call/BTN/9.5bb/SB/call,HJ,TdTc,fold,4,2,"['allin', 'fold']",24.0
+43,SB/call,BB,Td8s,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+44,UTG/2.0bb/HJ/6.5bb/BTN/14.0bb/SB/allin,BB,Ac9d,fold,5,4,"['call', 'fold']",123.5
+45,UTG/2.0bb/CO/call/BTN/9.5bb,UTG,AhAd,25.0bb,3,2,"['25.0bb', 'allin', 'fold']",15.0
+46,SB/call,BB,4c3c,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+47,UTG/2.0bb/HJ/6.5bb,CO,Ad5d,14.0bb,3,2,"['14.0bb', 'fold']",10.0
+48,UTG/2.0bb/CO/call/BTN/9.5bb,SB,9h9d,fold,4,2,"['23.0bb', 'allin', 'fold']",15.0
+49,,BTN,KsTs,2.5bb,1,0,"['2.5bb', 'fold']",1.5
+50,HJ/2.0bb/CO/call/BTN/call/SB/call,BB,8c4c,fold,5,1,"['16.0bb', 'fold']",9.0
+51,HJ/2.0bb/CO/6.5bb/BTN/13.1bb/HJ/fold,CO,KhTd,fold,3,3,"['allin', 'call', 'fold']",23.1
+52,HJ/2.0bb/BTN/call/BB/allin,HJ,AdKh,call,3,2,"['call', 'fold']",104.5
+53,UTG/2.0bb/BTN/allin,SB,Kh8h,fold,3,2,"['call', 'fold']",103.5
+54,CO/2.3bb/BTN/call,BB,QsQc,14.0bb,3,1,"['14.0bb', 'fold']",6.1
+55,UTG/2.0bb/CO/6.5bb,UTG,JsJh,18.0bb,2,2,"['18.0bb', 'allin', 'call', 'fold']",10.0
+56,CO/2.3bb/BB/13.5bb,CO,AhKh,28.0bb,2,2,"['call', '28.0bb', 'fold']",16.3
+57,CO/2.3bb,SB,AcJd,11.5bb,2,1,"['11.5bb', 'call', 'fold']",3.8
+58,SB/call,BB,Js6s,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+59,UTG/2.0bb,BB,5h5c,call,2,1,"['call', '12.0bb', 'fold']",3.5
+60,UTG/2.0bb/HJ/6.5bb,BB,QhQc,19.0bb,3,2,"['19.0bb', 'allin', 'fold']",10.0
+61,CO/2.3bb/BTN/call/SB/allin,BB,JdJc,call,4,2,"['call', 'fold']",105.6
+62,CO/2.3bb/BTN/call,SB,AhQs,12.5bb,3,1,"['12.5bb', 'fold']",6.1
+63,CO/2.3bb/BB/13.5bb,CO,KdKc,28.0bb,2,2,"['call', '28.0bb', 'fold']",16.3
+64,SB/call,BB,4h4d,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+65,HJ/2.0bb/CO/call,BTN,AsKs,9.5bb,3,1,"['9.5bb', 'fold']",5.5
+66,HJ/2.0bb/CO/call/BTN/call/SB/15.0bb/BB/30.1bb/HJ/call/CO/call/BTN/fold/SB/allin/BB/fold/HJ/fold,CO,AhQh,fold,5,4,['fold'],192.3
+67,HJ/2.0bb/CO/call/BTN/call/SB/15.0bb/HJ/call/CO/call/BTN/allin,SB,AhJh,call,4,3,"['call', 'fold']",146.0
+68,UTG/2.0bb/CO/call/BTN/call/SB/call/BB/15.0bb/UTG/call/CO/fold/BTN/allin/SB/fold,BB,Ah3h,call,5,3,"['call', 'fold']",134.0
+69,HJ/2.0bb/CO/6.5bb/BTN/call/SB/24.1bb,HJ,Ac9c,fold,4,3,"['allin', 'fold']",40.1
+70,UTG/2.0bb/CO/call/SB/call,BB,KhKd,14.0bb,4,1,"['14.0bb', 'fold']",7.0
+71,UTG/2.0bb/HJ/6.5bb/CO/14.0bb/SB/26.0bb,BB,Ad8d,fold,5,4,"['allin', 'fold']",49.5
+72,SB/call,BB,5s5d,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+73,,CO,KcJs,2.3bb,1,0,"['2.3bb', 'fold']",1.5
+74,HJ/2.0bb/CO/6.5bb,BB,7h6h,fold,3,2,"['17.5bb', 'allin', 'fold']",10.0
+75,CO/2.3bb/BB/13.5bb/CO/allin,BB,QsQc,call,2,3,"['call', 'fold']",114.0
+76,UTG/2.0bb/BTN/7.5bb/SB/20.0bb,BB,KhTh,fold,4,3,"['40.0bb', 'fold']",30.5
+77,UTG/2.0bb,CO,AsQc,6.5bb,2,1,"['6.5bb', 'fold']",3.5
+78,HJ/2.0bb,SB,KdQh,11.0bb,2,1,"['call', '11.0bb', 'fold']",3.5
+79,UTG/2.0bb/HJ/6.5bb/CO/14.0bb/UTG/fold/HJ/32.0bb,CO,AhAd,call,3,4,"['allin', 'call', 'fold']",49.5
+80,SB/call,BB,8s7h,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+81,SB/call,BB,Ah3s,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+82,UTG/2.0bb/CO/6.5bb/BTN/13.0bb/UTG/allin,CO,KsKh,call,3,4,"['call', 'fold']",121.0
+83,SB/call,BB,AdTh,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+84,SB/call,BB,3h3d,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+85,SB/call,BB,Ah6s,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+86,UTG/2.0bb/BTN/call/SB/call,BB,Td9s,fold,4,1,"['14.0bb', 'fold']",7.0
+87,UTG/2.0bb/CO/call,BB,AhKc,14.0bb,3,1,"['14.0bb', 'fold']",5.5
+88,HJ/2.0bb,BB,AsKs,12.3bb,2,1,"['call', '12.3bb', 'fold']",3.5
+89,UTG/2.0bb/CO/call/SB/call/BB/allin,UTG,AdTh,fold,4,2,"['call', 'fold']",106.0
+90,SB/call,BB,QcJd,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+91,HJ/2.0bb/CO/call/BTN/call/SB/15.0bb/BB/30.1bb/HJ/call/CO/fold/BTN/allin,SB,Ad4d,fold,5,4,"['call', 'fold']",177.2
+92,UTG/2.0bb/BTN/call/SB/call/BB/14.0bb/UTG/call/BTN/call/SB/allin/BB/fold/UTG/fold,BTN,3h3d,fold,4,3,['fold'],142.0
+93,UTG/2.0bb/BTN/call,SB,9s8c,fold,3,1,"['13.0bb', 'fold']",5.5
+94,CO/2.3bb,SB,QsQc,11.5bb,2,1,"['11.5bb', 'call', 'fold']",3.8
+95,UTG/2.0bb/HJ/6.5bb/CO/14.0bb/BTN/25.0bb/SB/allin/UTG/fold/HJ/fold/CO/fold,BTN,KdKc,call,5,5,"['call', 'fold']",148.5
+96,HJ/2.0bb/CO/call/BTN/call/SB/allin,HJ,AcKs,call,4,2,"['call', 'fold']",107.0
+97,SB/call,BB,QhQd,3.0bb,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+98,SB/call,BB,KhJc,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+99,HJ/2.0bb/BTN/call/SB/13.0bb/BB/25.0bb/HJ/fold/BTN/call/SB/allin,BB,AhAd,call,4,4,"['call', 'fold']",152.0
+100,BTN/2.5bb/BB/allin,BTN,AhAd,call,2,2,"['call', 'fold']",103.0
+101,SB/call,BB,KhTc,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+102,HJ/2.0bb/CO/call/BTN/call/SB/call/BB/16.0bb/HJ/fold/CO/31.2bb/BTN/call/SB/allin,BB,Ah6h,fold,5,4,"['call', 'fold']",180.4
+103,HJ/2.0bb,SB,QsQd,11.0bb,2,1,"['call', '11.0bb', 'fold']",3.5
+104,UTG/2.0bb/BTN/call,BB,KcQc,14.0bb,3,1,"['14.0bb', 'fold']",5.5
+105,CO/2.3bb/BTN/call/SB/12.5bb,BB,JsJh,27.0bb,4,2,"['allin', '27.0bb', 'call', 'fold']",18.1
+106,SB/call,BB,Ts8c,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+107,HJ/2.0bb/CO/call/BTN/call,SB,AdQs,15.0bb,4,1,"['15.0bb', 'fold']",7.5
+108,HJ/2.0bb/SB/11.0bb/BB/call/HJ/allin,SB,Kd7d,fold,3,3,"['call', 'fold']",122.0
+109,,BTN,Js5s,2.5bb,1,0,"['2.5bb', 'fold']",1.5
+110,UTG/2.0bb/CO/6.5bb/BB/18.0bb/UTG/fold,CO,AhQh,call,3,3,"['allin', 'call', 'fold']",27.0
+111,HJ/2.0bb/CO/call/BTN/call/SB/15.0bb,HJ,JsJd,29.6bb,4,2,"['allin', '29.6bb', 'call', 'fold']",22.0
+112,UTG/2.0bb/CO/call/BTN/call/SB/call/BB/15.0bb/UTG/call/CO/fold/BTN/fold/SB/allin/BB/fold,UTG,JsJh,call,5,3,"['call', 'fold']",134.0
+113,HJ/2.0bb/CO/call,SB,KhQh,13.0bb,3,1,"['13.0bb', 'fold']",5.5
+114,UTG/2.0bb/CO/call/SB/call/BB/14.0bb,UTG,KdJd,fold,4,2,"['allin', 'call', '28.0bb', 'fold']",20.0
+115,UTG/2.0bb/HJ/6.5bb,SB,Ac5c,20.0bb,3,2,"['20.0bb', 'allin', 'fold']",10.0
+116,UTG/2.0bb/HJ/6.5bb/BTN/14.0bb/SB/allin/UTG/fold/HJ/fold,BTN,KhKd,call,4,4,"['call', 'fold']",123.5
+117,HJ/2.0bb/CO/call/BTN/call/SB/call,BB,KhQc,16.0bb,5,1,"['16.0bb', 'fold']",9.0
+118,CO/2.3bb/SB/11.5bb,BB,AhQs,25.0bb,3,2,"['25.0bb', 'allin', 'fold']",14.8
+119,SB/call,BB,9h8d,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+120,SB/call,BB,JsTh,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+121,HJ/2.0bb/SB/call/BB/allin/HJ/fold,SB,AdQs,fold,3,2,"['call', 'fold']",104.0
+122,CO/2.3bb,BTN,KdJh,7.5bb,2,1,"['7.5bb', 'call', 'fold']",3.8
+123,SB/3.0bb,BB,Kd7h,10.0bb,2,1,"['call', '10.0bb', 'fold']",4.0
+124,SB/call,BB,Ad5s,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+125,SB/call,BB,Jd9h,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+126,SB/call,BB,As8c,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+127,UTG/2.0bb/CO/6.5bb/BTN/allin,SB,As4c,fold,4,3,"['call', 'fold']",110.0
+128,UTG/2.0bb/CO/6.5bb,BB,Ad2d,fold,3,2,"['18.0bb', 'allin', 'fold']",10.0
+129,UTG/2.0bb/CO/6.5bb/SB/18.0bb/UTG/fold/CO/allin,SB,AsAd,call,3,4,"['call', 'fold']",121.0
+130,HJ/2.0bb/CO/call/BTN/9.5bb/SB/call/BB/call/HJ/allin/CO/fold/BTN/fold/SB/fold,BB,AdAc,call,5,3,"['call', 'fold']",130.5
+131,CO/2.3bb/BTN/call/SB/call/BB/14.0bb/CO/fold,BTN,As3s,fold,4,2,"['call', 'fold']",20.9
+132,SB/call,BB,Tc8s,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+133,HJ/2.0bb/SB/call/BB/11.0bb/HJ/call/SB/allin,BB,AdKh,call,3,3,"['call', 'fold']",122.0
+134,CO/2.3bb/BTN/call,BB,AhQc,14.0bb,3,1,"['14.0bb', 'fold']",6.1
+135,SB/call,BB,KsTc,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+136,SB/call,BB,Kh8c,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+137,SB/allin,BB,AhQh,call,2,1,"['call', 'fold']",101.0
+138,SB/call,BB,Kc8h,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+139,SB/call,BB,Jd9d,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+140,SB/call,BB,6c3c,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+141,SB/call,BB,5c4c,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+142,CO/2.3bb/BTN/call/SB/call/BB/14.0bb/CO/31.0bb/BTN/fold/SB/fold/BB/allin,CO,AsQs,call,4,4,"['call', 'fold']",135.60000000000002
+143,BTN/2.5bb/SB/call/BB/11.0bb,BTN,As8s,23.0bb,3,2,"['23.0bb', 'call', 'fold']",16.0
+144,HJ/2.0bb/CO/call/BTN/9.5bb/SB/call/HJ/fold/CO/allin,BTN,KsKc,call,4,3,"['call', 'fold']",122.0
+145,HJ/2.0bb/CO/6.5bb/SB/17.5bb,BB,AsAd,35.0bb,4,3,"['35.0bb', 'fold']",27.0
+146,HJ/2.0bb/BTN/7.5bb/BB/allin/HJ/fold,BTN,QsQh,call,3,3,"['call', 'fold']",110.0
+147,UTG/2.0bb/HJ/allin,BTN,AsQd,fold,3,2,"['call', 'fold']",103.5
+148,SB/call,BB,KhTs,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+149,UTG/2.0bb/CO/call/BTN/9.5bb/SB/23.0bb/BB/call/UTG/fold/CO/call,BTN,AhKh,fold,5,3,"['allin', 'fold']",80.5
+150,CO/2.3bb/BTN/call/SB/12.5bb/CO/26.0bb/BTN/allin/SB/fold,CO,KsKc,call,3,4,"['call', 'fold']",139.5
+151,SB/call,BB,QhTd,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+152,UTG/2.0bb/CO/call/BTN/call/SB/15.0bb/BB/allin,UTG,3d3c,fold,5,3,"['call', 'fold']",121.0
+153,UTG/2.0bb/BTN/call/SB/call/BB/14.0bb/UTG/call/BTN/call/SB/allin,BB,AdKs,call,4,3,"['call', 'fold']",142.0
+154,HJ/2.0bb/CO/6.5bb/BTN/13.1bb/HJ/24.0bb/CO/call/BTN/allin,HJ,AhAc,fold,3,5,['fold'],149.5
+155,CO/2.3bb/BTN/call,SB,AdKs,12.5bb,3,1,"['12.5bb', 'fold']",6.1
+156,SB/call,BB,QsJd,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+157,UTG/2.0bb/HJ/6.5bb/CO/14.0bb/SB/26.0bb/UTG/fold,HJ,8h8c,fold,4,4,"['allin', 'fold']",49.5
+158,SB/call,BB,Kd8d,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+159,SB/call,BB,Ac3c,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+160,HJ/2.0bb/CO/6.5bb,HJ,AdTd,19.0bb,2,2,"['19.0bb', 'allin', 'call', 'fold']",10.0
+161,UTG/2.0bb/CO/6.5bb/SB/allin/UTG/fold,CO,QhQd,call,3,3,"['call', 'fold']",109.5
+162,CO/2.3bb/BTN/7.5bb/SB/21.0bb/BB/allin/CO/fold/BTN/fold,SB,AsKs,call,4,4,"['call', 'fold']",130.8
+163,CO/2.3bb/BTN/call/SB/call/BB/14.0bb/CO/call/BTN/allin/SB/fold,BB,Kh9h,fold,4,3,"['call', 'fold']",130.3
+164,SB/call,BB,Qd5d,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+165,HJ/2.0bb/CO/call/BTN/call/SB/15.0bb/BB/30.1bb/HJ/fold/CO/fold/BTN/allin,SB,AcKs,call,5,4,"['call', 'fold']",149.1
+166,HJ/2.0bb/CO/6.5bb/BTN/call/BB/24.1bb/HJ/allin,CO,QdTd,fold,4,4,"['call', 'fold']",137.6
+167,SB/call,BB,Qc4c,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+168,,CO,KdQs,2.3bb,1,0,"['2.3bb', 'fold']",1.5
+169,UTG/2.0bb/HJ/6.5bb/BTN/14.0bb,BB,KdKc,26.0bb,4,3,"['allin', '26.0bb', 'fold']",24.0
+170,SB/call,BB,Td3d,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+171,HJ/2.0bb,SB,AsTs,call,2,1,"['call', '11.0bb', 'fold']",3.5
+172,UTG/2.0bb/CO/call/BTN/allin,SB,QsQc,call,4,2,"['call', 'fold']",105.5
+173,SB/call,BB,Qh9s,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+174,SB/3.0bb,BB,KdKc,10.0bb,2,1,"['call', '10.0bb', 'fold']",4.0
+175,HJ/2.0bb/CO/call/SB/call/BB/15.0bb/HJ/fold,CO,JsJd,fold,4,2,['fold'],21.0
+176,SB/call,BB,QhTs,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+177,UTG/2.0bb/BTN/call,SB,As4s,13.0bb,3,1,"['13.0bb', 'fold']",5.5
+178,HJ/2.0bb/BTN/call/SB/13.0bb/BB/call/HJ/fold/BTN/allin,SB,QsQd,call,4,3,"['call', 'fold']",128.0
+179,CO/2.3bb/BTN/call,BB,AcQc,14.0bb,3,1,"['14.0bb', 'fold']",6.1
+180,UTG/2.0bb/SB/call/BB/11.0bb/UTG/call,SB,KhQc,fold,3,2,['fold'],24.0
+181,HJ/2.0bb/BTN/call/SB/13.0bb/BB/allin,HJ,QsQd,call,4,3,"['call', 'fold']",117.0
+182,SB/call,BB,Qh3h,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+183,BTN/2.5bb/SB/call,BB,Jd9d,11.0bb,3,1,"['11.0bb', 'fold']",6.0
+184,HJ/2.0bb/CO/6.5bb/BB/17.5bb/HJ/allin,CO,JsJd,fold,3,4,"['call', 'fold']",124.5
+185,UTG/2.0bb/CO/call/SB/call,BB,TdTc,fold,4,1,"['14.0bb', 'fold']",7.0
+186,HJ/2.0bb/BTN/call,SB,KhKc,13.0bb,3,1,"['13.0bb', 'fold']",5.5
+187,HJ/2.0bb/BTN/call/SB/call/BB/14.5bb/HJ/call/BTN/call/SB/allin,BB,KdJd,call,4,3,"['call', 'fold']",143.5
+188,CO/2.3bb,SB,Ac4c,11.5bb,2,1,"['11.5bb', 'call', 'fold']",3.8
+189,UTG/2.0bb/CO/call/SB/12.0bb/BB/24.0bb/UTG/call/CO/allin,SB,AdQh,call,4,4,"['call', 'fold']",160.0
+190,UTG/2.0bb/SB/call/BB/11.0bb/UTG/fold/SB/28.0bb,BB,6h6c,fold,3,3,"['allin', 'call', 'fold']",41.0
+191,CO/2.3bb/BTN/call/SB/12.5bb/CO/allin,BTN,6s6d,fold,3,3,['fold'],115.8
+192,HJ/2.0bb/BTN/call/BB/13.5bb/HJ/26.2bb/BTN/call,BB,QsQd,fold,3,3,"['allin', 'fold']",66.4
+193,CO/2.3bb/SB/call/BB/11.0bb,CO,AsAd,22.0bb,3,2,"['22.0bb', 'call', 'fold']",15.6
+194,HJ/2.0bb/BTN/7.5bb/SB/21.0bb/BB/40.1bb,HJ,Jh8h,fold,4,4,"['allin', 'fold']",70.6
+195,UTG/2.0bb/CO/call/BTN/call/SB/15.0bb/UTG/29.0bb/CO/call/BTN/call/SB/allin,UTG,Ac5c,fold,4,4,"['call', 'fold']",188.0
+196,,SB,KhJd,3.0bb,1,0,"['3.0bb', 'call', 'fold']",1.5
+197,HJ/2.0bb/CO/6.5bb/BTN/call/BB/24.1bb/HJ/call/CO/call/BTN/allin,BB,AdAc,call,4,4,"['call', 'fold']",172.8
+198,UTG/2.0bb/CO/call/SB/12.0bb/BB/24.0bb/UTG/fold/CO/allin/SB/fold,BB,As4s,fold,4,4,"['call', 'fold']",138.0
+199,UTG/2.0bb/CO/call/BTN/call/SB/15.0bb/BB/30.0bb/UTG/fold/CO/fold/BTN/fold,SB,8h8c,fold,5,3,"['allin', 'fold']",51.0
+200,SB/call,BB,Jc9h,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+201,CO/2.3bb/BTN/7.5bb/CO/allin,BTN,AsAd,call,2,3,"['call', 'fold']",109.0
+202,CO/2.3bb/BTN/7.5bb/SB/21.0bb/CO/allin,BTN,QdJh,fold,3,4,"['call', 'fold']",129.5
+203,HJ/2.0bb/BTN/call/SB/call/BB/14.5bb/HJ/fold/BTN/28.0bb/SB/allin,BB,AdKc,call,4,4,"['call', 'fold']",144.5
+204,UTG/2.0bb/CO/call/SB/call/BB/14.0bb/UTG/call/CO/allin/SB/fold,BB,KsKd,call,4,3,"['call', 'fold']",130.0
+205,UTG/2.0bb/BTN/call/SB/call,BB,Js9h,fold,4,1,"['14.0bb', 'fold']",7.0
+206,HJ/2.0bb/CO/call/BTN/call/SB/15.0bb/BB/30.1bb/HJ/fold/CO/fold/BTN/allin,SB,KcQs,fold,5,4,"['call', 'fold']",149.1
+207,SB/call,BB,Qs5s,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+208,CO/2.3bb/SB/call/BB/11.0bb,CO,AcQs,call,3,2,"['22.0bb', 'call', 'fold']",15.6
+209,SB/call,BB,Kc7s,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+210,HJ/2.0bb/CO/6.5bb/BTN/call,HJ,KhQh,22.9bb,3,2,"['allin', '22.9bb', 'fold']",16.5
+211,UTG/2.0bb/SB/10.0bb/UTG/19.0bb,SB,9h9d,fold,2,3,"['40.0bb', 'call', 'fold']",30.0
+212,CO/2.3bb/BTN/call/SB/12.5bb/BB/27.0bb/CO/fold/BTN/fold/SB/allin,BB,AsAd,call,4,4,"['call', 'fold']",131.60000000000002
+213,BTN/2.5bb/SB/12.0bb/BTN/26.0bb/SB/allin,BTN,AhAd,call,2,4,"['call', 'fold']",127.0
+214,SB/call,BB,Td8d,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+215,HJ/2.0bb/CO/call/BB/13.5bb/HJ/fold/CO/allin,BB,5d4d,fold,3,3,"['call', 'fold']",116.0
+216,HJ/2.0bb/BTN/call/SB/call,BB,AdJh,14.5bb,4,1,"['14.5bb', 'fold']",7.0
+217,SB/3.0bb,BB,Ac4s,call,2,1,"['call', '10.0bb', 'fold']",4.0
+218,BTN/2.5bb/SB/call,BB,KsKc,11.0bb,3,1,"['11.0bb', 'fold']",6.0
+219,HJ/2.0bb/BTN/7.5bb,BB,AcQc,21.0bb,3,2,"['21.0bb', 'allin', 'fold']",11.0
+220,UTG/2.0bb/CO/call/BTN/call,SB,AhKh,15.0bb,4,1,"['15.0bb', 'fold']",7.5
+221,UTG/2.0bb/CO/call/BTN/call/SB/call/BB/15.0bb/UTG/call/CO/call,BTN,JcTc,fold,5,2,['fold'],49.0
+222,SB/call/BB/3.0bb/SB/14.0bb,BB,AcKs,27.0bb,2,2,"['27.0bb', 'call', 'fold']",17.0
+223,HJ/2.0bb/BTN/7.5bb,BB,5h5c,fold,3,2,"['21.0bb', 'allin', 'fold']",11.0
+224,BTN/2.5bb/SB/12.0bb/BTN/allin,SB,KcTs,fold,2,3,"['call', 'fold']",113.0
+225,SB/call,BB,Ac7c,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+226,SB/call,BB,Kh6h,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+227,UTG/2.0bb/SB/allin,BB,KsQs,fold,3,2,"['call', 'fold']",103.0
+228,HJ/2.0bb/CO/call/BB/13.5bb/HJ/fold/CO/allin,BB,JsJd,call,3,3,"['call', 'fold']",116.0
+229,HJ/2.0bb/CO/call/SB/13.0bb/HJ/24.0bb,CO,Ad8d,fold,3,3,['fold'],40.0
+230,UTG/2.0bb/CO/call/BTN/call/SB/call/BB/15.0bb/UTG/call/CO/call/BTN/call/SB/allin,BB,JsJh,call,5,3,"['call', 'fold']",160.0
+231,UTG/2.0bb/CO/call/BTN/9.5bb/UTG/25.0bb/CO/call/BTN/allin,UTG,AsKs,call,3,4,"['call', 'fold']",151.5
+232,,HJ,Ad9s,2.0bb,1,0,"['2.0bb', 'fold']",1.5
+233,SB/call,BB,AsTh,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+234,UTG/2.0bb/HJ/6.5bb/BTN/14.0bb/SB/26.0bb,BB,TsTd,fold,5,4,"['allin', 'fold']",49.5
+235,UTG/2.0bb/CO/call/BTN/call/SB/call/BB/15.0bb/UTG/34.0bb/CO/call/BTN/allin/SB/fold,BB,AhAc,call,5,4,"['call', 'fold']",185.0
+236,UTG/2.0bb/CO/call/BTN/call/BB/14.0bb/UTG/fold,CO,5h4h,fold,4,2,['fold'],20.5
+237,SB/call,BB,Kc9d,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+238,CO/2.3bb/BTN/7.5bb,BB,KdTd,20.0bb,3,2,"['20.0bb', 'fold']",11.3
+239,SB/call,BB,Tc2c,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+240,HJ/2.0bb/CO/call/BTN/9.5bb/SB/call/BB/call/HJ/allin/CO/fold,BTN,2h2c,fold,5,3,"['call', 'fold']",130.5
+241,HJ/2.0bb/CO/allin,SB,TsTd,call,3,2,"['call', 'fold']",103.5
+242,,SB,Th8c,3.0bb,1,0,"['3.0bb', 'call', 'fold']",1.5
+243,UTG/2.0bb/HJ/6.5bb/BB/19.0bb/UTG/fold/HJ/allin,BB,AhAc,call,3,4,"['call', 'fold']",121.5
+244,,UTG,AdKc,2.0bb,1,0,"['2.0bb', 'fold']",1.5
+245,,HJ,Kd8d,2.0bb,1,0,"['2.0bb', 'fold']",1.5
+246,CO/2.3bb/SB/call,BB,AhTs,11.0bb,3,1,"['11.0bb', 'fold']",5.6
+247,HJ/2.0bb/CO/call/BTN/9.5bb/SB/24.1bb/BB/allin/HJ/fold/CO/fold/BTN/fold,SB,AsAh,call,5,4,"['call', 'fold']",137.6
+248,SB/call,BB,As3d,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+249,HJ/2.0bb/CO/call/BTN/allin,SB,ThTc,call,4,2,"['call', 'fold']",105.5
+250,SB/call,BB,9h9d,5.0bb,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+251,CO/2.3bb/BTN/7.5bb/BB/call/CO/allin,BTN,As8s,fold,3,3,"['call', 'fold']",115.5
+252,UTG/2.0bb/CO/call/BTN/call/SB/15.0bb/BB/30.0bb/UTG/fold/CO/allin/BTN/fold,SB,QdJd,fold,5,4,"['call', 'fold']",149.0
+253,UTG/2.0bb/CO/call/BTN/allin,UTG,AcKs,call,3,2,"['call', 'fold']",105.5
+254,HJ/2.0bb/CO/call/BTN/9.5bb/SB/24.1bb/BB/call/HJ/call/CO/call,BTN,9s9h,fold,5,3,"['allin', 'fold']",105.9
+255,HJ/2.0bb/CO/6.5bb/BTN/13.1bb/SB/25.2bb/HJ/fold/CO/allin,BTN,AsAc,call,4,5,"['call', 'fold']",141.29999999999998
+256,CO/2.3bb/BTN/call/SB/12.5bb/BB/27.0bb/CO/allin/BTN/fold,SB,AsKd,fold,4,4,"['call', 'fold']",141.8
+257,SB/call,BB,Qh5h,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+258,UTG/2.0bb/CO/call/BTN/call/SB/15.0bb/UTG/29.0bb/CO/call,BTN,AsJs,fold,4,3,['fold'],76.0
+259,,BTN,Ac5s,2.5bb,1,0,"['2.5bb', 'fold']",1.5
+260,SB/call,BB,Ah5s,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+261,SB/call,BB,8c7h,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+262,SB/call,BB,Qd4d,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+263,SB/call,BB,QdJc,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+264,HJ/2.0bb/CO/call/BTN/9.5bb/BB/call/HJ/call/CO/allin,BTN,Ad4d,call,4,3,"['call', 'fold']",129.0
+265,SB/call,BB,Qc5c,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+266,SB/call,BB,Ks6s,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+267,SB/call,BB,Jd8d,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+268,SB/call,BB,Qd3d,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+269,SB/call,BB,Ad9s,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+270,SB/call,BB,Jh9h,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+271,SB/call,BB,AcKs,5.0bb,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+272,,UTG,KsQh,2.0bb,1,0,"['2.0bb', 'fold']",1.5
+273,CO/2.3bb,SB,AsJd,11.5bb,2,1,"['11.5bb', 'call', 'fold']",3.8
+274,HJ/allin,SB,6s6d,fold,2,1,"['call', 'fold']",101.5
+275,UTG/2.0bb/SB/10.0bb,UTG,JsJh,call,2,2,"['19.0bb', 'allin', 'call', 'fold']",13.0
+276,UTG/2.0bb/CO/6.5bb/BTN/13.0bb/UTG/30.0bb/CO/fold/BTN/allin,UTG,AdAc,call,3,5,"['call', 'fold']",138.0
+277,SB/call,BB,AsTd,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+278,UTG/2.0bb/CO/call/BTN/call,BB,JhJc,14.0bb,4,1,"['14.0bb', 'fold']",7.5
+279,HJ/2.0bb/CO/call/BB/allin,HJ,QhQc,call,3,2,"['call', 'fold']",104.5
+280,,UTG,7s7h,2.0bb,1,0,"['2.0bb', 'fold']",1.5
+281,HJ/2.0bb/CO/6.5bb/BTN/call,BB,Qs9d,fold,4,2,"['allin', '24.1bb', 'fold']",16.5
+282,SB/call,BB,Ac6c,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+283,,SB,8h5h,3.0bb,1,0,"['3.0bb', 'call', 'fold']",1.5
+284,SB/call,BB,QcTs,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+285,UTG/2.0bb/CO/call/BTN/call/SB/15.0bb/BB/30.0bb/UTG/fold/CO/fold/BTN/allin,SB,AhKd,call,5,4,"['call', 'fold']",149.0
+286,HJ/2.0bb/CO/6.5bb/BTN/call/SB/allin,HJ,KhKc,call,4,3,"['call', 'fold']",116.0
+287,SB/call,BB,AhTs,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+288,HJ/2.0bb/CO/6.5bb/BTN/call/SB/allin,HJ,KsKd,call,4,3,"['call', 'fold']",116.0
+289,,SB,QsTh,3.0bb,1,0,"['3.0bb', 'call', 'fold']",1.5
+290,SB/call,BB,As8s,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+291,UTG/2.0bb/CO/call/BTN/call/BB/14.0bb/UTG/call/CO/fold/BTN/allin,BB,AhAc,call,4,3,"['call', 'fold']",130.5
+292,SB/call,BB,Jc4c,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+293,UTG/2.0bb/CO/call/BTN/call/SB/call/BB/15.0bb/UTG/call/CO/call/BTN/call/SB/allin/BB/fold,UTG,JsJc,call,5,3,"['call', 'fold']",160.0
+294,SB/call,BB,5d5c,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+295,SB/call,BB,Jd9s,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+296,SB/allin,BB,AhAc,call,2,1,"['call', 'fold']",101.0
+297,SB/call,BB,Ad2d,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+298,HJ/2.0bb/CO/call/BTN/9.5bb/SB/allin/HJ/fold/CO/fold,BTN,4s4d,fold,4,3,"['call', 'fold']",114.5
+299,CO/2.3bb,BB,JcTs,call,2,1,"['13.5bb', 'call', 'fold']",3.8
+300,,SB,Js6s,3.0bb,1,0,"['3.0bb', 'call', 'fold']",1.5
+301,HJ/2.0bb/BTN/7.5bb,SB,QdQc,21.0bb,3,2,"['21.0bb', 'allin', 'fold']",11.0
+302,UTG/2.0bb,HJ,AsKd,6.5bb,2,1,"['6.5bb', 'fold']",3.5
+303,UTG/2.0bb/BTN/call/SB/call/BB/14.0bb/UTG/fold/BTN/fold/SB/allin,BB,KhQh,call,4,3,"['call', 'fold']",118.0
+304,HJ/2.0bb/BTN/call/SB/call/BB/14.5bb/HJ/fold/BTN/allin/SB/fold,BB,TsTc,fold,4,3,"['call', 'fold']",118.5
+305,SB/call,BB,KsTh,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+306,SB/call,BB,5h4h,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+307,SB/3.0bb,BB,AdQs,10.0bb,2,1,"['call', '10.0bb', 'fold']",4.0
+308,SB/call,BB,KsJc,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+309,SB/call,BB,Tc8d,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+310,HJ/2.0bb/CO/allin,BB,9s6s,call,3,2,"['call', 'fold']",103.5
+311,HJ/2.0bb/BTN/7.5bb/SB/21.0bb/BB/40.1bb/HJ/fold/BTN/allin,SB,KhTh,fold,4,5,"['call', 'fold']",163.1
+312,,CO,QdTs,2.3bb,1,0,"['2.3bb', 'fold']",1.5
+313,CO/2.3bb,BTN,Ks9s,7.5bb,2,1,"['7.5bb', 'call', 'fold']",3.8
+314,HJ/2.0bb/BB/12.3bb,HJ,AhTh,call,2,2,"['allin', '24.9bb', 'call', 'fold']",14.8
+315,BTN/2.5bb,BB,Ts9d,call,2,1,"['call', '13.0bb', 'fold']",4.0
+316,SB/call,BB,3d3c,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+317,UTG/2.0bb/BTN/call/SB/13.0bb/BB/call/UTG/call/BTN/allin/SB/fold/BB/fold,UTG,3s3h,fold,4,3,"['call', 'fold']",139.0
+318,HJ/2.0bb/CO/call/BTN/9.5bb/SB/allin/HJ/fold/CO/fold,BTN,QsQc,call,4,3,"['call', 'fold']",114.5
+319,HJ/2.0bb/CO/6.5bb/BTN/call/SB/24.1bb/HJ/allin/CO/fold,BTN,8h8d,fold,4,4,['fold'],138.1
+320,SB/call,BB,Ac3d,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+321,SB/3.0bb/BB/10.0bb,SB,JsJc,21.0bb,2,2,"['21.0bb', 'allin', 'call', 'fold']",13.0
+322,HJ/2.0bb/BTN/call/SB/call,BB,AsKd,14.5bb,4,1,"['14.5bb', 'fold']",7.0
+323,SB/call,BB,Ah6h,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+324,UTG/2.0bb/CO/call/BTN/call/BB/14.0bb/UTG/fold/CO/fold/BTN/28.0bb,BB,KhQh,call,4,3,"['allin', 'call', 'fold']",46.5
+325,HJ/2.0bb/CO/call/SB/call/BB/15.0bb/HJ/29.2bb/CO/call/SB/allin,BB,AsKs,call,4,4,"['call', 'fold']",173.39999999999998
+326,SB/call,BB,5d3d,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+327,HJ/2.0bb,CO,Ac3c,6.5bb,2,1,"['6.5bb', 'fold']",3.5
+328,HJ/2.0bb,BB,Th9d,call,2,1,"['call', '12.3bb', 'fold']",3.5
+329,,UTG,9d9c,2.0bb,1,0,"['2.0bb', 'fold']",1.5
+330,HJ/2.0bb/CO/6.5bb/BTN/call,BB,QhQd,24.1bb,4,2,"['allin', '24.1bb', 'fold']",16.5
+331,,BTN,5h5c,2.5bb,1,0,"['2.5bb', 'fold']",1.5
+332,,HJ,QhJc,2.0bb,1,0,"['2.0bb', 'fold']",1.5
+333,SB/call,BB,Ac4s,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+334,BTN/2.5bb/BB/13.0bb,BTN,QhQd,27.0bb,2,2,"['allin', '27.0bb', 'call', 'fold']",16.0
+335,SB/call,BB,Tc9s,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+336,SB/call,BB,6h5h,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+337,UTG/2.0bb/CO/6.5bb/SB/18.0bb/UTG/33.0bb,CO,AhJd,fold,3,4,"['allin', 'fold']",58.5
+338,SB/call,BB,Jc9s,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+339,HJ/2.0bb/SB/call,BB,QdQc,11.0bb,3,1,"['11.0bb', 'fold']",5.0
+340,,SB,Th9h,3.0bb,1,0,"['3.0bb', 'call', 'fold']",1.5
+341,HJ/2.0bb/CO/call/SB/call/BB/15.0bb/HJ/call/CO/allin/SB/fold,BB,QsQc,call,4,3,"['call', 'fold']",132.0
+342,UTG/2.0bb/CO/call/BTN/allin,SB,4c2c,call,4,2,"['call', 'fold']",105.5
+343,HJ/2.0bb/CO/call/BTN/call/SB/call/BB/16.0bb/HJ/fold/CO/call/BTN/fold/SB/allin,BB,KsKc,call,5,3,"['call', 'fold']",136.0
+344,UTG/2.0bb/CO/call/BTN/call/SB/call/BB/15.0bb/UTG/fold/CO/fold/BTN/allin,SB,Ac5c,fold,5,3,['fold'],121.0
+345,HJ/2.0bb/BTN/7.5bb,HJ,AdQs,20.0bb,2,2,"['20.0bb', 'allin', 'call', 'fold']",11.0
+346,SB/call,BB,6c4c,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+347,BTN/2.5bb,BB,AcKc,13.0bb,2,1,"['call', '13.0bb', 'fold']",4.0
+348,UTG/2.0bb/CO/call/BTN/call,BB,KhKd,14.0bb,4,1,"['14.0bb', 'fold']",7.5
+349,UTG/2.0bb/CO/call/BTN/9.5bb/BB/24.0bb/UTG/call/CO/fold,BTN,AsJs,fold,4,3,"['allin', 'fold']",60.0
+350,CO/2.3bb/SB/call,BB,AhTc,11.0bb,3,1,"['11.0bb', 'fold']",5.6
+351,UTG/2.0bb/CO/call/BTN/call/SB/15.0bb/BB/30.0bb/UTG/call/CO/fold/BTN/allin/SB/fold,BB,AdAc,call,5,4,"['call', 'fold']",177.0
+352,SB/call,BB,Qc9c,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+353,CO/2.3bb/BTN/call/SB/call/BB/14.0bb/CO/fold/BTN/allin/SB/fold,BB,TsTh,call,4,3,"['call', 'fold']",118.6
+354,SB/call,BB,QhJd,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+355,SB/call,BB,4h2h,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+356,BTN/2.5bb,BB,4h4d,call,2,1,"['call', '13.0bb', 'fold']",4.0
+357,CO/2.3bb/BTN/call/SB/call/BB/allin,CO,AdJc,fold,4,2,"['call', 'fold']",106.9
+358,SB/call,BB,Qs6s,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+359,UTG/2.0bb/CO/6.5bb/SB/18.0bb/BB/allin/UTG/fold/CO/fold,SB,AhJh,fold,4,4,"['call', 'fold']",126.5
+360,UTG/2.0bb/HJ/6.5bb/UTG/19.0bb/HJ/allin,UTG,AdKd,call,2,4,"['call', 'fold']",120.5
+361,SB/call,BB,6d3d,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+362,HJ/2.0bb,CO,AdAc,6.5bb,2,1,"['6.5bb', 'fold']",3.5
+363,UTG/2.0bb/CO/6.5bb/BB/18.0bb/UTG/33.0bb,CO,KcTc,fold,3,4,"['allin', 'fold']",58.0
+364,BTN/2.5bb/SB/12.0bb,BTN,AdKc,26.0bb,2,2,"['allin', '26.0bb', 'call', 'fold']",15.5
+365,,CO,AhKs,2.3bb,1,0,"['2.3bb', 'fold']",1.5
+366,HJ/allin,SB,Tc4c,fold,2,1,"['call', 'fold']",101.5
+367,UTG/2.0bb/BTN/7.5bb/SB/20.0bb,BB,Qc9h,fold,4,3,"['40.0bb', 'fold']",30.5
+368,UTG/2.0bb/SB/10.0bb/UTG/allin,SB,QdQc,call,2,3,"['call', 'fold']",111.0
+369,UTG/2.0bb/SB/10.0bb,UTG,AdAc,19.0bb,2,2,"['19.0bb', 'allin', 'call', 'fold']",13.0
+370,HJ/2.0bb/CO/call/BTN/9.5bb/HJ/fold/CO/allin,BTN,JsJc,call,3,3,"['call', 'fold']",113.0
+371,SB/3.0bb,BB,Td9s,call,2,1,"['call', '10.0bb', 'fold']",4.0
+372,UTG/2.0bb/BTN/call/BB/14.0bb/UTG/fold/BTN/allin,BB,AhKd,call,3,3,"['call', 'fold']",116.5
+373,UTG/2.0bb/CO/call/BTN/9.5bb/SB/23.0bb/BB/call/UTG/fold/CO/fold,BTN,AcQc,fold,5,3,"['allin', 'fold']",59.5
+374,BTN/2.5bb/SB/call/BB/11.0bb/BTN/call/SB/allin,BB,AcKs,call,3,3,"['call', 'fold']",122.0
+375,UTG/2.0bb/CO/6.5bb/BTN/allin/UTG/fold,CO,AdKd,call,3,3,"['call', 'fold']",110.0
+376,UTG/2.0bb/BTN/7.5bb/SB/20.0bb,UTG,9s8s,fold,3,3,"['38.0bb', 'fold']",30.5
+377,SB/call,BB,Ks9c,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+378,SB/call,BB,KdJc,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+379,HJ/2.0bb,BB,KsQd,call,2,1,"['call', '12.3bb', 'fold']",3.5
+380,HJ/2.0bb/CO/call/BTN/call/BB/15.0bb/HJ/fold/CO/call,BTN,9s9c,fold,4,2,['fold'],34.5
+381,UTG/2.0bb/CO/call/BTN/call/BB/14.0bb/UTG/29.0bb/CO/fold/BTN/allin/BB/fold,UTG,KhKd,fold,4,4,"['call', 'fold']",145.5
+382,HJ/2.0bb/CO/call/BTN/call/SB/call/BB/16.0bb/HJ/31.2bb/CO/call/BTN/fold/SB/allin,BB,QhJh,call,5,4,"['call', 'fold']",180.4
+383,CO/2.3bb/BTN/call,SB,AcTc,12.5bb,3,1,"['12.5bb', 'fold']",6.1
+384,SB/call,BB,AhAd,3.0bb,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+385,SB/call,BB,Ac5d,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+386,UTG/2.0bb/CO/call,BB,Kc7c,14.0bb,3,1,"['14.0bb', 'fold']",5.5
+387,SB/call,BB,6h4h,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+388,UTG/2.0bb/BTN/allin,BB,KhKc,call,3,2,"['call', 'fold']",103.5
+389,,SB,Tc6c,3.0bb,1,0,"['3.0bb', 'call', 'fold']",1.5
+390,CO/2.3bb/BTN/call/SB/call/BB/14.0bb/CO/31.0bb/BTN/allin/SB/fold/BB/fold,CO,AhKh,call,4,4,"['call', 'fold']",147.3
+391,,HJ,AdJd,2.0bb,1,0,"['2.0bb', 'fold']",1.5
+392,HJ/2.0bb/CO/allin,BTN,8h8d,call,3,2,"['call', 'fold']",103.5
+393,HJ/2.0bb/CO/call/SB/call,BB,AdKs,15.0bb,4,1,"['15.0bb', 'fold']",7.0
+394,UTG/2.0bb/CO/call/BTN/allin,UTG,AhKc,call,3,2,"['call', 'fold']",105.5
+395,HJ/2.0bb/CO/call/BTN/call/SB/call/BB/16.0bb/HJ/fold/CO/fold/BTN/call/SB/allin,BB,AcKc,call,5,3,"['call', 'fold']",136.0
+396,HJ/2.0bb/SB/call,BB,KsKc,11.0bb,3,1,"['11.0bb', 'fold']",5.0
+397,CO/2.3bb/BTN/7.5bb/SB/call/BB/call/CO/allin,BTN,7s7c,fold,4,3,"['call', 'fold']",122.5
+398,SB/call,BB,Jh8h,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+399,SB/call,BB,JhTc,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+400,SB/call,BB,As3s,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+401,HJ/2.0bb/CO/call/BTN/9.5bb/SB/24.1bb/BB/call/HJ/fold/CO/allin/BTN/fold/SB/fold,BB,AsAc,call,5,4,"['call', 'fold']",159.7
+402,UTG/2.0bb/CO/call/BTN/call/SB/call/BB/15.0bb/UTG/fold/CO/fold/BTN/call/SB/allin,BB,QhQd,call,5,3,"['call', 'fold']",134.0
+403,UTG/2.0bb/BTN/call,BB,KdKc,14.0bb,3,1,"['14.0bb', 'fold']",5.5
+404,HJ/2.0bb/BTN/7.5bb/HJ/20.0bb/BTN/33.3bb,HJ,TsTh,call,2,4,"['allin', 'call', 'fold']",54.8
+405,SB/call/BB/3.0bb/SB/14.0bb,BB,KdQd,call,2,2,"['27.0bb', 'call', 'fold']",17.0
+406,CO/2.3bb/BTN/call/SB/12.5bb/BB/27.0bb/CO/fold/BTN/allin,SB,QhQd,call,4,4,"['call', 'fold']",141.8
+407,HJ/2.0bb/CO/6.5bb/BTN/call/SB/24.1bb/BB/allin/HJ/fold/CO/fold/BTN/fold,SB,AcQc,fold,5,4,"['call', 'fold']",139.1
+408,SB/call,BB,Qd9s,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+409,HJ/2.0bb/CO/call/SB/call,BB,AhQh,15.0bb,4,1,"['15.0bb', 'fold']",7.0
+410,HJ/2.0bb/BTN/call,BB,KcQh,13.5bb,3,1,"['13.5bb', 'fold']",5.5
+411,HJ/2.0bb/BTN/call/BB/13.5bb/HJ/26.2bb/BTN/call,BB,KcJs,fold,3,3,"['allin', 'fold']",66.4
+412,UTG/2.0bb/CO/6.5bb,SB,Kd5d,fold,3,2,"['18.0bb', 'allin', 'fold']",10.0
+413,SB/call,BB,8h7d,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+414,HJ/2.0bb/BTN/call/SB/call/BB/14.5bb/HJ/28.0bb/BTN/fold,SB,JsJd,fold,4,3,['fold'],46.5
+415,HJ/2.0bb/CO/call/BTN/call/SB/call/BB/16.0bb/HJ/fold/CO/fold/BTN/31.2bb/SB/fold,BB,Ad6d,fold,5,3,"['allin', 'call', 'fold']",53.2
+416,,BTN,KsJs,2.5bb,1,0,"['2.5bb', 'fold']",1.5
+417,BTN/2.5bb/SB/call,BB,Ah9d,11.0bb,3,1,"['11.0bb', 'fold']",6.0
+418,,BTN,AhQs,2.5bb,1,0,"['2.5bb', 'fold']",1.5
+419,HJ/2.0bb/CO/call/SB/call,BB,Ac5h,fold,4,1,"['15.0bb', 'fold']",7.0
+420,SB/call,BB,Ks8c,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+421,SB/call,BB,Kc8c,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+422,CO/2.3bb/BTN/call/SB/allin,BB,Kh7d,fold,4,2,"['call', 'fold']",105.6
+423,UTG/2.0bb/CO/call,SB,6h4h,fold,3,1,"['12.0bb', 'fold']",5.5
+424,BTN/2.5bb,SB,QdTd,12.0bb,2,1,"['12.0bb', 'fold']",4.0
+425,SB/call,BB,Qh6h,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+426,HJ/2.0bb/CO/call/BTN/9.5bb/BB/24.3bb/HJ/call/CO/fold,BTN,KsJd,fold,4,3,"['allin', 'fold']",60.6
+427,UTG/2.0bb/BTN/call/SB/call,BB,AsQd,14.0bb,4,1,"['14.0bb', 'fold']",7.0
+428,CO/2.3bb/BTN/7.5bb,SB,AsAc,21.0bb,3,2,"['21.0bb', 'fold']",11.3
+429,UTG/2.0bb/BTN/call/SB/allin/UTG/fold,BTN,9h9d,fold,3,2,"['call', 'fold']",105.0
+430,CO/2.3bb/BTN/allin,SB,Ts4s,fold,3,2,"['call', 'fold']",103.8
+431,SB/call,BB,6d4d,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+432,SB/call,BB,Ah3c,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+433,SB/3.0bb,BB,AdQc,10.0bb,2,1,"['call', '10.0bb', 'fold']",4.0
+434,HJ/allin,SB,Qs6s,fold,2,1,"['call', 'fold']",101.5
+435,,SB,Ts9c,3.0bb,1,0,"['3.0bb', 'call', 'fold']",1.5
+436,HJ/2.0bb/BTN/call,BB,Kh8d,fold,3,1,"['13.5bb', 'fold']",5.5
+437,SB/call,BB,Jh9d,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+438,HJ/2.0bb/BTN/call/SB/allin/HJ/fold,BTN,JdJc,call,3,2,"['call', 'fold']",105.0
+439,UTG/2.0bb/CO/call,BTN,KsQh,9.5bb,3,1,"['9.5bb', 'fold']",5.5
+440,UTG/2.0bb,BB,7d6d,call,2,1,"['call', '12.0bb', 'fold']",3.5
+441,UTG/2.0bb/BB/12.0bb,UTG,JsJd,call,2,2,"['22.0bb', 'call', 'fold']",14.5
+442,UTG/2.0bb/HJ/6.5bb/SB/20.0bb/BB/allin/UTG/fold/HJ/fold,SB,AsKh,fold,4,4,"['call', 'fold']",128.5
+443,CO/2.3bb/SB/call/BB/11.0bb,CO,KdKc,22.0bb,3,2,"['22.0bb', 'call', 'fold']",15.6
+444,SB/3.0bb,BB,Jd5d,call,2,1,"['call', '10.0bb', 'fold']",4.0
+445,CO/2.3bb/BTN/call/SB/call,BB,QhTh,14.0bb,4,1,"['14.0bb', 'fold']",7.899999999999999
+446,SB/call,BB,Kd9s,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+447,,BTN,2h2d,2.5bb,1,0,"['2.5bb', 'fold']",1.5
+448,UTG/2.0bb/SB/10.0bb/BB/20.0bb,UTG,KhKd,35.0bb,3,3,"['35.0bb', 'allin', 'fold']",32.0
+449,SB/call,BB,Ac6s,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+450,HJ/2.0bb/BTN/7.5bb/SB/21.0bb/BB/40.1bb/HJ/allin,BTN,KsQc,fold,4,5,"['call', 'fold']",168.6
+451,SB/call,BB,Kc6c,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+452,UTG/2.0bb/CO/6.5bb/BTN/13.0bb/SB/24.0bb/BB/allin,UTG,Kh5h,fold,5,5,"['call', 'fold']",145.5
+453,CO/2.3bb/BTN/call,SB,AdTd,12.5bb,3,1,"['12.5bb', 'fold']",6.1
+454,SB/call/BB/allin,SB,Ah5h,fold,2,1,['fold'],100.0
+455,CO/2.3bb/BTN/call,SB,AsJs,12.5bb,3,1,"['12.5bb', 'fold']",6.1
+456,HJ/2.0bb/BTN/call,SB,AdQd,13.0bb,3,1,"['13.0bb', 'fold']",5.5
+457,HJ/2.0bb/CO/call/SB/13.0bb/HJ/fold/CO/24.0bb,SB,AhQh,call,3,3,"['allin', 'call', 'fold']",40.0
+458,SB/call,BB,9c2c,5.0bb,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+459,UTG/2.0bb/CO/call/BTN/call/SB/15.0bb/UTG/29.0bb/CO/call/BTN/allin,SB,KsQc,fold,4,4,"['call', 'fold']",174.0
+460,HJ/2.0bb/CO/call/BTN/call/BB/15.0bb/HJ/call/CO/allin/BTN/fold,BB,AdKd,call,4,3,"['call', 'fold']",132.5
+461,UTG/2.0bb/CO/call/BTN/call/SB/call/BB/allin,UTG,KdKc,call,5,2,"['call', 'fold']",108.0
+462,UTG/2.0bb/HJ/6.5bb/BTN/14.0bb/SB/allin/UTG/fold,HJ,KhKc,call,4,4,"['call', 'fold']",123.5
+463,UTG/2.0bb/HJ/6.5bb/CO/14.0bb/BB/26.0bb/UTG/allin/HJ/fold/CO/fold,BB,AdAc,call,4,5,"['call', 'fold']",147.0
+464,UTG/2.0bb/CO/call,SB,JhTd,fold,3,1,"['12.0bb', 'fold']",5.5
+465,SB/3.0bb/BB/10.0bb,SB,AdTd,call,2,2,"['21.0bb', 'allin', 'call', 'fold']",13.0
+466,HJ/2.0bb/BB/12.3bb/HJ/allin,BB,Ad8c,fold,2,3,"['call', 'fold']",112.8
+467,SB/call/BB/3.0bb/SB/14.0bb/BB/27.0bb,SB,Ah7c,fold,2,3,['fold'],41.0
+468,HJ/2.0bb/CO/call/BTN/call/SB/15.0bb/BB/call/HJ/call/CO/call/BTN/allin/SB/fold,BB,JsJc,fold,5,3,"['call', 'fold']",160.0
+469,SB/call,BB,Ah7c,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+470,BTN/2.5bb/SB/call,BB,AsKh,11.0bb,3,1,"['11.0bb', 'fold']",6.0
+471,SB/call,BB,KdJs,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+472,HJ/2.0bb/SB/11.0bb/BB/23.0bb/HJ/fold/SB/allin,BB,QdQc,call,3,4,"['call', 'fold']",125.0
+473,CO/2.3bb/BTN/call/SB/call/BB/14.0bb/CO/31.0bb/BTN/fold,SB,Ah8h,fold,4,3,['fold'],49.6
+474,SB/call,BB,Ah9d,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+475,SB/call,BB,Ac7h,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+476,CO/2.3bb/BTN/7.5bb/BB/20.0bb/CO/fold/BTN/allin,BB,AdAc,call,3,4,"['call', 'fold']",122.8
+477,UTG/2.0bb/CO/call/BTN/9.5bb/SB/23.0bb/UTG/allin/CO/fold/BTN/fold,SB,AcKc,fold,4,4,"['call', 'fold']",135.5
+478,SB/call,BB,5c3c,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+479,SB/call,BB,Jc8c,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+480,HJ/2.0bb/BTN/7.5bb/BB/21.0bb,HJ,Kh7h,fold,3,3,"['allin', 'fold']",31.0
+481,HJ/2.0bb/CO/call/BTN/call/SB/15.0bb/BB/allin/HJ/fold/CO/fold/BTN/fold,SB,KsKd,call,5,3,"['call', 'fold']",121.0
+482,,BTN,Th8h,2.5bb,1,0,"['2.5bb', 'fold']",1.5
+483,UTG/2.0bb/HJ/6.5bb/BTN/14.0bb/BB/26.0bb/UTG/fold/HJ/fold,BTN,KdKc,call,4,4,"['call', 'fold']",49.0
+484,,SB,8h7h,3.0bb,1,0,"['3.0bb', 'call', 'fold']",1.5
+485,SB/call,BB,Th8h,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+486,UTG/2.0bb/CO/6.5bb/BTN/allin,SB,QsQh,call,4,3,"['call', 'fold']",110.0
+487,SB/3.0bb,BB,AcKd,10.0bb,2,1,"['call', '10.0bb', 'fold']",4.0
+488,SB/call,BB,Ah7h,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+489,SB/3.0bb,BB,Qd9s,call,2,1,"['call', '10.0bb', 'fold']",4.0
+490,HJ/2.0bb/BTN/call/SB/call/BB/14.5bb/HJ/fold/BTN/call,SB,7h7d,fold,4,2,['fold'],33.0
+491,HJ/2.0bb,BTN,KdQh,7.5bb,2,1,"['7.5bb', 'call', 'fold']",3.5
+492,HJ/2.0bb/CO/call,BTN,AsJd,9.5bb,3,1,"['9.5bb', 'fold']",5.5
+493,UTG/2.0bb/HJ/6.5bb/SB/20.0bb/UTG/33.0bb/HJ/allin/SB/fold,UTG,AdAc,call,3,5,"['call', 'fold']",154.0
+494,UTG/2.0bb/SB/call,BB,AhKh,11.0bb,3,1,"['11.0bb', 'fold']",5.0
+495,HJ/allin,CO,9d4d,fold,2,1,"['call', 'fold']",101.5
+496,SB/call,BB,Ac8c,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+497,UTG/2.0bb/CO/call/BTN/call/BB/allin/UTG/fold/CO/fold,BTN,Ad5d,fold,4,2,['fold'],106.5
+498,SB/call,BB,Th9s,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+499,HJ/2.0bb/CO/6.5bb,BTN,JhJd,13.1bb,3,2,"['13.1bb', 'fold']",10.0
+500,SB/call,BB,JhTd,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+501,SB/call,BB,Kh7h,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+502,HJ/2.0bb/BTN/allin,BB,KcQh,fold,3,2,"['call', 'fold']",103.5
+503,CO/2.3bb/SB/call,BB,AsTs,11.0bb,3,1,"['11.0bb', 'fold']",5.6
+504,SB/call,BB,As6d,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+505,SB/call,BB,KsTd,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+506,,SB,Qh9h,3.0bb,1,0,"['3.0bb', 'call', 'fold']",1.5
+507,HJ/2.0bb/BTN/call/SB/call/BB/14.5bb/HJ/call/BTN/fold,SB,AhQd,fold,4,2,['fold'],33.0
+508,UTG/2.0bb/CO/call/BTN/9.5bb,SB,AdQd,23.0bb,4,2,"['23.0bb', 'allin', 'fold']",15.0
+509,SB/call,BB,Qs9d,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+510,SB/3.0bb/BB/10.0bb/SB/21.0bb/BB/allin,SB,KdTs,fold,2,4,"['call', 'fold']",121.0
+511,CO/2.3bb/BTN/call,BB,KsQs,14.0bb,3,1,"['14.0bb', 'fold']",6.1
+512,SB/call,BB,Jh2h,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+513,UTG/2.0bb/BTN/call/SB/call/BB/14.0bb/UTG/27.0bb/BTN/fold/SB/allin/BB/fold,UTG,Ah5h,fold,4,4,"['call', 'fold']",143.0
+514,HJ/2.0bb/CO/call/BTN/call/SB/call/BB/16.0bb/HJ/fold/CO/fold/BTN/allin/SB/fold,BB,AsAc,call,5,3,"['call', 'fold']",122.0
+515,SB/call,BB,As5h,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+516,CO/2.3bb/BTN/call/SB/12.5bb/CO/fold/BTN/allin,SB,AhQh,call,3,3,"['call', 'fold']",115.8
+517,CO/2.3bb/BTN/call,BB,KdQd,14.0bb,3,1,"['14.0bb', 'fold']",6.1
+518,UTG/2.0bb/BTN/call/SB/call/BB/14.0bb/UTG/fold/BTN/fold/SB/allin,BB,AcKd,call,4,3,"['call', 'fold']",118.0
+519,SB/call,BB,9h8c,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+520,HJ/2.0bb/CO/call/BTN/call/SB/call/BB/16.0bb/HJ/fold/CO/31.2bb/BTN/allin/SB/fold,BB,KsKh,call,5,4,"['call', 'fold']",151.2
+521,SB/call,BB,AcTh,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+522,,UTG,AsJd,2.0bb,1,0,"['2.0bb', 'fold']",1.5
+523,HJ/2.0bb/CO/call/SB/call/BB/15.0bb/HJ/29.2bb/CO/fold/SB/allin,BB,AsJd,fold,4,4,"['call', 'fold']",146.2
+524,CO/2.3bb/BTN/7.5bb/CO/21.0bb/BTN/allin,CO,TsTh,call,2,4,"['call', 'fold']",122.5
+525,,SB,Kc9c,3.0bb,1,0,"['3.0bb', 'call', 'fold']",1.5
+526,HJ/2.0bb/SB/call,BB,Ah4h,11.0bb,3,1,"['11.0bb', 'fold']",5.0
+527,HJ/2.0bb/CO/6.5bb/BTN/13.1bb/BB/25.8bb,HJ,AhJc,fold,4,4,"['allin', 'fold']",47.9
+528,HJ/2.0bb/CO/call/SB/13.0bb/BB/allin/HJ/fold,CO,AhKs,fold,4,3,['fold'],117.0
+529,CO/2.3bb/BTN/7.5bb,CO,AdQc,21.0bb,2,2,"['21.0bb', 'call', 'fold']",11.3
+530,HJ/2.0bb/CO/call/BTN/call,SB,AhKs,15.0bb,4,1,"['15.0bb', 'fold']",7.5
+531,UTG/2.0bb/CO/6.5bb,BB,KsKd,18.0bb,3,2,"['18.0bb', 'allin', 'fold']",10.0
+532,UTG/2.0bb/BTN/7.5bb/UTG/20.0bb,BTN,AdQh,fold,2,3,"['allin', 'call', 'fold']",29.0
+533,UTG/2.0bb/CO/call/BTN/call/SB/call/BB/15.0bb/UTG/call/CO/call/BTN/fold/SB/allin/BB/fold,UTG,AdKd,call,5,3,"['call', 'fold']",147.0
+534,SB/call,BB,Qs8s,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+535,,CO,9h8h,2.3bb,1,0,"['2.3bb', 'fold']",1.5
+536,UTG/2.0bb/CO/call/BTN/call/SB/15.0bb/UTG/29.0bb/CO/call/BTN/allin,SB,QsQd,call,4,4,"['call', 'fold']",174.0
+537,HJ/2.0bb/CO/call/BTN/9.5bb/BB/24.3bb/HJ/call/CO/allin/BTN/fold,BB,AhQh,call,4,4,"['call', 'fold']",158.6
+538,UTG/2.0bb/CO/call/BTN/call/BB/14.0bb/UTG/call/CO/call/BTN/allin/BB/fold/UTG/fold,CO,9s9c,fold,4,3,['fold'],142.5
+539,UTG/2.0bb/CO/call/BTN/9.5bb/UTG/call,CO,AcQc,fold,3,2,['fold'],22.5
+540,SB/call,BB,Tc8c,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+541,HJ/2.0bb/CO/call/BTN/call/SB/15.0bb/HJ/call/CO/allin/BTN/fold,SB,AcKs,call,4,3,"['call', 'fold']",133.0
+542,,SB,Ah9s,3.0bb,1,0,"['3.0bb', 'call', 'fold']",1.5
+543,SB/call,BB,Ah7d,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+544,UTG/2.0bb/CO/call/SB/call/BB/14.0bb/UTG/fold/CO/28.0bb/SB/allin,BB,JsJd,call,4,4,"['call', 'fold']",144.0
+545,SB/call,BB,Kd5d,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+546,HJ/2.0bb/CO/allin,HJ,KsKc,call,2,2,"['call', 'fold']",103.5
+547,,SB,Ac6s,3.0bb,1,0,"['3.0bb', 'call', 'fold']",1.5
+548,BTN/2.5bb,BB,AcQc,13.0bb,2,1,"['call', '13.0bb', 'fold']",4.0
+549,SB/call,BB,QcTd,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+550,UTG/2.0bb/CO/call/BTN/call/SB/call/BB/15.0bb/UTG/fold/CO/34.0bb/BTN/call/SB/allin,BB,AhKc,call,5,4,"['call', 'fold']",185.0
+551,UTG/2.0bb/HJ/6.5bb/CO/14.0bb,BTN,Kc8d,fold,4,3,"['25.0bb', 'allin', 'fold']",24.0
+552,HJ/2.0bb/CO/call/BTN/call,BB,AsAd,15.0bb,4,1,"['15.0bb', 'fold']",7.5
+553,,SB,Ks5s,3.0bb,1,0,"['3.0bb', 'call', 'fold']",1.5
+554,UTG/2.0bb,SB,KdQh,10.0bb,2,1,"['call', '10.0bb', 'fold']",3.5
+555,CO/2.3bb/BTN/call/SB/12.5bb/CO/call/BTN/allin/SB/fold,CO,KhKc,fold,3,3,"['call', 'fold']",126.0
+556,SB/call/BB/3.0bb,SB,KdTs,fold,2,1,['fold'],3.0
+557,HJ/2.0bb/CO/call/BTN/call/SB/call/BB/16.0bb/HJ/fold/CO/fold/BTN/31.2bb/SB/allin,BB,KcJc,call,5,4,"['call', 'fold']",151.2
+558,CO/2.3bb/SB/11.5bb,BB,Qd7d,fold,3,2,"['25.0bb', 'allin', 'fold']",14.8
+559,SB/call,BB,JdTs,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+560,UTG/2.0bb/CO/call/BTN/call/SB/15.0bb/BB/30.0bb/UTG/fold/CO/allin/BTN/fold,SB,QsQd,call,5,4,"['call', 'fold']",149.0
+561,UTG/2.0bb/BTN/call/SB/13.0bb/UTG/24.0bb/BTN/allin/SB/fold,UTG,KsKc,fold,3,4,"['call', 'fold']",138.0
+562,HJ/2.0bb/CO/call/BTN/call/SB/15.0bb/HJ/fold/CO/call,BTN,Ad3d,fold,4,2,['fold'],35.0
+563,UTG/2.0bb/BTN/7.5bb/SB/20.0bb,BB,Ac8s,fold,4,3,"['40.0bb', 'fold']",30.5
+564,UTG/2.0bb/CO/call/BTN/call/SB/call/BB/15.0bb/UTG/allin/CO/fold/BTN/fold/SB/fold,BB,JdJc,call,5,3,"['call', 'fold']",121.0
+565,HJ/2.0bb/CO/call/SB/call,BB,Ad8d,15.0bb,4,1,"['15.0bb', 'fold']",7.0
+566,UTG/2.0bb/BTN/call/SB/call/BB/14.0bb/UTG/fold/BTN/allin/SB/fold,BB,JhJc,call,4,3,"['call', 'fold']",118.0
+567,HJ/2.0bb/CO/6.5bb,HJ,KdJd,19.0bb,2,2,"['19.0bb', 'allin', 'call', 'fold']",10.0
+568,SB/call,BB,Qs9s,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+569,HJ/2.0bb/CO/call/BTN/9.5bb/SB/24.1bb/HJ/allin/CO/fold,BTN,8h8c,fold,4,4,"['call', 'fold']",136.6
+570,SB/call,BB,Ah3d,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+571,SB/call,BB,Ad6d,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+572,UTG/2.0bb/CO/call/BTN/call/SB/15.0bb/BB/allin/UTG/fold/CO/fold,BTN,AsKh,fold,5,3,['fold'],121.0
+573,SB/call,BB,AhTd,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+574,SB/call,BB,JcTs,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+575,SB/call,BB,Qc8c,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+576,HJ/2.0bb/CO/call/BTN/9.5bb/SB/24.1bb,BB,Th9d,fold,5,3,"['allin', 'call', 'fold']",38.6
+577,SB/call,BB,As4h,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+578,HJ/2.0bb/BTN/7.5bb/SB/21.0bb/HJ/fold/BTN/36.3bb/SB/allin,BTN,JsJc,fold,3,5,['fold'],139.3
+579,,CO,AsKh,2.3bb,1,0,"['2.3bb', 'fold']",1.5
+580,UTG/2.0bb/BTN/7.5bb,SB,AhKc,20.0bb,3,2,"['20.0bb', 'allin', 'fold']",11.0
+581,SB/call,BB,Ac6h,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+582,SB/call,BB,Jd7d,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+583,UTG/2.0bb/HJ/6.5bb,CO,AsKs,14.0bb,3,2,"['14.0bb', 'fold']",10.0
+584,UTG/2.0bb/BTN/call/SB/allin/UTG/fold,BTN,2s2c,fold,3,2,"['call', 'fold']",105.0
+585,UTG/2.0bb/CO/call/BTN/call/SB/allin,BB,Jd5d,fold,5,2,"['call', 'fold']",107.0
+586,SB/call,BB,8d7s,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+587,SB/call,BB,Th8s,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+588,UTG/2.0bb/HJ/allin,BTN,5h4h,fold,3,2,"['call', 'fold']",103.5
+589,HJ/2.0bb/CO/call/SB/13.0bb/HJ/24.0bb/CO/fold/SB/allin,HJ,KhJh,fold,3,4,"['call', 'fold']",127.0
+590,UTG/2.0bb/CO/call/SB/call/BB/14.0bb/UTG/fold/CO/fold/SB/31.0bb,BB,AdKc,call,4,3,"['call', 'fold']",49.0
+591,SB/call,BB,Kh9d,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+592,HJ/2.0bb/BTN/call/SB/allin,BB,Ts9h,fold,4,2,"['call', 'fold']",105.0
+593,SB/call,BB,5s4s,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+594,SB/call,BB,Kh4h,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+595,UTG/2.0bb/CO/call/BTN/call/SB/call/BB/15.0bb/UTG/34.0bb/CO/fold/BTN/allin/SB/fold,BB,AcKc,fold,5,4,"['call', 'fold']",153.0
+596,,SB,Jh9s,3.0bb,1,0,"['3.0bb', 'call', 'fold']",1.5
+597,HJ/2.0bb/BTN/7.5bb/SB/21.0bb/BB/allin/HJ/fold,BTN,7s7d,fold,4,4,"['call', 'fold']",130.5
+598,UTG/2.0bb/SB/call,BB,KhQc,11.0bb,3,1,"['11.0bb', 'fold']",5.0
+599,,HJ,Qs8s,2.0bb,1,0,"['2.0bb', 'fold']",1.5
+600,UTG/2.0bb/BTN/call/SB/13.0bb/BB/25.0bb/UTG/call/BTN/call/SB/allin,BB,AsAc,call,4,4,"['call', 'fold']",175.0
+601,UTG/2.0bb/BTN/call/SB/allin,BB,Ah5d,fold,4,2,"['call', 'fold']",105.0
+602,HJ/2.0bb/CO/call/SB/call/BB/15.0bb/HJ/29.2bb/CO/call/SB/allin/BB/fold,HJ,AhAd,call,4,4,"['call', 'fold']",173.39999999999998
+603,UTG/2.0bb/CO/call/BTN/call/BB/14.0bb/UTG/call/CO/allin/BTN/fold,BB,AdAc,call,4,3,"['call', 'fold']",130.5
+604,UTG/2.0bb/CO/call/BTN/call/SB/15.0bb/BB/30.0bb/UTG/call/CO/fold/BTN/fold,SB,AhKs,fold,5,3,"['allin', 'fold']",79.0
+605,SB/call,BB,KdTs,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+606,CO/2.3bb/SB/allin,BB,8d8c,call,3,2,"['call', 'fold']",103.3
+607,SB/call,BB,2h2d,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+608,HJ/2.0bb/CO/call/BTN/call/BB/15.0bb/HJ/fold,CO,9s9h,fold,4,2,['fold'],21.5
+609,HJ/2.0bb/CO/call/BTN/call/SB/call/BB/16.0bb/HJ/call/CO/allin/BTN/fold,SB,5s5c,fold,5,3,['fold'],136.0
+610,BTN/2.5bb/BB/13.0bb/BTN/27.0bb,BB,Ts9s,call,2,3,"['call', 'fold']",40.5
+611,UTG/2.0bb/CO/call/BTN/call/SB/15.0bb/BB/30.0bb/UTG/fold/CO/fold/BTN/allin,SB,QhJh,call,5,4,"['call', 'fold']",149.0
+612,HJ/2.0bb/CO/call/SB/13.0bb/HJ/24.0bb/CO/allin,SB,AcJd,fold,3,4,"['call', 'fold']",138.0
+613,SB/call,BB,Th4h,5.0bb,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+614,CO/2.3bb/SB/allin,BB,KcJc,call,3,2,"['call', 'fold']",103.3
+615,SB/call,BB,KcJs,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+616,SB/call,BB,Ah3h,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+617,,HJ,AhTs,2.0bb,1,0,"['2.0bb', 'fold']",1.5
+618,HJ/2.0bb/CO/call/BTN/call/SB/call/BB/16.0bb/HJ/fold/CO/call/BTN/allin/SB/fold,BB,QsQd,call,5,3,"['call', 'fold']",136.0
+619,HJ/2.0bb/BTN/call,BB,AhJs,13.5bb,3,1,"['13.5bb', 'fold']",5.5
+620,SB/call,BB,QhJs,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+621,UTG/2.0bb/CO/call/SB/call/BB/14.0bb/UTG/28.0bb/CO/allin/SB/fold,BB,AsKd,call,4,4,"['call', 'fold']",144.0
+622,HJ/2.0bb/SB/call,BB,Qc9c,fold,3,1,"['11.0bb', 'fold']",5.0
+623,HJ/2.0bb/BTN/7.5bb/SB/21.0bb/BB/40.1bb/HJ/fold/BTN/allin/SB/fold,BB,6h6c,fold,4,5,['fold'],163.1
+624,UTG/2.0bb/BTN/call/SB/13.0bb/BB/call,UTG,KhQd,fold,4,2,"['allin', 'fold']",30.0
+625,HJ/2.0bb/BTN/7.5bb/SB/21.0bb/BB/call,HJ,AhQd,fold,4,3,"['allin', 'fold']",51.5
+626,UTG/allin,CO,KhKc,call,2,1,"['call', 'fold']",101.5
+627,,HJ,Ks5s,2.0bb,1,0,"['2.0bb', 'fold']",1.5
+628,HJ/2.0bb/SB/allin,HJ,9d8d,fold,2,2,"['call', 'fold']",103.0
+629,SB/3.0bb,BB,9s8s,10.0bb,2,1,"['call', '10.0bb', 'fold']",4.0
+630,UTG/2.0bb/BTN/call/SB/call/BB/14.0bb/UTG/call/BTN/fold/SB/allin,BB,AdKc,call,4,3,"['call', 'fold']",130.0
+631,SB/call,BB,Qh9h,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+632,SB/call,BB,Kd6d,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+633,HJ/2.0bb/CO/6.5bb/BB/17.5bb/HJ/allin,CO,AcTc,fold,3,4,"['call', 'fold']",124.5
+634,SB/call,BB,Td8c,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+635,UTG/2.0bb/CO/call/BB/14.0bb/UTG/call/CO/allin,BB,AsKh,call,3,3,"['call', 'fold']",128.5
+636,HJ/2.0bb/CO/6.5bb/BTN/call/SB/allin/HJ/fold,CO,AhAc,call,4,3,"['call', 'fold']",116.0
+637,CO/2.3bb/BTN/call/SB/call/BB/14.0bb,CO,KhTh,31.0bb,4,2,"['31.0bb', 'allin', 'call', 'fold']",20.9
+638,CO/2.3bb/BB/13.5bb,CO,AhKd,28.0bb,2,2,"['call', '28.0bb', 'fold']",16.3
+639,UTG/2.0bb/HJ/6.5bb/UTG/allin,HJ,AsQs,fold,2,3,"['call', 'fold']",108.0
+640,CO/2.3bb/BTN/7.5bb,SB,AdQh,21.0bb,3,2,"['21.0bb', 'fold']",11.3
+641,UTG/2.0bb/BTN/7.5bb/BB/20.0bb/UTG/38.0bb,BTN,Ad8d,fold,3,4,"['allin', 'fold']",66.0
+642,SB/call,BB,Ah6c,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+643,HJ/2.0bb/CO/6.5bb/BTN/call/BB/allin/HJ/fold,CO,KhKc,call,4,3,"['call', 'fold']",115.5
+644,HJ/2.0bb/BTN/call/SB/call,BB,AcJs,14.5bb,4,1,"['14.5bb', 'fold']",7.0
+645,HJ/2.0bb/BTN/7.5bb/SB/21.0bb/HJ/allin/BTN/fold,SB,QsQc,call,3,4,"['call', 'fold']",129.5
+646,CO/2.3bb/SB/call/BB/11.0bb/CO/call/SB/allin,BB,AcKd,call,3,3,"['call', 'fold']",122.0
+647,,SB,Ts8c,3.0bb,1,0,"['3.0bb', 'call', 'fold']",1.5
+648,SB/call,BB,As3h,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+649,HJ/2.0bb/CO/call/BTN/call/SB/call/BB/16.0bb/HJ/31.2bb/CO/call/BTN/call/SB/allin,BB,QsJs,call,5,4,"['call', 'fold']",209.6
+650,,SB,Ac3c,3.0bb,1,0,"['3.0bb', 'call', 'fold']",1.5
+651,UTG/2.0bb/BTN/call,SB,QsQh,13.0bb,3,1,"['13.0bb', 'fold']",5.5
+652,UTG/2.0bb/HJ/6.5bb/BB/19.0bb/UTG/fold,HJ,AsAc,call,3,3,"['allin', 'call', 'fold']",28.0
+653,SB/call,BB,4s3s,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+654,UTG/2.0bb/CO/call/SB/call,BB,KsQh,14.0bb,4,1,"['14.0bb', 'fold']",7.0
+655,HJ/2.0bb/CO/6.5bb/BB/17.5bb/HJ/fold/CO/allin,BB,QhQd,call,3,4,"['call', 'fold']",120.0
+656,SB/call,BB,Kc8d,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+657,UTG/2.0bb/BTN/call/SB/13.0bb/BB/25.0bb/UTG/40.0bb/BTN/allin/SB/fold,BB,9s9d,fold,4,5,"['call', 'fold']",178.0
+658,SB/call,BB,Js8s,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+659,UTG/2.0bb/CO/call/SB/call/BB/14.0bb,UTG,6s6h,fold,4,2,"['allin', 'call', '28.0bb', 'fold']",20.0
+660,SB/call,BB,As4d,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+661,HJ/2.0bb/SB/call/BB/11.0bb/HJ/call/SB/allin,BB,AsQs,call,3,3,"['call', 'fold']",122.0
+662,UTG/2.0bb/HJ/6.5bb,SB,AhKs,20.0bb,3,2,"['20.0bb', 'allin', 'fold']",10.0
+663,HJ/2.0bb/BTN/call/BB/13.5bb/HJ/fold/BTN/26.2bb,BB,As5s,call,3,3,"['allin', 'call', 'fold']",42.2
+664,UTG/2.0bb/HJ/6.5bb/CO/allin,BTN,Qs3s,fold,4,3,"['call', 'fold']",110.0
+665,SB/call,BB,4d2d,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+666,HJ/2.0bb/CO/6.5bb,SB,AsAh,17.5bb,3,2,"['17.5bb', 'allin', 'fold']",10.0
+667,BTN/2.5bb/SB/call,BB,AcJd,11.0bb,3,1,"['11.0bb', 'fold']",6.0
+668,UTG/2.0bb/HJ/6.5bb,BTN,AhKh,14.0bb,3,2,"['14.0bb', 'fold']",10.0
+669,,BTN,Kc7c,2.5bb,1,0,"['2.5bb', 'fold']",1.5
+670,HJ/2.0bb/CO/call/BTN/9.5bb/SB/24.1bb/HJ/fold/CO/allin,BTN,KdQh,fold,4,4,"['call', 'fold']",136.6
+671,HJ/2.0bb/BTN/call/SB/call/BB/14.5bb/HJ/28.0bb/BTN/fold/SB/fold/BB/allin,HJ,AhKh,call,4,4,"['call', 'fold']",132.0
+672,UTG/2.0bb/CO/call/BTN/call/SB/15.0bb/BB/30.0bb/UTG/fold/CO/fold/BTN/allin,SB,AhKh,call,5,4,"['call', 'fold']",149.0
+673,UTG/2.0bb/SB/10.0bb,UTG,AhAd,19.0bb,2,2,"['19.0bb', 'allin', 'call', 'fold']",13.0
+674,CO/2.3bb/BTN/call/SB/call/BB/14.0bb/CO/fold/BTN/allin/SB/fold,BB,JsJh,call,4,3,"['call', 'fold']",118.6
+675,UTG/2.0bb/SB/10.0bb,UTG,AhKh,19.0bb,2,2,"['19.0bb', 'allin', 'call', 'fold']",13.0
+676,SB/call,BB,Ad4s,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+677,,HJ,Jd9d,2.0bb,1,0,"['2.0bb', 'fold']",1.5
+678,UTG/2.0bb/CO/allin,UTG,AdAc,call,2,2,"['call', 'fold']",103.5
+679,UTG/2.0bb/HJ/6.5bb/CO/14.0bb,SB,Ah9d,fold,4,3,"['allin', 'fold']",24.0
+680,HJ/2.0bb/CO/call/BTN/call/SB/15.0bb/BB/30.1bb/HJ/fold/CO/fold/BTN/allin,SB,AhQs,fold,5,4,"['call', 'fold']",149.1
+681,HJ/2.0bb/CO/call/BTN/call/SB/15.0bb/BB/30.1bb/HJ/call/CO/allin/BTN/fold,SB,JdTd,fold,5,4,"['call', 'fold']",177.2
+682,UTG/2.0bb/CO/call/BTN/call/SB/call/BB/15.0bb/UTG/fold/CO/34.0bb/BTN/fold/SB/allin,BB,AcKh,fold,5,4,"['call', 'fold']",153.0
+683,UTG/2.0bb/HJ/6.5bb/CO/14.0bb/SB/allin,BB,QcJs,fold,5,4,"['call', 'fold']",123.5
+684,SB/call,BB,2s2h,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+685,HJ/2.0bb/CO/call/BTN/9.5bb/BB/allin/HJ/fold/CO/fold,BTN,KcJh,fold,4,3,"['call', 'fold']",114.0
+686,HJ/2.0bb/CO/call/BTN/call/SB/call,BB,AsTh,fold,5,1,"['16.0bb', 'fold']",9.0
+687,HJ/2.0bb/CO/call/BTN/call/SB/15.0bb/BB/30.1bb,HJ,4h4c,fold,5,3,"['allin', 'fold']",51.1
+688,HJ/2.0bb/CO/call/BTN/call/SB/call/BB/16.0bb/HJ/call/CO/fold/BTN/call/SB/allin,BB,QhQd,call,5,3,"['call', 'fold']",150.0
+689,SB/call,BB,Ts3s,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+690,HJ/2.0bb/CO/call/BTN/call/SB/call/BB/16.0bb/HJ/fold/CO/fold/BTN/31.2bb/SB/allin,BB,AhAd,call,5,4,"['call', 'fold']",151.2
+691,SB/call,BB,Js3s,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+692,SB/call/BB/5.0bb,SB,Td6d,fold,2,1,['fold'],5.0
+693,,CO,Qh6h,2.3bb,1,0,"['2.3bb', 'fold']",1.5
+694,UTG/2.0bb/HJ/6.5bb/BTN/allin,BB,Ad4s,fold,4,3,"['call', 'fold']",110.0
+695,HJ/2.0bb/CO/6.5bb/BTN/13.1bb/HJ/fold/CO/28.5bb,BTN,QdQc,call,3,4,"['allin', 'call', 'fold']",45.1
+696,HJ/2.0bb/BTN/7.5bb,HJ,KsQs,20.0bb,2,2,"['20.0bb', 'allin', 'call', 'fold']",11.0
+697,SB/call,BB,Ad3d,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+698,UTG/2.0bb/SB/10.0bb,UTG,AcKc,19.0bb,2,2,"['19.0bb', 'allin', 'call', 'fold']",13.0
+699,SB/call,BB,4d3d,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+700,HJ/2.0bb/CO/call/SB/call,BB,AcQc,15.0bb,4,1,"['15.0bb', 'fold']",7.0
+701,UTG/2.0bb/BTN/allin,SB,AdKh,call,3,2,"['call', 'fold']",103.5
+702,HJ/2.0bb/CO/6.5bb,BTN,AsQs,13.1bb,3,2,"['13.1bb', 'fold']",10.0
+703,BTN/2.5bb,BB,Ac8h,call,2,1,"['call', '13.0bb', 'fold']",4.0
+704,HJ/2.0bb/CO/6.5bb/BTN/13.1bb/SB/25.2bb,BB,Kd3d,fold,5,4,"['allin', 'fold']",47.8
+705,SB/call,BB,JdTh,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+706,SB/call,BB,Kh8h,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+707,HJ/2.0bb/CO/call/SB/call/BB/15.0bb/HJ/29.2bb/CO/fold/SB/allin/BB/fold,HJ,AcKc,call,4,4,"['call', 'fold']",146.2
+708,,BTN,Qc6c,2.5bb,1,0,"['2.5bb', 'fold']",1.5
+709,CO/2.3bb/BTN/call/SB/12.5bb/BB/call/CO/call/BTN/allin,SB,KhKd,call,4,3,"['call', 'fold']",137.5
+710,SB/call,BB,Kh9h,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+711,CO/2.3bb/BTN/call/SB/12.5bb/CO/fold/BTN/allin,SB,JhJc,call,3,3,"['call', 'fold']",115.8
+712,SB/call,BB,Qs2s,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+713,UTG/2.0bb/CO/call/BTN/call/SB/15.0bb/BB/call/UTG/fold/CO/allin,BTN,JhTh,fold,5,3,['fold'],134.0
+714,HJ/2.0bb/CO/call/BTN/9.5bb/SB/24.1bb/HJ/fold/CO/call,BTN,AdQc,fold,4,3,"['allin', 'fold']",60.7
+715,SB/call,BB,KsJd,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+716,HJ/2.0bb/BTN/call/SB/call/BB/14.5bb,HJ,Qc9c,fold,4,2,"['allin', 'call', '28.0bb', 'fold']",20.5
+717,HJ/2.0bb/CO/call/BB/allin,HJ,AdKd,call,3,2,"['call', 'fold']",104.5
+718,HJ/2.0bb/SB/11.0bb/BB/call,HJ,Kc5c,fold,3,2,"['allin', 'fold']",24.0
+719,SB/call,BB,5s3s,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+720,SB/call,BB,Tc3c,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+721,CO/2.3bb/SB/allin,BB,Qc9c,call,3,2,"['call', 'fold']",103.3
+722,SB/call,BB,Jc2c,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+723,CO/2.3bb,BB,QhTc,call,2,1,"['13.5bb', 'call', 'fold']",3.8
+724,HJ/2.0bb/CO/call/BTN/9.5bb/SB/24.1bb/BB/call/HJ/fold/CO/allin/BTN/fold/SB/fold,BB,AdAc,call,5,4,"['call', 'fold']",159.7
+725,UTG/2.0bb/BTN/call/SB/call/BB/allin,UTG,QsQd,call,4,2,"['call', 'fold']",106.0
+726,,BTN,Qc9h,2.5bb,1,0,"['2.5bb', 'fold']",1.5
+727,SB/call,BB,4h4c,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+728,UTG/2.0bb/CO/call/BTN/call/BB/14.0bb/UTG/29.0bb/CO/fold/BTN/fold/BB/allin,UTG,AdAc,call,4,4,"['call', 'fold']",133.5
+729,BTN/2.5bb/BB/13.0bb/BTN/27.0bb,BB,AsQd,call,2,3,"['call', 'fold']",40.5
+730,HJ/2.0bb/BTN/7.5bb/SB/allin/HJ/fold,BTN,2h2c,fold,3,3,"['call', 'fold']",110.5
+731,CO/2.3bb/BTN/call/SB/call,BB,JhJc,14.0bb,4,1,"['14.0bb', 'fold']",7.899999999999999
+732,SB/call,BB,Qc9d,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+733,UTG/2.0bb/CO/call/BTN/call/SB/15.0bb/UTG/29.0bb/CO/allin/BTN/fold,SB,QhQc,call,4,4,"['call', 'fold']",147.0
+734,UTG/2.0bb/HJ/6.5bb/CO/14.0bb/BB/26.0bb/UTG/fold/HJ/fold,CO,QsQc,call,4,4,"['call', 'fold']",49.0
+735,UTG/2.0bb/CO/call/BTN/call/SB/call/BB/15.0bb/UTG/call/CO/call/BTN/fold,SB,7h6h,fold,5,2,['fold'],49.0
+736,HJ/2.0bb/BTN/call/SB/call/BB/14.5bb/HJ/fold/BTN/fold/SB/allin,BB,KdKc,call,4,3,"['call', 'fold']",118.5
+737,UTG/2.0bb/CO/call/BTN/call/BB/14.0bb/UTG/29.0bb/CO/fold/BTN/allin/BB/fold,UTG,AhAc,call,4,4,"['call', 'fold']",145.5
+738,UTG/2.0bb/CO/allin,UTG,AsAc,call,2,2,"['call', 'fold']",103.5
+739,HJ/2.0bb/CO/call/BTN/call/SB/call/BB/16.0bb/HJ/31.2bb/CO/call/BTN/fold,SB,ThTd,fold,5,3,"['allin', 'fold']",82.4
+740,,BTN,Ks8s,2.5bb,1,0,"['2.5bb', 'fold']",1.5
+741,HJ/2.0bb,BB,8s6s,call,2,1,"['call', '12.3bb', 'fold']",3.5
+742,HJ/2.0bb/BTN/7.5bb,HJ,AhJh,call,2,2,"['20.0bb', 'allin', 'call', 'fold']",11.0
+743,CO/2.3bb/SB/call/BB/11.0bb,CO,JhJd,call,3,2,"['22.0bb', 'call', 'fold']",15.6
+744,UTG/2.0bb/HJ/6.5bb/BTN/14.0bb/BB/allin,UTG,KdJd,fold,4,4,"['call', 'fold']",123.0
+745,HJ/2.0bb/CO/call/SB/call/BB/15.0bb/HJ/29.2bb/CO/allin,SB,8s7s,fold,4,4,['fold'],146.2
+746,UTG/2.0bb/HJ/6.5bb/CO/14.0bb/BB/allin,UTG,As6s,fold,4,4,"['call', 'fold']",123.0
+747,UTG/2.0bb/CO/call/BTN/call/SB/15.0bb/BB/30.0bb/UTG/call/CO/allin/BTN/fold/SB/fold,BB,AsAh,call,5,4,"['call', 'fold']",177.0
+748,HJ/2.0bb/CO/6.5bb/SB/allin/HJ/fold,CO,AhKs,fold,3,3,"['call', 'fold']",109.5
+749,SB/3.0bb,BB,3s2s,call,2,1,"['call', '10.0bb', 'fold']",4.0
+750,UTG/2.0bb/CO/call/BB/14.0bb/UTG/allin/CO/fold,BB,AsAc,call,3,3,"['call', 'fold']",116.5
+751,CO/2.3bb/SB/call,BB,KhTs,11.0bb,3,1,"['11.0bb', 'fold']",5.6
+752,SB/call,BB,4s2s,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+753,UTG/2.0bb/CO/6.5bb/BB/18.0bb/UTG/33.0bb/CO/allin/BB/fold,UTG,JhJc,fold,3,5,"['call', 'fold']",151.5
+754,HJ/2.0bb/CO/6.5bb/BTN/13.1bb/BB/25.8bb/HJ/fold/CO/allin/BTN/fold,BB,AhAd,call,4,5,"['call', 'fold']",141.4
+755,SB/call,BB,Kd9d,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+756,SB/3.0bb/BB/10.0bb,SB,Td7d,fold,2,2,"['21.0bb', 'allin', 'call', 'fold']",13.0
+757,CO/2.3bb/BTN/call/SB/allin,CO,TdTc,call,3,2,"['call', 'fold']",105.6
+758,HJ/2.0bb/CO/call/BTN/call/SB/call/BB/16.0bb/HJ/31.2bb/CO/fold/BTN/allin/SB/fold,BB,QsQd,call,5,4,"['call', 'fold']",151.2
+759,SB/call,BB,Kd4d,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+760,UTG/2.0bb/HJ/6.5bb/CO/14.0bb/UTG/fold,HJ,AsAd,32.0bb,3,3,"['allin', '32.0bb', 'call', 'fold']",24.0
+761,SB/call,BB,Ac8h,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+762,HJ/2.0bb/CO/6.5bb/BB/allin/HJ/fold,CO,TsTd,call,3,3,"['call', 'fold']",109.0
+763,UTG/2.0bb/CO/call/BTN/call/BB/14.0bb/UTG/call/CO/call/BTN/allin,BB,AsAc,call,4,3,"['call', 'fold']",142.5
+764,SB/call,BB,QcJh,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+765,HJ/2.0bb/BTN/7.5bb/SB/21.0bb/HJ/fold,BTN,AsAc,call,3,3,"['allin', 'call', 'fold']",31.5
+766,SB/call,BB,Ac5h,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+767,SB/call,BB,Qc9h,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+768,CO/2.3bb/BTN/call/SB/12.5bb/BB/call,CO,AcTh,fold,4,2,"['allin', 'fold']",29.6
+769,UTG/2.0bb/CO/call/BTN/9.5bb/BB/24.0bb/UTG/call/CO/allin/BTN/fold,BB,KsKc,fold,4,4,"['call', 'fold']",158.0
+770,SB/3.0bb,BB,KhKc,10.0bb,2,1,"['call', '10.0bb', 'fold']",4.0
+771,HJ/2.0bb/CO/call,BTN,AcQh,9.5bb,3,1,"['9.5bb', 'fold']",5.5
+772,UTG/2.0bb/HJ/6.5bb,BB,8d7c,fold,3,2,"['19.0bb', 'allin', 'fold']",10.0
+773,SB/call,BB,As9h,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+774,UTG/2.0bb/BB/12.0bb,UTG,Td9d,fold,2,2,"['22.0bb', 'call', 'fold']",14.5
+775,UTG/2.0bb/SB/10.0bb/BB/20.0bb/UTG/allin,SB,7s7d,fold,3,4,"['call', 'fold']",130.0
+776,UTG/2.0bb/CO/call/BTN/call/BB/14.0bb/UTG/fold/CO/call/BTN/allin/BB/fold,CO,9d9c,fold,4,3,['fold'],130.5
+777,BTN/2.5bb,SB,QcJc,12.0bb,2,1,"['12.0bb', 'fold']",4.0
+778,HJ/2.0bb/CO/call/SB/13.0bb/BB/25.0bb/HJ/fold/CO/fold,SB,JdJc,call,4,3,"['allin', 'call', 'fold']",42.0
+779,HJ/2.0bb/CO/call/SB/call/BB/15.0bb/HJ/fold/CO/fold/SB/allin,BB,Ac7c,fold,4,3,"['call', 'fold']",119.0
+780,UTG/2.0bb/CO/call/BTN/call/SB/call/BB/15.0bb/UTG/34.0bb/CO/fold/BTN/allin/SB/fold,BB,JsJh,call,5,4,"['call', 'fold']",153.0
+781,SB/call,BB,Qd7d,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+782,SB/call,BB,Ad7d,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+783,HJ/2.0bb/CO/call/SB/call/BB/15.0bb,HJ,AdKd,29.2bb,4,2,"['allin', '29.2bb', 'call', 'fold']",21.0
+784,UTG/2.0bb/CO/call/BTN/call/SB/15.0bb/BB/30.0bb/UTG/call/CO/allin/BTN/fold,SB,KhKd,call,5,4,"['call', 'fold']",177.0
+785,BTN/2.5bb/SB/12.0bb,BB,KdJd,23.0bb,3,2,"['23.0bb', 'allin', 'fold']",15.5
+786,HJ/2.0bb/CO/call/BTN/call/SB/15.0bb/HJ/fold/CO/call/BTN/allin,SB,KsQs,call,4,3,"['call', 'fold']",133.0
+787,HJ/2.0bb/CO/call/BTN/9.5bb/SB/24.1bb/HJ/fold/CO/allin,BTN,AcKs,call,4,4,"['call', 'fold']",136.6
+788,UTG/2.0bb/CO/call/BTN/call/SB/call/BB/15.0bb/UTG/allin/CO/fold/BTN/fold/SB/fold,BB,9h9d,fold,5,3,"['call', 'fold']",121.0
+789,,CO,Qd7d,2.3bb,1,0,"['2.3bb', 'fold']",1.5
+790,SB/call,BB,Kd7c,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+791,UTG/2.0bb/CO/6.5bb/BTN/13.0bb/BB/allin/UTG/fold,CO,KsKh,call,4,4,"['call', 'fold']",122.0
+792,HJ/2.0bb/BTN/call/SB/call/BB/14.5bb/HJ/28.0bb/BTN/fold/SB/allin,BB,JsJc,call,4,4,"['call', 'fold']",144.5
+793,SB/call,BB,Ac4h,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+794,SB/call,BB,Ad4c,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+795,SB/call,BB,Ad8c,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+796,,BTN,AcTd,2.5bb,1,0,"['2.5bb', 'fold']",1.5
+797,SB/call,BB,Kd7h,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+798,SB/3.0bb,BB,Kh7h,call,2,1,"['call', '10.0bb', 'fold']",4.0
+799,HJ/2.0bb/BTN/call/SB/13.0bb/HJ/call/BTN/allin,SB,AdKc,call,3,3,"['call', 'fold']",127.0
+800,HJ/2.0bb/CO/6.5bb/BTN/13.1bb/BB/25.8bb/HJ/call/CO/call/BTN/allin,BB,AsAd,call,4,5,"['call', 'fold']",177.9
+801,SB/call,BB,Ac3s,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+802,UTG/2.0bb/HJ/6.5bb/BB/19.0bb/UTG/fold,HJ,AsJd,fold,3,3,"['allin', 'call', 'fold']",28.0
+803,SB/call,BB,Ad7s,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+804,SB/call,BB,Jh9c,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+805,HJ/2.0bb/CO/call/BTN/call/SB/call/BB/16.0bb/HJ/fold/CO/call/BTN/call/SB/allin,BB,AsKd,call,5,3,"['call', 'fold']",150.0
+806,SB/call,BB,Ac7d,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+807,HJ/2.0bb/CO/call/SB/13.0bb/BB/call,HJ,KhJs,fold,4,2,"['allin', 'fold']",30.0
+808,UTG/2.0bb/BTN/7.5bb/SB/20.0bb/BB/40.0bb/UTG/allin/BTN/fold/SB/fold,BB,KsKc,call,4,5,"['call', 'fold']",167.5
+809,CO/2.3bb/BTN/7.5bb/SB/allin/CO/fold,BTN,KhTs,fold,3,3,"['call', 'fold']",110.8
+810,BTN/2.5bb/SB/call/BB/11.0bb,BTN,AdKs,23.0bb,3,2,"['23.0bb', 'call', 'fold']",16.0
+811,UTG/2.0bb/CO/6.5bb,SB,AcKh,18.0bb,3,2,"['18.0bb', 'allin', 'fold']",10.0
+812,HJ/2.0bb/CO/call/BTN/9.5bb/SB/24.1bb/HJ/call/CO/allin,BTN,AcQh,call,4,4,"['call', 'fold']",158.7
+813,CO/2.3bb,SB,AsQh,11.5bb,2,1,"['11.5bb', 'call', 'fold']",3.8
+814,UTG/2.0bb/CO/call,SB,KhTh,12.0bb,3,1,"['12.0bb', 'fold']",5.5
+815,SB/call,BB,6c2c,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+816,UTG/2.0bb/HJ/6.5bb/CO/allin,BB,Ad4d,fold,4,3,"['call', 'fold']",110.0
+817,HJ/2.0bb/CO/call/BTN/call/BB/15.0bb/HJ/29.2bb/CO/call/BTN/allin,BB,JsJh,call,4,4,"['call', 'fold']",173.9
+818,HJ/2.0bb/CO/6.5bb,BB,JsJd,17.5bb,3,2,"['17.5bb', 'allin', 'fold']",10.0
+819,SB/call,BB,Ac2c,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+820,HJ/2.0bb/CO/6.5bb/BTN/allin,SB,2s2d,fold,4,3,"['call', 'fold']",110.0
+821,UTG/2.0bb/CO/call/SB/call/BB/14.0bb,UTG,Ac4c,fold,4,2,"['allin', 'call', '28.0bb', 'fold']",20.0
+822,UTG/2.0bb/CO/6.5bb,BB,AdQd,18.0bb,3,2,"['18.0bb', 'allin', 'fold']",10.0
+823,HJ/2.0bb/BTN/call/BB/13.5bb/HJ/26.2bb/BTN/allin,BB,KhKd,call,3,4,"['call', 'fold']",140.2
+824,UTG/2.0bb/HJ/6.5bb/BTN/14.0bb,BB,Js6s,fold,4,3,"['allin', '26.0bb', 'fold']",24.0
+825,HJ/2.0bb/BTN/7.5bb/HJ/20.0bb/BTN/33.3bb,HJ,Ac5c,fold,2,4,"['allin', 'call', 'fold']",54.8
+826,HJ/2.0bb,SB,Ac5c,11.0bb,2,1,"['call', '11.0bb', 'fold']",3.5
+827,UTG/2.0bb/CO/6.5bb,SB,AhKc,18.0bb,3,2,"['18.0bb', 'allin', 'fold']",10.0
+828,SB/call,BB,6s5s,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+829,HJ/2.0bb/CO/call/BTN/9.5bb,BB,AcQc,24.3bb,4,2,"['allin', '24.3bb', 'fold']",15.0
+830,UTG/2.0bb/HJ/6.5bb/CO/allin,BB,Ts9c,fold,4,3,"['call', 'fold']",110.0
+831,HJ/2.0bb/CO/call/BTN/call/SB/call/BB/16.0bb/HJ/fold/CO/31.2bb/BTN/fold/SB/allin,BB,AcKc,call,5,4,"['call', 'fold']",151.2
+832,BTN/2.5bb,SB,AhTc,12.0bb,2,1,"['12.0bb', 'fold']",4.0
+833,HJ/2.0bb/BTN/call/SB/13.0bb/HJ/24.9bb/BTN/allin,SB,KsKh,call,3,4,"['call', 'fold']",138.9
+834,SB/call,BB,Kc9s,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+835,HJ/2.0bb/BTN/call/SB/13.0bb/BB/25.0bb/HJ/call/BTN/allin/SB/fold,BB,AdQd,call,4,4,"['call', 'fold']",163.0
+836,SB/call,BB,Qh4h,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+837,UTG/2.0bb/CO/call/BTN/call/BB/14.0bb/UTG/call/CO/call/BTN/allin,BB,KhKc,call,4,3,"['call', 'fold']",142.5
+838,UTG/2.0bb,SB,AsKc,10.0bb,2,1,"['call', '10.0bb', 'fold']",3.5
+839,BTN/2.5bb/SB/12.0bb,BTN,AdAc,26.0bb,2,2,"['allin', '26.0bb', 'call', 'fold']",15.5
+840,UTG/2.0bb,BTN,AcQc,7.5bb,2,1,"['7.5bb', 'call', 'fold']",3.5
+841,SB/call,BB,3s3c,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+842,SB/3.0bb/BB/10.0bb,SB,AsJh,21.0bb,2,2,"['21.0bb', 'allin', 'call', 'fold']",13.0
+843,UTG/2.0bb/CO/call/BTN/9.5bb/UTG/call/CO/allin,BTN,AhKd,call,3,3,"['call', 'fold']",120.5
+844,SB/call,BB,Ks7d,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+845,HJ/2.0bb/CO/call/BTN/call/SB/15.0bb/HJ/29.6bb/CO/allin/BTN/fold/SB/fold,HJ,AsAh,call,4,4,"['call', 'fold']",147.6
+846,UTG/2.0bb/HJ/6.5bb/BTN/14.0bb/SB/allin,UTG,5h4h,fold,4,4,"['call', 'fold']",123.5
+847,HJ/2.0bb/CO/call/BTN/9.5bb/BB/24.3bb/HJ/allin/CO/fold,BTN,KdJs,fold,4,4,"['call', 'fold']",136.3
+848,UTG/2.0bb/HJ/6.5bb/BTN/14.0bb/BB/26.0bb/UTG/fold/HJ/fold,BTN,AdAc,call,4,4,"['call', 'fold']",49.0
+849,HJ/2.0bb/CO/call/BTN/call/BB/15.0bb,HJ,AsAc,29.2bb,4,2,"['allin', '29.2bb', 'call', 'fold']",21.5
+850,HJ/2.0bb/CO/6.5bb/BTN/call/BB/allin/HJ/fold,CO,AdJs,fold,4,3,"['call', 'fold']",115.5
+851,CO/2.3bb/BTN/7.5bb/SB/21.0bb,BB,Qh7h,fold,4,3,"['allin', 'fold']",31.8
+852,SB/call,BB,QhQc,5.0bb,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+853,UTG/2.0bb/CO/call/BTN/call/BB/14.0bb/UTG/fold/CO/fold/BTN/allin,BB,8c7c,fold,4,3,"['call', 'fold']",118.5
+854,UTG/2.0bb/CO/call,BTN,AhJh,9.5bb,3,1,"['9.5bb', 'fold']",5.5
+855,,SB,QsTd,3.0bb,1,0,"['3.0bb', 'call', 'fold']",1.5
+856,,CO,AdJh,2.3bb,1,0,"['2.3bb', 'fold']",1.5
+857,UTG/2.0bb/CO/call/SB/allin,BB,Jd9c,fold,4,2,"['call', 'fold']",105.0
+858,UTG/2.0bb/CO/call/SB/allin,BB,JsTs,fold,4,2,"['call', 'fold']",105.0
+859,HJ/2.0bb/CO/6.5bb/BTN/13.1bb/HJ/allin/CO/fold,BTN,KdKc,call,3,4,"['call', 'fold']",121.1
+860,UTG/2.0bb/BTN/call/SB/13.0bb/UTG/fold/BTN/24.0bb,SB,AdKd,fold,3,3,"['call', 'fold']",40.0
+861,SB/call,BB,Qc9s,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+862,HJ/2.0bb/CO/call,BTN,AcQc,9.5bb,3,1,"['9.5bb', 'fold']",5.5
+863,HJ/2.0bb/CO/call/BTN/call/SB/15.0bb/BB/call/HJ/fold/CO/call/BTN/allin,SB,QsQh,call,5,3,"['call', 'fold']",147.0
+864,SB/call,BB,5h3h,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+865,HJ/2.0bb/CO/call/BTN/call/SB/call/BB/16.0bb/HJ/31.2bb/CO/allin,BTN,JsTs,fold,5,4,['fold'],151.2
+866,HJ/2.0bb/CO/6.5bb/BTN/call,BB,AhJd,fold,4,2,"['allin', '24.1bb', 'fold']",16.5
+867,HJ/2.0bb/CO/call/BTN/9.5bb/HJ/call/CO/allin,BTN,AhKh,call,3,3,"['call', 'fold']",120.5
+868,,HJ,9s9d,2.0bb,1,0,"['2.0bb', 'fold']",1.5
+869,BTN/2.5bb/SB/call/BB/allin,BTN,AsKh,call,3,2,"['call', 'fold']",105.0
+870,SB/call,BB,KhJd,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+871,UTG/2.0bb/HJ/6.5bb/SB/20.0bb/BB/34.0bb/UTG/fold/HJ/allin/SB/fold,BB,KsKh,fold,4,5,"['call', 'fold']",156.0
+872,BTN/2.5bb/SB/call/BB/11.0bb,BTN,AcKs,23.0bb,3,2,"['23.0bb', 'call', 'fold']",16.0
+873,UTG/2.0bb/BTN/call/SB/call/BB/14.0bb/UTG/27.0bb/BTN/fold/SB/fold,BB,Kd7d,fold,4,3,"['allin', 'call', 'fold']",45.0
+874,UTG/2.0bb/CO/call/BTN/call/SB/15.0bb/BB/call/UTG/call/CO/allin/BTN/fold,SB,KcTc,call,5,3,"['call', 'fold']",147.0
+875,UTG/2.0bb/HJ/6.5bb/CO/14.0bb/BTN/25.0bb,BB,AhQh,fold,5,4,"['allin', 'fold']",49.0
+876,UTG/2.0bb/CO/call/BTN/call,BB,KhKc,14.0bb,4,1,"['14.0bb', 'fold']",7.5
+877,HJ/2.0bb/CO/call/SB/call/BB/allin,HJ,JsJc,call,4,2,"['call', 'fold']",106.0
+878,SB/call,BB,Jc7c,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+879,UTG/2.0bb/CO/call/BTN/call/SB/15.0bb/UTG/29.0bb/CO/fold/BTN/allin,SB,QdTd,fold,4,4,"['call', 'fold']",147.0
+880,SB/call,BB,Ad8d,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+881,SB/call,BB,Ah4c,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+882,HJ/2.0bb/BTN/7.5bb/SB/21.0bb/HJ/fold/BTN/allin,SB,KhKc,fold,3,4,"['call', 'fold']",124.0
+883,UTG/2.0bb/CO/call/BTN/call/SB/call/BB/15.0bb/UTG/34.0bb/CO/call/BTN/call,SB,As3s,fold,5,3,['fold'],119.0
+884,SB/call,BB,Ts8d,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+885,UTG/2.0bb/HJ/6.5bb/BTN/14.0bb/SB/allin,BB,QdTs,fold,5,4,"['call', 'fold']",123.5
+886,BTN/2.5bb/SB/call/BB/11.0bb/BTN/allin/SB/fold,BB,JsJc,call,3,3,"['call', 'fold']",113.5
+887,HJ/2.0bb/CO/call/BB/13.5bb/HJ/28.0bb/CO/call,BB,Ad4d,fold,3,3,"['allin', 'fold']",70.0
+888,UTG/2.0bb/HJ/6.5bb/BB/allin/UTG/fold,HJ,QsQc,call,3,3,"['call', 'fold']",109.0
+889,UTG/2.0bb/CO/call/BTN/call/SB/15.0bb/BB/call/UTG/fold/CO/allin/BTN/fold,SB,AsQh,fold,5,3,"['call', 'fold']",134.0
+890,UTG/2.0bb/BTN/call/SB/13.0bb,BB,6c3c,fold,4,2,"['25.0bb', 'allin', 'fold']",18.0
+891,,CO,Jc9c,2.3bb,1,0,"['2.3bb', 'fold']",1.5
+892,UTG/2.0bb/BB/12.0bb,UTG,AcJd,fold,2,2,"['22.0bb', 'call', 'fold']",14.5
+893,HJ/2.0bb/BTN/7.5bb/BB/21.0bb/HJ/allin/BTN/fold,BB,KdKc,fold,3,4,"['call', 'fold']",129.0
+894,HJ/2.0bb/CO/6.5bb/SB/17.5bb/HJ/33.7bb/CO/allin,SB,AdJd,fold,3,5,"['call', 'fold']",152.2
+895,HJ/2.0bb/BTN/call/SB/call/BB/14.5bb/HJ/allin/BTN/fold,SB,KdQc,fold,4,3,['fold'],118.5
+896,UTG/2.0bb/CO/call/BTN/allin,BB,Tc2c,fold,4,2,"['call', 'fold']",105.5
+897,UTG/2.0bb/CO/call/BTN/call/SB/15.0bb/UTG/fold/CO/29.0bb/BTN/fold,SB,KsQs,call,4,3,"['allin', 'call', 'fold']",49.0
+898,UTG/2.0bb/HJ/6.5bb/CO/14.0bb/BTN/allin,SB,AcTs,fold,5,4,"['call', 'fold']",124.0
+899,UTG/2.0bb/CO/call/SB/call,BB,QdJd,14.0bb,4,1,"['14.0bb', 'fold']",7.0
+900,BTN/2.5bb/BB/13.0bb,BTN,As9s,call,2,2,"['allin', '27.0bb', 'call', 'fold']",16.0
+901,BTN/2.5bb/BB/13.0bb,BTN,QsQc,27.0bb,2,2,"['allin', '27.0bb', 'call', 'fold']",16.0
+902,UTG/2.0bb,BB,Kc8h,fold,2,1,"['call', '12.0bb', 'fold']",3.5
+903,SB/call,BB,Ks8d,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+904,CO/2.3bb/BTN/call/BB/14.0bb/CO/31.0bb/BTN/allin,BB,KsKc,call,3,4,"['call', 'fold']",145.5
+905,SB/call,BB,5c2c,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+906,,BTN,Ad5h,2.5bb,1,0,"['2.5bb', 'fold']",1.5
+907,,SB,AhKc,3.0bb,1,0,"['3.0bb', 'call', 'fold']",1.5
+908,CO/2.3bb/SB/call,BB,AdTh,11.0bb,3,1,"['11.0bb', 'fold']",5.6
+909,HJ/2.0bb/SB/11.0bb,BB,KcQd,fold,3,2,"['23.0bb', 'allin', 'fold']",14.0
+910,UTG/2.0bb/HJ/6.5bb/CO/14.0bb/BTN/25.0bb/SB/allin,UTG,KsKd,call,5,5,"['call', 'fold']",148.5
+911,,CO,As8s,2.3bb,1,0,"['2.3bb', 'fold']",1.5
+912,UTG/2.0bb/CO/call/SB/call/BB/14.0bb/UTG/fold/CO/fold/SB/allin,BB,KhKc,call,4,3,"['call', 'fold']",118.0
+913,SB/call,BB,Kc7d,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+914,CO/2.3bb/BTN/call/BB/14.0bb/CO/31.0bb/BTN/allin/BB/fold,CO,KsTs,call,3,4,"['call', 'fold']",145.5
+915,SB/call,BB,QdTc,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+916,CO/2.3bb/SB/11.5bb/BB/25.0bb/CO/call/SB/allin,BB,KsKc,call,3,4,"['call', 'fold']",150.0
+917,HJ/2.0bb/CO/6.5bb/SB/17.5bb/HJ/33.7bb/CO/call/SB/allin,HJ,KsKd,fold,3,5,['fold'],168.39999999999998
+918,UTG/2.0bb/CO/6.5bb/BTN/13.0bb/SB/24.0bb/UTG/fold/CO/fold,BTN,TdTc,fold,4,4,"['call', 'fold']",46.5
+919,HJ/2.0bb/CO/6.5bb/SB/17.5bb/HJ/fold/CO/30.5bb,SB,QsQh,call,3,4,"['call', 'fold']",51.0
+920,SB/call,BB,Ad9h,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+921,SB/call,BB,9c8h,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+922,SB/call,BB,JdTc,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+923,SB/call,BB,Ah8d,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+924,SB/call,BB,6h2h,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+925,UTG/2.0bb,BTN,JsTs,call,2,1,"['7.5bb', 'call', 'fold']",3.5
+926,HJ/2.0bb/BTN/call/SB/call/BB/14.5bb/HJ/call/BTN/fold,SB,6d6c,fold,4,2,['fold'],33.0
+927,UTG/2.0bb/CO/6.5bb/BTN/13.0bb/UTG/fold/CO/31.0bb,BTN,QhQc,call,3,4,"['allin', 'call', 'fold']",47.5
+928,,BTN,3s3h,2.5bb,1,0,"['2.5bb', 'fold']",1.5
+929,SB/call,BB,6d2d,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+930,HJ/2.0bb/BTN/call/SB/call/BB/14.5bb/HJ/28.0bb/BTN/fold/SB/allin,BB,KhKd,call,4,4,"['call', 'fold']",144.5
+931,HJ/2.0bb/CO/call/BTN/call/SB/15.0bb/BB/30.1bb/HJ/allin/CO/fold,BTN,3h3c,fold,5,4,['fold'],149.1
+932,HJ/2.0bb/CO/call/BTN/9.5bb/BB/24.3bb/HJ/call/CO/fold,BTN,Kc9c,fold,4,3,"['allin', 'fold']",60.6
+933,CO/2.3bb/BTN/call/SB/12.5bb/BB/call/CO/allin/BTN/fold,SB,AhAc,call,4,3,"['call', 'fold']",127.3
+934,UTG/2.0bb/HJ/6.5bb,BB,Ad5d,19.0bb,3,2,"['19.0bb', 'allin', 'fold']",10.0
+935,HJ/2.0bb/SB/11.0bb/HJ/22.0bb,SB,Ac5c,fold,2,3,"['allin', 'call', 'fold']",34.0
+936,SB/call,BB,Qd6d,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+937,SB/call,BB,Kh7c,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+938,,BTN,Kh7h,2.5bb,1,0,"['2.5bb', 'fold']",1.5
+939,HJ/2.0bb/CO/call,BB,QcJc,13.5bb,3,1,"['13.5bb', 'fold']",5.5
+940,BTN/2.5bb/SB/call,BB,AhQc,11.0bb,3,1,"['11.0bb', 'fold']",6.0
+941,CO/2.3bb,BB,Qc8c,call,2,1,"['13.5bb', 'call', 'fold']",3.8
+942,SB/call,BB,6s2s,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+943,SB/call,BB,Kc2c,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+944,SB/call,BB,Qc7c,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+945,UTG/2.0bb/CO/call/BTN/call/SB/15.0bb/UTG/29.0bb/CO/call/BTN/call/SB/allin,UTG,AdAc,call,4,4,"['call', 'fold']",188.0
+946,SB/call,BB,9d8h,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+947,HJ/2.0bb/SB/call/BB/11.0bb/HJ/allin,SB,Ah4h,fold,3,3,['fold'],113.0
+948,HJ/2.0bb/BTN/call/SB/call/BB/allin,HJ,KhKc,call,4,2,"['call', 'fold']",106.0
+949,SB/call,BB,Ad4h,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+950,SB/call,BB,8s7c,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+951,SB/call,BB,QsTd,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+952,HJ/2.0bb/CO/6.5bb/BTN/13.1bb/HJ/24.0bb/CO/fold,BTN,AcKh,call,3,4,"['call', 'fold']",45.1
+953,CO/2.3bb/SB/call/BB/11.0bb,CO,AhQh,call,3,2,"['22.0bb', 'call', 'fold']",15.6
+954,UTG/2.0bb/HJ/6.5bb,SB,KdQs,fold,3,2,"['20.0bb', 'allin', 'fold']",10.0
+955,CO/2.3bb/BTN/call/SB/call/BB/14.0bb/CO/call/BTN/fold,SB,KhQc,fold,4,2,['fold'],32.6
+956,HJ/2.0bb/CO/call/BTN/call,SB,AsKs,15.0bb,4,1,"['15.0bb', 'fold']",7.5
+957,SB/call,BB,Jh6h,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+958,HJ/2.0bb/BTN/call/BB/13.5bb/HJ/fold/BTN/26.2bb,BB,Ah4h,fold,3,3,"['allin', 'call', 'fold']",42.2
+959,HJ/2.0bb/CO/call/SB/call/BB/15.0bb/HJ/29.2bb/CO/call/SB/allin/BB/fold,HJ,AcKc,call,4,4,"['call', 'fold']",173.39999999999998
+960,HJ/2.0bb/BTN/call/BB/13.5bb,HJ,AcQc,call,3,2,"['allin', 'call', '26.2bb', 'fold']",18.0
+961,UTG/2.0bb/CO/call/BTN/call/SB/call/BB/15.0bb/UTG/34.0bb/CO/call/BTN/fold/SB/allin,BB,QhQc,call,5,4,"['call', 'fold']",185.0
+962,SB/call,BB,KcTd,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+963,CO/2.3bb/BTN/call,SB,AdJs,12.5bb,3,1,"['12.5bb', 'fold']",6.1
+964,,SB,6d6c,3.0bb,1,0,"['3.0bb', 'call', 'fold']",1.5
+965,SB/call,BB,4h3h,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+966,UTG/2.0bb/CO/6.5bb/BTN/13.0bb/SB/allin,BB,Kc8d,fold,5,4,"['call', 'fold']",122.5
+967,UTG/2.0bb,CO,KsJs,6.5bb,2,1,"['6.5bb', 'fold']",3.5
+968,SB/call,BB,5d2d,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+969,,SB,Ah5d,3.0bb,1,0,"['3.0bb', 'call', 'fold']",1.5
+970,,SB,Td9c,3.0bb,1,0,"['3.0bb', 'call', 'fold']",1.5
+971,UTG/2.0bb/CO/call/SB/call/BB/14.0bb,UTG,JhJd,fold,4,2,"['allin', 'call', '28.0bb', 'fold']",20.0
+972,CO/2.3bb/SB/11.5bb,CO,AsQs,call,2,2,"['25.0bb', 'call', 'fold']",14.8
+973,SB/call,BB,Ad8h,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+974,SB/call,BB,Tc9h,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+975,SB/call,BB,Jd9c,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+976,SB/call,BB,AdTc,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+977,SB/call,BB,Ah9c,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+978,SB/call,BB,Qs4s,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+979,UTG/2.0bb/CO/call/BB/14.0bb/UTG/28.0bb/CO/fold/BB/allin,UTG,AsAh,call,3,4,"['call', 'fold']",130.5
+980,HJ/2.0bb/CO/6.5bb/HJ/19.0bb,CO,QdQc,call,2,3,"['34.4bb', 'allin', 'call', 'fold']",27.0
+981,SB/call,BB,Ks9s,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+982,UTG/2.0bb,HJ,QsQh,6.5bb,2,1,"['6.5bb', 'fold']",3.5
+983,SB/call,BB,Ah6d,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+984,SB/call,BB,9d2d,3.0bb,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+985,,UTG,AcQc,2.0bb,1,0,"['2.0bb', 'fold']",1.5
+986,SB/call,BB,Jd6d,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+987,HJ/2.0bb/CO/6.5bb/BTN/call/SB/24.1bb/HJ/fold/CO/fold/BTN/allin,SB,AsAd,call,4,4,"['call', 'fold']",133.6
+988,UTG/2.0bb/CO/call/BTN/call/SB/15.0bb/UTG/call/CO/fold/BTN/allin,SB,KcTc,fold,4,3,"['call', 'fold']",133.0
+989,UTG/2.0bb/CO/call/SB/12.0bb/BB/24.0bb/UTG/fold/CO/allin,SB,8s8c,fold,4,4,"['call', 'fold']",138.0
+990,HJ/2.0bb/SB/11.0bb,HJ,AhQh,call,2,2,"['22.0bb', 'allin', 'call', 'fold']",14.0
+991,HJ/2.0bb/CO/call/BTN/9.5bb/SB/call/BB/call/HJ/fold/CO/allin/BTN/fold,SB,AdKs,fold,5,3,['fold'],130.5
+992,,SB,Qs3s,3.0bb,1,0,"['3.0bb', 'call', 'fold']",1.5
+993,HJ/2.0bb/CO/6.5bb/BTN/13.1bb/SB/allin,BB,Ac6d,fold,5,4,"['call', 'fold']",122.6
+994,,CO,AdJd,2.3bb,1,0,"['2.3bb', 'fold']",1.5
+995,SB/call,BB,5s2s,check,2,0,"['5.0bb', '3.0bb', 'check', 'fold']",1.0
+996,HJ/2.0bb/CO/call/BTN/call/SB/15.0bb/BB/call/HJ/call/CO/allin/BTN/fold,SB,AdJd,fold,5,3,"['call', 'fold']",147.0
+997,CO/2.3bb/BB/allin,CO,AsJd,fold,2,2,"['call', 'fold']",102.8
+998,UTG/2.0bb/CO/call,BTN,AcKd,9.5bb,3,1,"['9.5bb', 'fold']",5.5
+999,BTN/2.5bb/SB/12.0bb,BTN,AcJs,26.0bb,2,2,"['allin', '26.0bb', 'call', 'fold']",15.5

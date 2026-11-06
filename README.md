@@ -49,7 +49,7 @@ python "%ROOT%\Programs\concatfiles.py" %*
 - `batch` on PATH so commands resolve from any working directory:
 
   ```text
-  C:\scripts\batch
+  C:\Users\monfalcone\PycharmProjects\scripts\batch
   ```
 
 List known commands:
@@ -87,8 +87,8 @@ Prefer stdlib-only when possible so you can skip a dedicated venv.
 If the script imports packages that are not in the standard library:
 
 ```bat
-py -m venv C:\scripts\venvs\_<name>_venv
-C:\scripts\venvs\_<name>_venv\Scripts\pip install <packages>
+py -m venv C:\Users\monfalcone\PycharmProjects\scripts\venvs\_<name>_venv
+C:\Users\monfalcone\PycharmProjects\scripts\venvs\_<name>_venv\Scripts\pip install <packages>
 ```
 
 Naming convention used in this repo:
@@ -148,7 +148,7 @@ From any directory (with `batch` on PATH):
 Or call the bat explicitly:
 
 ```bat
-C:\scripts\batch\<name>.bat --help
+C:\Users\monfalcone\PycharmProjects\scripts\batch\<name>.bat --help
 ```
 
 For a venv-based command, confirm the bat finds `venvs\_<name>_venv\Scripts\python.exe` and does not look under `batch\venvs\`.

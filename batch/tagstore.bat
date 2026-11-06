@@ -1,17 +1,14 @@
 @echo off
 setlocal
 
-for %%I in ("%~dp0..") do set "ROOT=%%~fI"
+rem Remember the directory this command was launched from
+set "TARGET_DIR=%CD%"
 
-set "VENV_DIR=%ROOT%\venvs\_tagstore_venv"
-set "SCRIPT=%ROOT%\Programs\TagStore.py"
+rem Change into the folder that contains the tagstore package
+cd /d "%~dp0..\Programs"
 
-if not exist "%VENV_DIR%\Scripts\python.exe" (
-    echo ERROR: Virtual environment not found at "%VENV_DIR%"
-    echo Please run the setup for a new venv:
-    echo   py -m venv "%ROOT%\venvs\_tagstore_venv"
-    echo   "%ROOT%\venvs\_tagstore_venv\Scripts\pip" install rich
-    exit /b 1
-)
+rem Open the page in the default browser once the server is up
+start "" /b cmd /c "timeout /t 3 /nobreak >nul & start http://127.0.0.1:8000"
 
-"%VENV_DIR%\Scripts\python.exe" "%SCRIPT%" %*
+rem Start the TagStore web server rooted at the launch directory
+python -m tagstore.web --root "%TARGET_DIR%" --port 8000
