@@ -4,6 +4,29 @@ Personal Windows toolkit: small Python utilities and launchers, exposed as named
 
 Each command is a short batch wrapper in `batch/` that runs a script under `Programs/` (and optionally a dedicated virtual environment under `venvs/`). Putting `batch` on your `PATH` lets you type the command name from any directory.
 
+## Programs
+
+Everything under `Programs/`, largest source first (Python, HTML, CSS, and JS; bundled decks and databases are not counted). `TagStore.py` is the CLI entry for `tagstore/`, not a separate tool. `token_tactics.lnk` is a shortcut, not a program.
+
+| Program | Path | Command | What it does |
+| --- | --- | --- | --- |
+| learn_japanese | `Programs/learn_japanese/` | `learn-japanese` | Local quiz for hiragana, katakana, kanji, and phrases, with SRS and a loopback web UI. |
+| tagstore | `Programs/tagstore/`, `Programs/TagStore.py` | `tagstore`, `tagstore-web`, `tagstore-cli` | Hash-based image tagging. Browser UI plus a CLI/REPL over a local `.tagstore.json`. |
+| learn_poker | `Programs/learn_poker/` | `learn-poker` | Local heads-up frequency trainer built from PokerBench spots, with a loopback web UI. |
+| structure | `Programs/structure.py` | `fs`, `folder-structure` | Print a folder tree and write a summary under `data/summaries/`. |
+| concatfiles | `Programs/concatfiles.py` | `cf`, `concatfiles` | Concatenate text and PDF files in the working directory into one summary file. |
+| genesys | `Programs/genesys.py` | `genesys` | Search and refresh the Yu-Gi-Oh! GENESYS card point list. |
+| search | `Programs/search.py` | `search` | Case-insensitive exact word search, with time, depth, and file limits. |
+| count_words | `Programs/count_words.py` | `words`, `countwords` | Count words in a file or directory, with extension and exclude filters. |
+| countfiles | `Programs/countfiles.py` | `countfiles` | Count files under a folder, with extension and prefix filters and scan limits. |
+| md_to_pdf | `Programs/md_to_pdf.py` | `md_to_pdf` | Convert a Markdown file to a styled PDF. |
+| convert_webp | `Programs/convert_webp.py` | `convert-webp` | Convert animated WebP files in the current directory to MP4. |
+| big_folders | `Programs/big_folders.py` | `big-folders` | List the folders with the most files. |
+| big_files | `Programs/big_files.py` | `bf`, `big-files` | List the largest files in a tree. |
+| PasGen_2026 | `Programs/PasGen_2026.py` | — | Generate a password from a keyword and the `PASGEN_SALT` value in the repo `.env`. |
+| news | `Programs/news.py` | `news` | Fetch headlines from a fixed set of RSS feeds. |
+| commands | `Programs/commands.py` | `commands` | Print the names of every launcher in `batch/`. |
+
 ## Layout
 
 ```text
