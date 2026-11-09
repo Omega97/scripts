@@ -159,7 +159,9 @@ main {
   border-right: 1px solid var(--border);
   background: var(--panel);
   padding: 12px;
+  overflow-x: hidden;
   overflow-y: auto;
+  touch-action: pan-y;
 }
 
 aside h2 {
@@ -178,12 +180,15 @@ aside h2 {
 
 .resizer:hover, .resizer.dragging { background: var(--accent); }
 
-.tag-list { display: flex; flex-direction: column; gap: 2px; }
+.tag-list { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
 
 .tag-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 8px;
+  width: 100%;
+  min-width: 0;
   background: none;
   border: none;
   color: var(--text);
@@ -195,7 +200,13 @@ aside h2 {
 
 .tag-item:hover { background: var(--border); }
 .tag-item.dim { color: var(--muted); }
-.count { color: var(--muted); font-size: 12px; }
+.tag-name {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.count { flex: 0 0 auto; color: var(--muted); font-size: 12px; }
 
 section.gallery {
   flex: 1 1 auto;
@@ -310,15 +321,17 @@ section.gallery {
 }
 
 .detail .tags { max-height: 80px; overflow-y: auto; }
+.detail .tag { display: inline-flex; align-items: center; gap: 4px; }
 
 .detail-actions { display: flex; gap: 4px; margin-top: 6px; }
 .detail-actions input { flex: 1; min-width: 0; }
 .detail-actions button { background: var(--accent); color: #fff; border: none; border-radius: 6px; padding: 8px 10px; cursor: pointer; }
 
 .selection-info { font-size: 12px; margin-top: 6px; }
-.selection-tags { margin-top: 6px; padding-top: 6px; border-top: 1px solid var(--border); max-height: 120px; overflow-y: auto; }
-.tag.sel-tag { background: var(--panel); color: var(--text); border: 1px solid var(--border); display: inline-flex; align-items: center; gap: 4px; }
-.sel-count { color: var(--accent); font-size: 11px; font-weight: 600; }
+.tag.sel-tag { background: var(--panel); color: var(--text); border: 1px solid var(--border); }
+.sel-count { font-size: 11px; font-weight: 600; }
+.tag.sel-tag .sel-count { color: var(--accent); }
+.tag:not(.sel-tag) .sel-count { color: #fff; }
 
 /* pager */
 .pager {

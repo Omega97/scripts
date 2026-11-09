@@ -22,6 +22,7 @@ from .errors import DatabaseLoadError, NoMatchError, QuerySyntaxError
 
 DB_FILE = ".tagstore.json"
 SYNONYMS_FILE = "synonyms.txt"
+BANNED_FILE = "banned.txt"
 SCHEMA_VERSION = 3
 HASH_CHUNK = 64 * 1024
 SUPPORTED_EXTS = {".png", ".jpg", ".jpeg", ".webp", ".gif"}
@@ -332,7 +333,9 @@ class TagStore:
         self.db_path = os.path.join(self.root_dir, DB_FILE)
         self.synonym_map = {}
         self.synonym_groups = {}
+        self.banned = set()
         self._load_synonyms()
+        self._load_banned()
         self.data = self._load()
         self.apply_synonyms()
         self._prune_spurious_tags()
@@ -370,6 +373,30 @@ class TagStore:
                 if alias not in self.synonym_groups[canon]:
                     self.synonym_groups[canon].append(alias)
 
+    def _load_banned(self):
+        """Read banned tags. Words are whitespace-separated; ``#`` starts a comment.
+
+        A banned word is never stored, including when it is only an alias in
+        the synonyms file. Matching uses the same normalization as other tags.
+        """
+        self.banned = set()
+        path = os.path.join(self.root_dir, BANNED_FILE)
+        if not os.path.isfile(path):
+            return
+        try:
+            with open(path, "r", encoding="utf-8") as f:
+                lines = f.readlines()
+        except OSError:
+            return
+        for line in lines:
+            stripped = self._strip_comment(line).strip()
+            if not stripped:
+                continue
+            for part in stripped.split():
+                tag = normalize_tag(part)
+                if tag:
+                    self.banned.add(tag)
+
     def canonicalize(self, tag):
         tag = normalize_tag(tag)
         if not tag:
@@ -384,36 +411,52 @@ class TagStore:
                 return line[:i]
         return line
 
+    def _accept_tag(self, value):
+        """Return the stored form of a tag, or '' when it must be ignored.
+
+        A word listed in the banned file is dropped before synonym rewriting,
+        so a banned alias is not replaced by its canonical tag. The canonical
+        form is dropped too when that form is itself banned.
+        """
+        raw = normalize_tag(value)
+        if not raw or raw.startswith("-") or raw in self.banned:
+            return ""
+        tag = self.synonym_map.get(raw, raw)
+        if not tag or tag in self.banned or _is_numeric(tag):
+            return ""
+        return tag
+
     def _clean_tags(self, values):
-        """Normalize, canonicalize, de-duplicate and drop numeric/empty tags."""
+        """Normalize, canonicalize, de-duplicate and drop numeric, empty, or banned tags."""
         out = []
         seen = set()
         for v in values or []:
-            c = self.canonicalize(v)
-            if not c or _is_numeric(c) or c in seen:
+            c = self._accept_tag(v)
+            if not c or c in seen:
                 continue
             seen.add(c)
             out.append(c)
         return out
 
     def apply_synonyms(self):
-        """Canonicalize stored tags and attach synonym metadata; rebuilds counts."""
-        if self.synonym_map:
+        """Canonicalize stored tags, drop banned tags, and attach synonym metadata."""
+        if self.synonym_map or self.banned:
             for info in self.data.get("hashes", {}).values():
                 if not isinstance(info, dict):
                     continue
                 info["tags"] = sorted(self._clean_tags(info.get("tags") or []))
         rebuild_tag_counts(self.data)
-        if not self.synonym_map:
-            return
         tags = self.data.setdefault("tags", {})
-        for canon, aliases in self.synonym_groups.items():
-            if canon in tags:
-                rec = _as_tag_record(tags[canon])
-                rec["synonyms"] = aliases
-                tags[canon] = rec
-        for alias in self.synonym_map:
-            tags.pop(alias, None)
+        if self.synonym_map:
+            for canon, aliases in self.synonym_groups.items():
+                if canon in tags:
+                    rec = _as_tag_record(tags[canon])
+                    rec["synonyms"] = aliases
+                    tags[canon] = rec
+            for alias in self.synonym_map:
+                tags.pop(alias, None)
+        for banned in self.banned:
+            tags.pop(banned, None)
 
     def _min_visible_count(self):
         """Minimum matches a tag needs to be treated as a real tag (default: MIN_TAG_MATCHES)."""
@@ -517,11 +560,10 @@ class TagStore:
             if i == len(parts) - 1:
                 part = os.path.splitext(part)[0]
             for token in re.split(r"[_\s]+", part):
-                token = self.canonicalize(token)
+                token = self._accept_tag(token)
                 if (
                     token
                     and len(token) >= MIN_TOKEN_LEN
-                    and not _is_numeric(token)
                     and re.match(r"^\w+(-\w+)*$", token)
                 ):
                     tags.add(token)
@@ -599,6 +641,7 @@ class TagStore:
         walk so renamed folders/files no longer leave stale tags behind.
         """
         self._load_synonyms()
+        self._load_banned()
         cache = self._path_cache()
         seen_hashes = set()
         seen_paths = set()
@@ -694,16 +737,27 @@ class TagStore:
         ``keywords`` is an ordered list of ``{"term", "hits"}`` for the literal
         tag terms in the query. Terms with zero hits are treated as ``True``
         (match-all) so they are effectively ignored.
+
+        A tag glued to a leading ``-`` is negated: ``dogs -cats`` means dogs
+        that are not tagged cats. The minus is not part of a tag name.
         """
         tokens = re.findall(r"\(|\)|AND|OR|NOT|[\w-]+", query_str.upper())
         pos = 0
+
+        def _term_body(tok):
+            if tok.startswith("-"):
+                return tok[1:]
+            return tok
 
         term_hits = {}
         term_order = []
         for tok in tokens:
             if tok in ("(", ")", "AND", "OR", "NOT"):
                 continue
-            term = self.canonicalize(tok.lower())
+            body = _term_body(tok)
+            if not body:
+                continue
+            term = self.canonicalize(body.lower())
             if term not in term_hits:
                 term_hits[term] = self.tag_count(term)
                 term_order.append(term)
@@ -747,10 +801,17 @@ class TagStore:
                     pos += 1
                 return res
             if pos < len(tokens):
-                tag = self.canonicalize(tokens[pos].lower())
+                raw = tokens[pos]
                 pos += 1
+                negated = raw.startswith("-")
+                body = raw[1:] if negated else raw
+                if not body:
+                    return lambda tags: True
+                tag = self.canonicalize(body.lower())
                 if term_hits.get(tag, 0) == 0:
                     return lambda tags: True
+                if negated:
+                    return lambda tags, t=tag: t not in tags
                 return lambda tags, t=tag: t in tags
             return lambda tags: True
 

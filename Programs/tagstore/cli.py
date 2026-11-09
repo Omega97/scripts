@@ -117,7 +117,7 @@ RESULT_DISPLAY_LIMIT = 50
 COMMANDS = [
     ("help", "List available commands and what they do"),
     ("scan", "Index images under the root (skips unchanged files, no full-file load)"),
-    ("search", "Find images by tags: AND, OR, NOT, parentheses  e.g. dog AND cat"),
+    ("search", "Find images by tags: AND, OR, NOT, -tag, parentheses  e.g. dogs -cats"),
     ("add", "Add tags to matching images     add <query> <tags...>"),
     ("remove", "Remove tags from matching images  remove <query> <tags...>"),
     ("override", "Replace tags on matching images   override <query> <tags...>"),
@@ -134,8 +134,8 @@ def print_command_help():
         table.add_row(name, desc)
     console.print(table)
     console.print(
-        "[dim]Search query operators:[/dim] [bold]AND[/bold], [bold]OR[/bold], [bold]NOT[/bold], [bold]( )[/bold]\n"
-        "[dim]Examples:[/dim]  [green]search dog AND cat[/green]   "
+        "[dim]Search query operators:[/dim] [bold]AND[/bold], [bold]OR[/bold], [bold]NOT[/bold], [bold]-tag[/bold], [bold]( )[/bold]\n"
+        "[dim]Examples:[/dim]  [green]search dogs -cats[/green]   "
         "[green]add dog favorite[/green]   [green]scan[/green]\n"
         "[dim]One-shot from a shell:[/dim]  [green]tagstore search dog AND cat[/green]"
     )

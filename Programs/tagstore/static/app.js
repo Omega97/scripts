@@ -55,8 +55,11 @@ function extractKeywords(text) {
   const out = [];
   for (const t of tokens) {
     if (t === "(" || t === ")" || t === "AND" || t === "OR" || t === "NOT") continue;
-    const term = t.toLowerCase();
-    if (!seen.includes(term)) { seen.push(term); out.push(term); }
+    let term = t.toLowerCase();
+    if (term.startsWith("-")) term = term.slice(1);
+    if (!term || seen.includes(term)) continue;
+    seen.push(term);
+    out.push(term);
   }
   return out;
 }
@@ -69,7 +72,8 @@ function currentPartial() {
 }
 
 function matchingTags(partial) {
-  const p = (partial || "").toLowerCase();
+  let p = (partial || "").toLowerCase();
+  if (p.startsWith("-")) p = p.slice(1);
   if (!p) return [];
   return tagsCache.filter((t) => t.startsWith(p)).slice(0, 20);
 }
@@ -81,7 +85,8 @@ function replacePartial(replacement) {
   const after = el.value.slice(pos);
   const m = before.match(/[^\s()]+$/);
   const start = m ? before.length - m[0].length : before.length;
-  const newBefore = before.slice(0, start) + replacement;
+  const prefix = m && m[0].startsWith("-") ? "-" : "";
+  const newBefore = before.slice(0, start) + prefix + replacement;
   el.value = newBefore + after;
   const caret = newBefore.length;
   el.setSelectionRange(caret, caret);
@@ -114,19 +119,44 @@ function renderAutocomplete() {
   });
 }
 
-function renderTags(container, tags, hash) {
-  container.innerHTML = "";
-  for (const t of tags) {
+let tagRequest = 0;
+
+function renderMergedTags(unionTags) {
+  const box = $("#detail-tags");
+  box.innerHTML = "";
+  const imageTags = new Set(selectedEntry?.visible_tags || []);
+  const hash = selectedEntry?.hash || null;
+  const items = [];
+  const seen = new Set();
+  for (const t of unionTags || []) {
+    if (!t.tag || seen.has(t.tag)) continue;
+    seen.add(t.tag);
+    items.push(t);
+  }
+  for (const tag of imageTags) {
+    if (seen.has(tag)) continue;
+    seen.add(tag);
+    items.push({ tag, count: 1 });
+  }
+  for (const t of items) {
+    const onImage = imageTags.has(t.tag);
     const span = document.createElement("span");
-    span.className = "tag";
-    span.textContent = t;
-    span.title = "left-click: add to search — right-click: remove";
-    span.addEventListener("click", () => addKeyword(t));
-    span.addEventListener("contextmenu", (e) => {
-      e.preventDefault();
-      removeTagFromImage(hash, t);
-    });
-    container.appendChild(span);
+    span.className = "tag" + (onImage ? "" : " sel-tag");
+    span.title = onImage
+      ? "left-click: add to search — right-click: remove"
+      : "click to add to search";
+    const count = Number(t.count) || 0;
+    span.innerHTML = count > 1
+      ? `${esc(t.tag)}<span class="sel-count">${count}</span>`
+      : esc(t.tag);
+    span.addEventListener("click", () => addKeyword(t.tag));
+    if (onImage && hash) {
+      span.addEventListener("contextmenu", (e) => {
+        e.preventDefault();
+        removeTagFromImage(hash, t.tag);
+      });
+    }
+    box.appendChild(span);
   }
 }
 
@@ -241,18 +271,17 @@ function showDetail(r) {
   $("#detail-name").textContent = r.primary_path || r.name || "";
   const extra = (r.paths || []).slice(1);
   $("#detail-paths").textContent = extra.join("\n");
-  renderTags($("#detail-tags"), r.visible_tags, r.hash);
+  updateCumulativeTags();
 }
 
 function clearDetailVisuals() {
+  tagRequest++;
   $("#detail-thumb").classList.add("hidden");
   $("#detail-placeholder").classList.remove("hidden");
   $("#detail-name").textContent = "";
   $("#detail-paths").textContent = "";
-  renderTags($("#detail-tags"), [], null);
+  $("#detail-tags").innerHTML = "";
   $("#selection-info").classList.add("hidden");
-  $("#selection-tags").classList.add("hidden");
-  $("#selection-tags").innerHTML = "";
 }
 
 function clearSelection() {
@@ -279,37 +308,23 @@ function updateSelectionInfo() {
 }
 
 async function updateCumulativeTags() {
-  const box = $("#selection-tags");
-  if (!selectedHashes.size) {
-    box.classList.add("hidden");
-    box.innerHTML = "";
+  const request = ++tagRequest;
+  const hashes = [...selectedHashes];
+  if (!hashes.length) {
+    $("#detail-tags").innerHTML = "";
     return;
   }
   try {
     const data = await api("/api/assets/tags-union", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ hashes: [...selectedHashes] }),
+      body: JSON.stringify({ hashes }),
     });
-    box.innerHTML = "";
-    if (!data.tags.length) {
-      box.classList.add("hidden");
-      return;
-    }
-    box.classList.remove("hidden");
-    for (const t of data.tags) {
-      const span = document.createElement("span");
-      span.className = "tag sel-tag";
-      span.title = "click to add to search";
-      span.innerHTML = t.count > 1
-        ? `${esc(t.tag)}<span class="sel-count">${t.count}</span>`
-        : esc(t.tag);
-      span.addEventListener("click", () => addKeyword(t.tag));
-      box.appendChild(span);
-    }
+    if (request !== tagRequest) return;
+    renderMergedTags(data.tags);
   } catch (_) {
-    box.classList.add("hidden");
-    box.innerHTML = "";
+    if (request !== tagRequest) return;
+    renderMergedTags([]);
   }
 }
 
@@ -444,18 +459,20 @@ async function loadTags() {
     const item = document.createElement("button");
     item.className = "tag-item" + (t.visible ? "" : " dim");
     item.type = "button";
-    item.innerHTML = `<span>${esc(t.tag)}</span><span class="count">${t.count}</span>`;
+    item.title = t.tag;
+    item.innerHTML = `<span class="tag-name">${esc(t.tag)}</span><span class="count">${t.count}</span>`;
     item.addEventListener("click", () => {
       $("#search-input").value = t.tag;
-      doSearch(t.tag);
+      doSearch(t.tag, { selectFirst: true });
     });
     list.appendChild(item);
   }
 }
 
-async function doSearch(q) {
+async function doSearch(q, opts = {}) {
   activeQuery = q || "";
   pageCache.clear();
+  if (opts.selectFirst) clearSelection();
   const focus = selectedHash;
   let data;
   if (focus) {
@@ -468,6 +485,9 @@ async function doSearch(q) {
     afterSelectionChange();
   }
   renderPageData(data);
+  if (opts.selectFirst && currentResults.length) {
+    selectAsset(currentResults[0]);
+  }
 }
 
 async function refreshCurrent() {
@@ -594,6 +614,15 @@ async function openSynonyms() {
   $("#settings-menu").classList.add("hidden");
   try {
     await api("/api/synonyms/open", { method: "POST" });
+  } catch (e) {
+    alert(e.message);
+  }
+}
+
+async function openBanned() {
+  $("#settings-menu").classList.add("hidden");
+  try {
+    await api("/api/banned/open", { method: "POST" });
   } catch (e) {
     alert(e.message);
   }
@@ -752,6 +781,7 @@ $("#scan-db").addEventListener("click", startScan);
 $("#scan-cancel").addEventListener("click", cancelScan);
 $("#force-recompute").addEventListener("click", startRecomputeScan);
 $("#open-synonyms").addEventListener("click", openSynonyms);
+$("#open-banned").addEventListener("click", openBanned);
 $("#min-matches").addEventListener("change", saveMinMatches);
 $("#grid-rows").addEventListener("change", saveGrid);
 $("#grid-cols").addEventListener("change", saveGrid);
