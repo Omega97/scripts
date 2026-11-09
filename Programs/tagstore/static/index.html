@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>TagStore</title>
-  <link rel="stylesheet" href="/style.css" />
+  <link rel="stylesheet" href="/style.css?v=20261108" />
 </head>
 <body>
   <header>
@@ -13,6 +13,7 @@
       <div id="settings-menu" class="menu hidden">
         <button id="scan-db" class="menu-item" type="button">Scan database</button>
         <button id="open-synonyms" class="menu-item" type="button">Synonyms</button>
+        <button id="open-banned" class="menu-item" type="button">Banned tags</button>
         <label class="menu-item setting">
           <span>Min tag matches</span>
           <input id="min-matches" type="number" min="1" step="1" />
@@ -44,7 +45,7 @@
 
     <div class="search-area">
       <div class="search-row">
-        <input id="search-input" type="text" placeholder='cat AND (dog OR bird)' autocomplete="off" spellcheck="false" />
+        <input id="search-input" type="text" placeholder='dogs -cats' autocomplete="off" spellcheck="false" />
         <button id="search-btn" type="button">Search</button>
 
         <div class="menu-wrap">
@@ -91,7 +92,6 @@
         <div id="detail-paths" class="detail-paths"></div>
         <div id="detail-tags" class="tags"></div>
         <div id="selection-info" class="selection-info muted hidden"></div>
-        <div id="selection-tags" class="tags selection-tags hidden"></div>
         <div class="detail-actions">
           <input id="detail-tag-input" type="text" placeholder="add tag" />
           <button id="detail-delete" type="button" title="Delete selected image(s)">🗑</button>
@@ -102,6 +102,6 @@
     </aside>
   </main>
 
-  <script src="/app.js"></script>
+  <script src="/app.js?v=20261108"></script>
 </body>
 </html>

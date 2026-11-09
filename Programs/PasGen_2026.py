@@ -1,12 +1,16 @@
 #!/usr/bin/env python3
 """
 PasGen 2026
-Generate password given username and keyword
+Generate a deterministic password from a keyword and PASGEN_SALT.
+
+Scheme v1. Spaces are removed from the keyword and the rest is lowercased,
+then mixed with the salt and the length. The same keyword, salt, and length
+always produce the same password. Length must be from 4 through 100.
 """
 import sys
 import argparse
+import random
 from pathlib import Path
-from random import randrange, seed, shuffle
 
 # Alphabet without similar characters
 ALPHA = [
@@ -24,11 +28,11 @@ ENV_FILE = PROJECT_ROOT / '.env'
 SALT_KEY = 'PASGEN_SALT'
 
 
-def gen_string(length):
+def gen_string(length, rng):
     """Generate string of random char using alphabet"""
     types = [i % len(ALPHA) for i in range(length)]
-    chars = [ALPHA[i][randrange(len(ALPHA[i]))] for i in types]
-    shuffle(chars)
+    chars = [ALPHA[i][rng.randrange(len(ALPHA[i]))] for i in types]
+    rng.shuffle(chars)
     return ''.join(chars)
 
 
@@ -43,30 +47,39 @@ def get_password(key, salt, length: int, max_length=100):
     if length > max_length:
         raise ValueError(f'Length is more than {max_length}')
 
-    s = salt + key
+    s = salt + key + str(length)
     s = s.replace(' ', '').lower()
-    seed(s)
-    return gen_string(length=length)
+    rng = random.Random()
+    rng.seed(s, version=2)
+    return gen_string(length, rng)
 
 
 def load_salt():
     """Load salt from PASGEN_SALT in the root .env file"""
     if not ENV_FILE.exists():
-        print(f"Error: {ENV_FILE} not found.")
-        print(f"Add a line '{SALT_KEY}=<your secret>' to it and run the script again.")
+        print(f"Error: {ENV_FILE} not found.", file=sys.stderr)
+        print(
+            f"Add a line '{SALT_KEY}=<your secret>' to it and run the script again.",
+            file=sys.stderr,
+        )
         sys.exit(1)
 
     salt = None
-    with open(ENV_FILE, 'r', encoding='utf-8') as f:
+    with open(ENV_FILE, 'r', encoding='utf-8-sig') as f:
         for line in f:
             line = line.strip()
+            if line.startswith('export '):
+                line = line[len('export '):].lstrip()
             if line.startswith(SALT_KEY + '='):
                 salt = line[len(SALT_KEY) + 1:].strip().strip('"').strip("'")
                 break
 
     if not salt:
-        print(f"Error: '{SALT_KEY}' not set in {ENV_FILE}.")
-        print(f"Add a line '{SALT_KEY}=<your secret>' and run the script again.")
+        print(f"Error: '{SALT_KEY}' not set in {ENV_FILE}.", file=sys.stderr)
+        print(
+            f"Add a line '{SALT_KEY}=<your secret>' and run the script again.",
+            file=sys.stderr,
+        )
         sys.exit(1)
 
     return salt
