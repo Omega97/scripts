@@ -23,7 +23,7 @@ Everything under `Programs/`, largest source first (Python, HTML, CSS, and JS; b
 | convert_webp | `Programs/convert_webp.py` | `convert-webp` | Convert animated WebP files in the current directory to MP4. |
 | big_folders | `Programs/big_folders.py` | `big-folders` | List the folders with the most files. |
 | big_files | `Programs/big_files.py` | `bf`, `big-files` | List the largest files in a tree. |
-| PasGen_2026 | `Programs/PasGen_2026.py` | — | Generate a password from a keyword and the `PASGEN_SALT` value in the repo `.env`. |
+| PasGen_2026 | `Programs/PasGen_2026.py` | `pasgen` | Generate a password from a keyword and the `PASGEN_SALT` value in the repo `.env`. |
 | news | `Programs/news.py` | `news` | Fetch headlines from a fixed set of RSS feeds. |
 | commands | `Programs/commands.py` | `commands` | Print the names of every launcher in `batch/`. |
 
