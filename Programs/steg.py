@@ -2,8 +2,12 @@
 """
 Row-parity steganography.
 
-Each row stores three bits: the parity of the set bits in red, then green, then
-blue. Bits are grouped into Latin-1 bytes, high bit first. Leftover bits are
+Each row stores three bits at one bit depth: the parity of that bit in red,
+then green, then blue. Depth -1 (the default) is the least significant bit.
+Depth 0 is the most significant bit. Depths -8 and 0 are the same plane, and
+-1 and 7 are the same plane. A message at one depth does not change another.
+
+Bits are grouped into Latin-1 bytes, high bit first. Leftover bits are
 discarded, and trailing spaces are removed on decode. Encode pads the message
 with spaces so it fills every usable byte.
 """
@@ -17,8 +21,16 @@ from pathlib import Path
 from PIL import Image, UnidentifiedImageError
 
 
-def parity_bits(image):
-    """Return one parity bit per channel per row, top to bottom, red-green-blue."""
+def bit_shift(depth):
+    """Map a depth to a bit index. -1 and 7 are the least significant bit."""
+    if not -8 <= depth <= 7:
+        raise ValueError("Depth must be from -8 to 7")
+    return 7 - (depth % 8)
+
+
+def parity_bits(image, depth=-1):
+    """Return one parity bit per channel per row at this bit depth."""
+    shift = bit_shift(depth)
     rgb = image.convert("RGB")
     width, height = rgb.size
     if width < 1 or height < 1:
@@ -30,7 +42,7 @@ def parity_bits(image):
         for channel in range(3):
             count = 0
             for x in range(width):
-                count += pixels[x, y][channel].bit_count()
+                count += (pixels[x, y][channel] >> shift) & 1
             bits.append(count & 1)
     return bits
 
@@ -66,26 +78,42 @@ def usable_bytes(height):
     return (height * 3) // 8
 
 
-def report_capacity(height):
-    """Print how many Latin-1 bytes this image can store."""
-    print(f"capacity: {usable_bytes(height)}", file=sys.stderr)
+def report_capacity(height, depth=-1):
+    """Print how many Latin-1 bytes this image can store at this depth."""
+    print(f"capacity: {usable_bytes(height)} (depth {depth})", file=sys.stderr)
+
+
+def colorize(text, code, stream):
+    """Wrap text in an ANSI color when the stream is a terminal."""
+    if stream.isatty():
+        return f"\033[{code}m{text}\033[0m"
+    return text
 
 
 def print_message(text):
     """Print the decoded message in blue when stdout is a terminal."""
-    if sys.stdout.isatty():
-        print(f"\033[94m{text}\033[0m")
-    else:
-        print(text)
+    print(colorize(text, "94", sys.stdout))
 
 
-def encode_into(image, message):
-    """Return an RGB image whose row parities store message, padded with spaces.
+def print_encoded(destination):
+    """Confirm a successful encode in green when stdout is a terminal."""
+    print(colorize(f"Encoded {destination}", "92", sys.stdout))
 
-    A mismatch flips the lowest bit of one pixel in that row. The column is
-    chosen from a generator seeded with the image width, so a later message
-    edits that same set of pixels.
+
+def print_warning(text):
+    """Print a warning in yellow when stderr is a terminal."""
+    print(colorize(text, "93", sys.stderr), file=sys.stderr)
+
+
+def encode_into(image, message, depth=-1):
+    """Return an RGB image whose row parities at this depth store message.
+
+    A mismatch flips that bit of one pixel in that row. The column is chosen
+    from a generator seeded with the image width, so a later message at the
+    same depth edits that same set of pixels. Other depths are left alone.
     """
+    shift = bit_shift(depth)
+    mask = 1 << shift
     rgb = image.convert("RGB")
     width, height = rgb.size
     if width < 1 or height < 1:
@@ -107,18 +135,18 @@ def encode_into(image, message):
         x = columns.randrange(width)
         parity = 0
         for column in range(width):
-            parity = (parity + pixels[column, y][channel].bit_count()) & 1
+            parity = (parity + ((pixels[column, y][channel] >> shift) & 1)) & 1
         if parity == desired:
             continue
         pixel = list(pixels[x, y])
-        pixel[channel] ^= 1
+        pixel[channel] ^= mask
         pixels[x, y] = tuple(pixel)
     return rgb
 
 
-def decode_image(image, as_bits=False):
-    """Read parities from an image as a bit string or as stripped Latin-1."""
-    bits = parity_bits(image)
+def decode_image(image, as_bits=False, depth=-1):
+    """Read one depth's parities as a bit string or as stripped Latin-1."""
+    bits = parity_bits(image, depth)
     if as_bits:
         return "".join(str(bit) for bit in bits)
     return bits_to_text(bits)
@@ -156,6 +184,19 @@ def save_png(image, destination):
             temporary.unlink()
 
 
+def add_depth_argument(command):
+    """Add the shared bit-plane selector. -1 is the lowest bit."""
+    command.add_argument(
+        "-d",
+        "--depth",
+        type=int,
+        default=-1,
+        choices=range(-8, 8),
+        metavar="DEPTH",
+        help="Bit plane from -8 to 7. -1 (default) is the lowest bit; 0 is the highest",
+    )
+
+
 def main(argv=None):
     parser = argparse.ArgumentParser(
         prog="steg",
@@ -163,7 +204,9 @@ def main(argv=None):
         epilog=(
             "examples:\n"
             '  steg encode photo.png "Hello World"\n'
-            "  steg decode photo.png"
+            '  steg encode photo.png "second" --depth -2\n'
+            "  steg decode photo.png\n"
+            "  steg decode photo.png --depth -2"
         ),
         formatter_class=argparse.RawDescriptionHelpFormatter,
     )
@@ -176,6 +219,7 @@ def main(argv=None):
         action="store_true",
         help="Print every parity bit, including bits left over from the last byte",
     )
+    add_depth_argument(decode_cmd)
 
     encode_cmd = commands.add_parser("encode", help="Hide a message in an image")
     encode_cmd.add_argument(
@@ -193,6 +237,7 @@ def main(argv=None):
         action="store_true",
         help="Leave the source image and write <name>.steg.png",
     )
+    add_depth_argument(encode_cmd)
 
     if argv is None:
         argv = sys.argv[1:]
@@ -204,7 +249,7 @@ def main(argv=None):
     try:
         if args.mode == "decode":
             with Image.open(args.image) as image:
-                text = decode_image(image, as_bits=args.bits)
+                text = decode_image(image, as_bits=args.bits, depth=args.depth)
             if args.bits:
                 print(text)
             else:
@@ -225,17 +270,16 @@ def main(argv=None):
                 raise ValueError(f"{destination} already exists")
 
         with Image.open(source) as image:
-            report_capacity(image.size[1])
-            encoded = encode_into(image, args.message)
+            report_capacity(image.size[1], args.depth)
+            encoded = encode_into(image, args.message, depth=args.depth)
         save_png(encoded, destination)
         if delete_source:
             source.unlink()
         if source.suffix.lower() != ".png":
-            print(
-                f"Warning: converted {source.name} to PNG ({destination.name}).",
-                file=sys.stderr,
+            print_warning(
+                f"Warning: converted {source.name} to PNG ({destination.name})."
             )
-        print(destination)
+        print_encoded(destination)
     except (ValueError, OSError, UnidentifiedImageError) as exc:
         print(f"Error: {exc}", file=sys.stderr)
         sys.exit(1)
